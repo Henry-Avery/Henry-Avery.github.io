@@ -18,4 +18,48 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>启航</title>
+    <url>/2020/08/20/%E5%90%AF%E8%88%AA/</url>
+    <content><![CDATA[<hr>
+<h1 id="我们的征程是星辰大海"><a href="#我们的征程是星辰大海" class="headerlink" title="我们的征程是星辰大海"></a>我们的征程是星辰大海</h1><h2 id="下一站"><a href="#下一站" class="headerlink" title="下一站"></a>下一站</h2><h3 id="天堂"><a href="#天堂" class="headerlink" title="天堂"></a>天堂</h3><p><strong>无所畏惧</strong></p>
+<hr>
+<blockquote>
+<p>“Hello world!”</p>
+<blockquote>
+<p>“Hello new world!”</p>
+</blockquote>
+</blockquote>
+<p><strong><em>无所畏惧</em></strong></p>
+<ul>
+<li>七剑</li>
+<li></li>
+</ul>
+<hr>
+<ol>
+<li>第一剑</li>
+<li>第二剑</li>
+<li>第三剑</li>
+</ol>
+<hr>
+<p><code>代码块</code></p>
+<p><code>`</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;段落代码块&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="http://huihut-img.oss-cn-shenzhen.aliyuncs.com/H_ya.png" alt="huihut"></p>
+<p><a href="https://huihut.github.io/">huihut</a></p>
+<p><a href="http://google.com/">Google</a></p>
+<p><a href="http://google.com/">Google</a></p>
+<p><a href="http://google.com/">Google</a></p>
+]]></content>
+      <tags>
+        <tag>&lt;Markdown&gt;</tag>
+      </tags>
+  </entry>
 </search>
