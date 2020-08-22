@@ -126,32 +126,6 @@
   </entry>
   
   <entry>
-    <title>阅读笔记</title>
-    <link href="https://https://henry-avery.github.io/2020/08/21/yue-du-bi-ji/"/>
-    <id>https://https://henry-avery.github.io/2020/08/21/yue-du-bi-ji/</id>
-    <published>2020-08-21T02:03:55.000Z</published>
-    <updated>2020-08-21T02:46:12.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;读书笔记&quot;&gt;&lt;a href=&quot;#读书笔记&quot; class=&quot;headerlink&quot; title=&quot;读书笔记&quot;&gt;&lt;/a&gt;读书笔记&lt;/h1&gt;&lt;h2 id=&quot;如下&quot;&gt;&lt;a href=&quot;#如下&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="阅读笔记" scheme="https://https://henry-avery.github.io/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书" scheme="https://https://henry-avery.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>技术笔记</title>
     <link href="https://https://henry-avery.github.io/2020/08/21/ji-zhu-bi-ji/"/>
     <id>https://https://henry-avery.github.io/2020/08/21/ji-zhu-bi-ji/</id>
@@ -174,6 +148,32 @@
     
     
       <category term="Blog" scheme="https://https://henry-avery.github.io/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阅读笔记</title>
+    <link href="https://https://henry-avery.github.io/2020/08/21/yue-du-bi-ji/"/>
+    <id>https://https://henry-avery.github.io/2020/08/21/yue-du-bi-ji/</id>
+    <published>2020-08-21T02:03:55.000Z</published>
+    <updated>2020-08-21T02:46:12.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;读书笔记&quot;&gt;&lt;a href=&quot;#读书笔记&quot; class=&quot;headerlink&quot; title=&quot;读书笔记&quot;&gt;&lt;/a&gt;读书笔记&lt;/h1&gt;&lt;h2 id=&quot;如下&quot;&gt;&lt;a href=&quot;#如下&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="阅读笔记" scheme="https://https://henry-avery.github.io/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="读书" scheme="https://https://henry-avery.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   

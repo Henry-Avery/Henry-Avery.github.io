@@ -90,31 +90,6 @@
     
     
     <entry>
-      <title>阅读笔记</title>
-      <link href="/2020/08/21/yue-du-bi-ji/"/>
-      <url>/2020/08/21/yue-du-bi-ji/</url>
-      
-        <content type="html"><![CDATA[<h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="如下"><a href="#如下" class="headerlink" title="如下"></a>如下</h2><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> 阅读笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 读书 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>技术笔记</title>
       <link href="/2020/08/21/ji-zhu-bi-ji/"/>
       <url>/2020/08/21/ji-zhu-bi-ji/</url>
@@ -132,6 +107,31 @@
         <tags>
             
             <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阅读笔记</title>
+      <link href="/2020/08/21/yue-du-bi-ji/"/>
+      <url>/2020/08/21/yue-du-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="如下"><a href="#如下" class="headerlink" title="如下"></a>如下</h2><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 阅读笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 读书 </tag>
             
         </tags>
       
