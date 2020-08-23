@@ -458,53 +458,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         </div>
         <article id="friends-link">
             
-            
-            <div class="row tags-posts friend-all">
-                
-                
-                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                    <div class="card frind-card1">
-                        <div class="frind-ship">
-                            <div class="title">
-                                <img src="https://godweiyang.com/medias/avatars/avatar.jpg" alt="img">
-                                <div>
-                                    <h1 class="friend-name">godweiyang</h1>
-                                    <p class="friend-introduction">公众号【算法码上来】，分享深度学习与NLP算法</p>
-                                </div>
-                            </div>
-                            <div class="friend-button">
-                                <a href="https://godweiyang.com" target="_blank"
-                                    class="button button-glow button-rounded button-caution">
-                                    访问主页
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                    <div class="card frind-card2">
-                        <div class="frind-ship">
-                            <div class="title">
-                                <img src="/medias/avatars/myzhihu.png" alt="img">
-                                <div>
-                                    <h1 class="friend-name">知乎专栏</h1>
-                                    <p class="friend-introduction">一个有温度的深度学习小屋</p>
-                                </div>
-                            </div>
-                            <div class="friend-button">
-                                <a href="https://zhuanlan.zhihu.com/godweiyang" target="_blank"
-                                    class="button button-glow button-rounded button-caution">
-                                    访问主页
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
         </article>
     </div>
 </main>
@@ -519,7 +472,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 WeiYang. 版权所有
+            &copy; 2019-2020 Henry-Avery. 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -578,8 +531,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 20000;
+        var pvcountOffset = 800;
+        var uvcountOffset = 200;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
@@ -617,7 +570,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         minutes - 0-59之间的整数，做为date对象的分钟数
         seconds - 0-59之间的整数，做为date对象的秒数
         microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t1 = Date.UTC(2020, 07, 30, 00, 00, 00); //北京时间2018-2-13 00:00:00
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
@@ -625,8 +578,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        /*document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
     }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +  diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }
     siteTime();
 </script>
 
