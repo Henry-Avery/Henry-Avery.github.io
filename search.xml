@@ -90,31 +90,6 @@
     
     
     <entry>
-      <title>技术笔记</title>
-      <link href="/2020/08/21/ji-zhu-bi-ji/"/>
-      <url>/2020/08/21/ji-zhu-bi-ji/</url>
-      
-        <content type="html"><![CDATA[<h2 id="常用快捷键和语法"><a href="#常用快捷键和语法" class="headerlink" title="常用快捷键和语法"></a>常用快捷键和语法</h2><p>标题：Ctrl+1、2、3…对应一、二、三…级标题（光标定位到需要设置为标题的行，按快捷键） </p><p>加粗：Ctrl+B（选中要加粗的文本，按快捷键）  </p><p><em>斜体</em>：Ctrl+I（选中要设置斜体的文本，按快捷键） </p><p>下划线：Ctrl+U（选中要加下划线的文本，按快捷键） </p><p>删除线：Alt+Shift+5（选中要加删除线的文本，按快捷键） </p><p><code>代码片段</code>：Ctrl+Shift+`（选中要设置为代码片段的文本，按快捷键） </p><p>代码块：Ctrl+Shift+K（任意位置按快捷键，选择编程语言然后在代码块中输入代码） </p><p>切换到下一行：Ctrl+Enter（任意位置按快捷键，在代码块中可以跳出代码块另起一行） </p><p><a href="https://link.zhihu.com/?target=https%3A//www.baidu.com/" target="_blank" rel="noopener">链接</a>：Ctrl+K（先复制链接，然后选中要加链接的文本，按快捷键。Ctrl+左键点击文本可跳转到对应链接） </p><p>取消格式：再次按相同的快捷键即可 </p><p>有序列表：数字+点+空格 </p><p>任务列表：加号或减号+空格 </p><p>切换到列表下一行：Space+Enter </p><p>嵌套列表：按Tab键 </p><p>退出列表：按 Shift+Tab </p><p>插入表格：Ctrl+T </p><p>引用：输入&gt;后面加空格，或者Ctrl+Shift+Q</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>阅读笔记</title>
       <link href="/2020/08/21/yue-du-bi-ji/"/>
       <url>/2020/08/21/yue-du-bi-ji/</url>
@@ -132,6 +107,31 @@
         <tags>
             
             <tag> 读书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>技术笔记</title>
+      <link href="/2020/08/21/ji-zhu-bi-ji/"/>
+      <url>/2020/08/21/ji-zhu-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="常用快捷键和语法"><a href="#常用快捷键和语法" class="headerlink" title="常用快捷键和语法"></a>常用快捷键和语法</h2><p>标题：Ctrl+1、2、3…对应一、二、三…级标题（光标定位到需要设置为标题的行，按快捷键） </p><p>加粗：Ctrl+B（选中要加粗的文本，按快捷键）  </p><p><em>斜体</em>：Ctrl+I（选中要设置斜体的文本，按快捷键） </p><p>下划线：Ctrl+U（选中要加下划线的文本，按快捷键） </p><p>删除线：Alt+Shift+5（选中要加删除线的文本，按快捷键） </p><p><code>代码片段</code>：Ctrl+Shift+`（选中要设置为代码片段的文本，按快捷键） </p><p>代码块：Ctrl+Shift+K（任意位置按快捷键，选择编程语言然后在代码块中输入代码） </p><p>切换到下一行：Ctrl+Enter（任意位置按快捷键，在代码块中可以跳出代码块另起一行） </p><p><a href="https://link.zhihu.com/?target=https%3A//www.baidu.com/" target="_blank" rel="noopener">链接</a>：Ctrl+K（先复制链接，然后选中要加链接的文本，按快捷键。Ctrl+左键点击文本可跳转到对应链接） </p><p>取消格式：再次按相同的快捷键即可 </p><p>有序列表：数字+点+空格 </p><p>任务列表：加号或减号+空格 </p><p>切换到列表下一行：Space+Enter </p><p>嵌套列表：按Tab键 </p><p>退出列表：按 Shift+Tab </p><p>插入表格：Ctrl+T </p><p>引用：输入&gt;后面加空格，或者Ctrl+Shift+Q</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Blog </tag>
             
         </tags>
       

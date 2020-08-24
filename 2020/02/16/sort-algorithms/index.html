@@ -271,7 +271,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -880,29 +880,29 @@
     </div>
 
     
-    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
 
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
+    
+    <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div id="gitment-content" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
+<script src="/libs/gitment/gitment.js"></script>
 <script>
-    let gitalk = new Gitalk({
-        clientID: 'b1695360170b8fa033a0',
-        clientSecret: '75c9e0550c90a0d9795f2d70435febf9365b3e7d',
-        repo: 'henry-avery.github.io/',
-        owner: 'henry-avery',
-        admin: "henry-avery",
-        id: '2020/02/16/sort-algorithms/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
+var gitment = new Gitment({
+    id: 'Sun Feb 16 2020 15:09:23 GMT+0800',
+    owner: 'henry-avery',
+    repo: 'henry-avery.github.io/',
+    oauth: {
+        client_id: 'b1695360170b8fa033a0',
+        client_secret: '75c9e0550c90a0d9795f2d70435febf9365b3e7d'
+    }
+});
 
-    gitalk.render('gitalk-container');
+gitment.render('gitment-content');
 </script>
-    
-
     
 
     
@@ -920,20 +920,22 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/21/yue-du-bi-ji/">
+                <a href="/2020/08/21/ji-zhu-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="阅读笔记">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="技术笔记">
                         
-                        <span class="card-title">阅读笔记</span>
+                        <span class="card-title">技术笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            读书笔记如下
-
+                            常用快捷键和语法标题：Ctrl+1、2、3…对应一、二、三…级标题（光标定位到需要设置为标题的行，按快捷键） 
+加粗：Ctrl+B（选中要加粗的文本，按快捷键）  
+斜体：Ctrl+I（选中要设置斜体的文本，按快捷键） 
+下划线：Ctrl+
                         
                     </div>
                     <div class="publish-info">
@@ -944,8 +946,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/阅读笔记/" class="post-category" target="_blank">
-                                    阅读笔记
+                            <a href="/categories/技术笔记/" class="post-category" target="_blank">
+                                    技术笔记
                                 </a>
                             
                             
@@ -955,8 +957,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/读书/" target="_blank">
-                        <span class="chip bg-color">读书</span>
+                    <a href="/tags/Blog/" target="_blank">
+                        <span class="chip bg-color">Blog</span>
                     </a>
                     
                 </div>
@@ -974,7 +976,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
                         
                         <span class="card-title">十大经典排序算法整理汇总（附代码）</span>
                     </div>
