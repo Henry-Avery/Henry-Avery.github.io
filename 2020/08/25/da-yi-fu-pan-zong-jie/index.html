@@ -480,6 +480,28 @@
     </div>
 
     
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'bcac118c07efd37bb7c3',
+        clientSecret: '59ace8a6f5bc3daffc7aa090f2f8e93c971668e8',
+        repo: 'Blogtalk',
+        owner: 'henry-avery',
+        admin: "henry-avery",
+        id: '2020/08/25/da-yi-fu-pan-zong-jie/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
