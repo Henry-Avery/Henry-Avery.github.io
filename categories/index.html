@@ -132,24 +132,6 @@
         </a>
     </li>
     
-    <li class="hide-on-med-and-down">
-        <a href="/friends" class="waves-effect waves-light">
-            
-            <i class="fa fa-address-book"></i>
-            
-            <span>友情链接</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/contact" class="waves-effect waves-light">
-            
-            <i class="fa fa-comments"></i>
-            
-            <span>留言板</span>
-        </a>
-    </li>
-    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -220,24 +202,6 @@
             </a>
         </li>
         
-        <li>
-            <a href="/friends" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-address-book"></i>
-                
-                友情链接
-            </a>
-        </li>
-        
-        <li>
-            <a href="/contact" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-comments"></i>
-                
-                留言板
-            </a>
-        </li>
-        
         
     </ul>
 </div>
@@ -293,46 +257,55 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 
                 
                 
-                <a href="/categories/资料库/" title="资料库: 1">
+                <a href="/categories/资料库/" title="资料库: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">资料库
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/编程算法/" title="编程算法: 1">
+                <a href="/categories/编程算法/" title="编程算法: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F5EEF8;">编程算法
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/学习笔记/" title="学习笔记: 1">
+                <a href="/categories/学习笔记/" title="学习笔记: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #D5F5E3;">学习笔记
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/阅读笔记/" title="阅读笔记: 1">
+                <a href="/categories/技术笔记/" title="技术笔记: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">阅读笔记
-                        <span class="tag-length">1</span>
+                            style="background-color: #E8F8F5;">技术笔记
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/技术笔记/" title="技术笔记: 1">
+                <a href="/categories/阅读笔记/" title="阅读笔记: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">技术笔记
+                            style="background-color: #FEF9E7;">阅读笔记
+                        <span class="tag-length">0</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/复盘/" title="复盘: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F8F9F9;">复盘
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -379,7 +352,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"资料库","max":2},{"name":"编程算法","max":2},{"name":"学习笔记","max":2},{"name":"阅读笔记","max":2},{"name":"技术笔记","max":2}],
+            indicator: [{"name":"资料库","max":1},{"name":"编程算法","max":1},{"name":"学习笔记","max":1},{"name":"技术笔记","max":1},{"name":"阅读笔记","max":1},{"name":"复盘","max":1}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -390,7 +363,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,1,1,1,1],
+                    value : [0,0,0,0,0,1],
                     name : '文章分类数量'
                 }
             ]
@@ -410,7 +383,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.5k</span>
+            <span class="white-color">0</span>
             
 
             <br>

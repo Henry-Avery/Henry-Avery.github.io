@@ -132,24 +132,6 @@
         </a>
     </li>
     
-    <li class="hide-on-med-and-down">
-        <a href="/friends" class="waves-effect waves-light">
-            
-            <i class="fa fa-address-book"></i>
-            
-            <span>友情链接</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/contact" class="waves-effect waves-light">
-            
-            <i class="fa fa-comments"></i>
-            
-            <span>留言板</span>
-        </a>
-    </li>
-    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -220,24 +202,6 @@
             </a>
         </li>
         
-        <li>
-            <a href="/friends" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-address-book"></i>
-                
-                友情链接
-            </a>
-        </li>
-        
-        <li>
-            <a href="/contact" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-comments"></i>
-                
-                留言板
-            </a>
-        </li>
-        
         
     </ul>
 </div>
@@ -292,73 +256,91 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Blog/" title="Blog: 2">
+                <a href="/tags/Blog/" title="Blog: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Blog" style="background-color: #F9EBEA;">Blog
-                        <span class="tag-length">2</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Next/" title="Next: 1">
+                <a href="/tags/Next/" title="Next: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Next" style="background-color: #F5EEF8;">Next
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Typora/" title="Typora: 1">
+                <a href="/tags/Typora/" title="Typora: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Typora" style="background-color: #D5F5E3;">Typora
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/leetcode/" title="leetcode: 1">
+                <a href="/tags/Markdown/" title="<Markdown>: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="leetcode" style="background-color: #E8F8F5;">leetcode
-                        <span class="tag-length">1</span>
+                            data-tagname="<Markdown>" style="background-color: #E8F8F5;"><Markdown>
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/算法/" title="算法: 1">
+                <a href="/tags/leetcode/" title="leetcode: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="算法" style="background-color: #FEF9E7;">算法
-                        <span class="tag-length">1</span>
+                            data-tagname="leetcode" style="background-color: #FEF9E7;">leetcode
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Markdown/" title="<Markdown>: 1">
+                <a href="/tags/算法/" title="算法: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="<Markdown>" style="background-color: #F8F9F9;"><Markdown>
-                        <span class="tag-length">1</span>
+                            data-tagname="算法" style="background-color: #F8F9F9;">算法
+                        <span class="tag-length">0</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Python/" title="Python: 1">
+                <a href="/tags/Python/" title="Python: 0">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Python" style="background-color: #82E0AA;">Python
+                        <span class="tag-length">0</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/读书/" title="读书: 0">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="读书" style="background-color: #D7BDE2;">读书
+                        <span class="tag-length">0</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/大学/" title="大学: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="大学" style="background-color: #A3E4D7;">大学
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/读书/" title="读书: 1">
+                <a href="/tags/复盘/" title="复盘: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="读书" style="background-color: #D7BDE2;">读书
+                            data-tagname="复盘" style="background-color: #85C1E9;">复盘
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -387,7 +369,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Blog","weight":2,"link":"/tags/Blog/"},{"text":"Next","weight":1,"link":"/tags/Next/"},{"text":"Typora","weight":1,"link":"/tags/Typora/"},{"text":"leetcode","weight":1,"link":"/tags/leetcode/"},{"text":"算法","weight":1,"link":"/tags/算法/"},{"text":"<Markdown>","weight":1,"link":"/tags/Markdown/"},{"text":"Python","weight":1,"link":"/tags/Python/"},{"text":"读书","weight":1,"link":"/tags/读书/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Blog","weight":0,"link":"/tags/Blog/"},{"text":"Next","weight":0,"link":"/tags/Next/"},{"text":"Typora","weight":0,"link":"/tags/Typora/"},{"text":"<Markdown>","weight":0,"link":"/tags/Markdown/"},{"text":"leetcode","weight":0,"link":"/tags/leetcode/"},{"text":"算法","weight":0,"link":"/tags/算法/"},{"text":"Python","weight":0,"link":"/tags/Python/"},{"text":"读书","weight":0,"link":"/tags/读书/"},{"text":"大学","weight":1,"link":"/tags/大学/"},{"text":"复盘","weight":1,"link":"/tags/复盘/"}], {
         autoResize: true
     });
 </script>
@@ -402,7 +384,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.5k</span>
+            <span class="white-color">0</span>
             
 
             <br>
