@@ -132,6 +132,24 @@
         </a>
     </li>
     
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -199,6 +217,24 @@
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
                 关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                留言板
             </a>
         </li>
         
@@ -469,7 +505,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"编程算法","value":0},{"name":"资料库","value":0},{"name":"学习笔记","value":0},{"name":"阅读笔记","value":0},{"name":"技术笔记","value":0},{"name":"复盘","value":1}],
+                data: [{"name":"资料库","value":0},{"name":"编程算法","value":0},{"name":"学习笔记","value":0},{"name":"阅读笔记","value":0},{"name":"技术笔记","value":0},{"name":"复盘","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -493,7 +529,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["大学","复盘","leetcode","算法","Blog","Next","Typora","<Markdown>","Python","读书"]
+                data: ["大学","复盘","Blog","Next","Typora","leetcode","算法","<Markdown>","Python","读书"]
             }
         ],
         yAxis: [
