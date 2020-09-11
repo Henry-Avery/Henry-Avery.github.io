@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://https://henry-avery.github.io/"/>
-  <updated>2020-09-10T21:58:29.525Z</updated>
+  <updated>2020-09-11T03:11:28.270Z</updated>
   <id>https://https://henry-avery.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>美赛启航</title>
+    <link href="https://https://henry-avery.github.io/2020/09/11/mei-sai-qi-hang/"/>
+    <id>https://https://henry-avery.github.io/2020/09/11/mei-sai-qi-hang/</id>
+    <published>2020-09-11T02:15:06.000Z</published>
+    <updated>2020-09-11T03:11:28.270Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;h3 id=&quot;美国大学生数学建模竞赛（MCM-ICM）&quot;&gt;&lt;a href=&quot;#美国大学生数学建模竞赛（MCM-ICM）&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="比赛" scheme="https://https://henry-avery.github.io/categories/%E6%AF%94%E8%B5%9B/"/>
+    
+    
+      <category term="在更" scheme="https://https://henry-avery.github.io/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+      <category term="美赛" scheme="https://https://henry-avery.github.io/tags/%E7%BE%8E%E8%B5%9B/"/>
+    
+      <category term="数模" scheme="https://https://henry-avery.github.io/tags/%E6%95%B0%E6%A8%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机书单</title>
     <link href="https://https://henry-avery.github.io/2020/09/02/ji-suan-ji-shu-dan/"/>
     <id>https://https://henry-avery.github.io/2020/09/02/ji-suan-ji-shu-dan/</id>
     <published>2020-09-02T00:37:34.000Z</published>
-    <updated>2020-09-10T21:58:29.525Z</updated>
+    <updated>2020-09-11T03:08:34.663Z</updated>
     
     <summary type="html">
     
@@ -42,6 +72,8 @@
       <category term="计算机" scheme="https://https://henry-avery.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
       <category term="书" scheme="https://https://henry-avery.github.io/tags/%E4%B9%A6/"/>
+    
+      <category term="待更" scheme="https://https://henry-avery.github.io/tags/%E5%BE%85%E6%9B%B4/"/>
     
   </entry>
   
