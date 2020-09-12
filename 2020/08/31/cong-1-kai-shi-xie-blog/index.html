@@ -275,7 +275,7 @@ LEPTURE
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -434,7 +434,7 @@ LEPTURE
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    354
+                    514
                 </div>
                 
 
@@ -477,7 +477,15 @@ LEPTURE
 <p>Challenge the status quo</p>
 <h4 id="怎么写博客"><a href="#怎么写博客" class="headerlink" title="怎么写博客"></a>怎么写博客</h4><p>搭建好博客，写下去。每周至少写完一篇发到博客上。所以平时需要多写，每天都至少要写三十分钟。</p>
 <h4 id="博客写什么"><a href="#博客写什么" class="headerlink" title="博客写什么"></a>博客写什么</h4><p>可能写一写日常生活里值得思考的小事，或者是技术上解决的问题和信息资源的整理。</p>
-
+<hr>
+<h2 id="各种报错"><a href="#各种报错" class="headerlink" title="各种报错"></a>各种报错</h2><p><strong>hexo s</strong>报错</p>
+<pre><code>FATAL Something&#39;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.htmlNunjucks Error:  [Line 78, Column 29] expected variable end</code></pre><p>解决办法：<br><a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">官网描述</a></p>
+<p>翻译过来就是： 转义内容 Hexo使用Nunjucks渲染帖子（较早的版本使用Swig，它们具有相似的语法）。</p>
+<p>用<code>{ { } }</code>或<code>{ ％ ％ }</code>包装的内容将被解析，并可能导致问题。</p>
+<p>您可以使用原始标签插件包装敏感内容。<br>找到正文里面<code>{ {</code>、<code>} }</code>、<code>{ %</code>、<code>% }</code>这样的语句，作如下修改：</p>
+<pre><code>{% raw %}	//敏感内容前加上这个
+Hello {{ sensitive }}	l/敏感内容被包装在中间
+{% endraw %}    //敏感内容后加上这个</code></pre>
             </div>
             <hr />
 
@@ -583,7 +591,7 @@ LEPTURE
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="计算机书单">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="计算机书单">
                         
                         <span class="card-title">计算机书单</span>
                     </div>
@@ -640,7 +648,7 @@ LEPTURE
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="大一复盘总结">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="大一复盘总结">
                         
                         <span class="card-title">大一复盘总结</span>
                     </div>
@@ -830,7 +838,7 @@ LEPTURE
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.7k</span>
+            <span class="white-color">6.6k</span>
             
 
             <br>

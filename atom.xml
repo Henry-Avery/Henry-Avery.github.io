@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://https://henry-avery.github.io/"/>
-  <updated>2020-09-11T03:33:46.718Z</updated>
+  <updated>2020-09-12T12:31:31.155Z</updated>
   <id>https://https://henry-avery.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MATLAB学习</title>
-    <link href="https://https://henry-avery.github.io/2020/09/11/matlab-xue-xi/"/>
-    <id>https://https://henry-avery.github.io/2020/09/11/matlab-xue-xi/</id>
-    <published>2020-09-11T03:21:25.000Z</published>
-    <updated>2020-09-11T03:33:46.718Z</updated>
+    <title>基于Django框架的学习笔记项目开发</title>
+    <link href="https://https://henry-avery.github.io/2020/09/11/ji-yu-django-kuang-jia-de-xue-xi-bi-ji-xiang-mu-kai-fa/"/>
+    <id>https://https://henry-avery.github.io/2020/09/11/ji-yu-django-kuang-jia-de-xue-xi-bi-ji-xiang-mu-kai-fa/</id>
+    <published>2020-09-11T12:53:01.000Z</published>
+    <updated>2020-09-12T12:31:31.155Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,35 @@
       
         
         
-          &lt;h2 id=&quot;信号处理实验课&quot;&gt;&lt;a href=&quot;#信号处理实验课&quot; class=&quot;headerlink&quot; title=&quot;信号处理实验课&quot;&gt;&lt;/a&gt;信号处理实验课&lt;/h2&gt;&lt;h3 id=&quot;上课学习&quot;&gt;&lt;a href=&quot;#上课学习&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;Django入门&quot;&gt;&lt;a href=&quot;#Django入门&quot; class=&quot;headerlink&quot; title=&quot;Django入门&quot;&gt;&lt;/a&gt;Django入门&lt;/h1&gt;&lt;h2 id=&quot;建立项目&quot;&gt;&lt;a href=&quot;#建立项目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://https://henry-avery.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="在更" scheme="https://https://henry-avery.github.io/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+      <category term="Python" scheme="https://https://henry-avery.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB学习</title>
+    <link href="https://https://henry-avery.github.io/2020/09/11/matlab-xue-xi/"/>
+    <id>https://https://henry-avery.github.io/2020/09/11/matlab-xue-xi/</id>
+    <published>2020-09-11T03:21:25.000Z</published>
+    <updated>2020-09-12T12:30:35.263Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;第一周信号处理实验课&quot;&gt;&lt;a href=&quot;#第一周信号处理实验课&quot; class=&quot;headerlink&quot; title=&quot;第一周信号处理实验课&quot;&gt;&lt;/a&gt;第一周信号处理实验课&lt;/h2&gt;&lt;h3 id=&quot;上课学习&quot;&gt;&lt;a href=&quot;#上课学习&quot;
         
       
     
@@ -110,7 +138,7 @@
     <link href="https://https://henry-avery.github.io/2020/08/31/cong-1-kai-shi-xie-blog/"/>
     <id>https://https://henry-avery.github.io/2020/08/31/cong-1-kai-shi-xie-blog/</id>
     <published>2020-08-31T08:12:05.000Z</published>
-    <updated>2020-09-10T22:21:58.209Z</updated>
+    <updated>2020-09-12T12:26:28.230Z</updated>
     
     <summary type="html">
     
