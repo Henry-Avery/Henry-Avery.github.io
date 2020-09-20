@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://https://henry-avery.github.io/"/>
-  <updated>2020-09-12T12:45:39.362Z</updated>
+  <updated>2020-09-20T00:46:15.723Z</updated>
   <id>https://https://henry-avery.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Django后续</title>
+    <link href="https://https://henry-avery.github.io/2020/09/19/django-hou-xu/"/>
+    <id>https://https://henry-avery.github.io/2020/09/19/django-hou-xu/</id>
+    <published>2020-09-19T06:19:01.000Z</published>
+    <updated>2020-09-20T00:46:15.723Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Django后续&quot;&gt;&lt;a href=&quot;#Django后续&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://https://henry-avery.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="在更" scheme="https://https://henry-avery.github.io/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+      <category term="Python" scheme="https://https://henry-avery.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django入门</title>
     <link href="https://https://henry-avery.github.io/2020/09/11/django-ru-men/"/>
     <id>https://https://henry-avery.github.io/2020/09/11/django-ru-men/</id>
     <published>2020-09-11T12:53:01.000Z</published>
-    <updated>2020-09-12T12:45:39.362Z</updated>
+    <updated>2020-09-20T00:46:30.809Z</updated>
     
     <summary type="html">
     
@@ -38,9 +66,9 @@
       <category term="学习笔记" scheme="https://https://henry-avery.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="在更" scheme="https://https://henry-avery.github.io/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Python" scheme="https://https://henry-avery.github.io/tags/Python/"/>
+    
+      <category term="Django" scheme="https://https://henry-avery.github.io/tags/Django/"/>
     
   </entry>
   

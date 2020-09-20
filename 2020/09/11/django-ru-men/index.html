@@ -269,7 +269,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -386,12 +386,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/在更/" target="_blank">
-                            <span class="chip bg-color">在更</span>
-                        </a>
-                        
                         <a href="/tags/Python/" target="_blank">
                             <span class="chip bg-color">Python</span>
+                        </a>
+                        
+                        <a href="/tags/Django/" target="_blank">
+                            <span class="chip bg-color">Django</span>
                         </a>
                         
                     </div>
@@ -428,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.7k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
                 
@@ -457,17 +457,19 @@
 <p>开始编写一个名为“学习笔记”的Web应用程序，让用户能够记录感兴趣的主题，并在学习每个主题的过程中添加日志条目。“学习笔记”的主页对这个网站进行描述，并邀请用户注册或登录。用户登录后，就可以创建主题、添加新条目以及阅读既有的条目。</p>
 <p>学习新的主题时，记录学到的知识可以帮助跟踪和复习这些知识。优秀的应用程序让这个记录的过程简单易行。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>《Python从入门到实践》</p>
+<p><a href="https://www.jianshu.com/p/c92345eea6b4" target="_blank" rel="noopener">Django新版本(2.x)踩坑记录</a></p>
 <p><a href="https://blog.csdn.net/u012084802/article/details/79625428" target="_blank" rel="noopener">Python练习Django项目——学习笔记</a></p>
 <p><a href="https://www.jianshu.com/p/b3267d16c245" target="_blank" rel="noopener">Python编程从入门到实践：Web应用程序 - Django入门</a></p>
 <p><a href="https://www.runoob.com/html/html-tutorial.html" target="_blank" rel="noopener">HTML 教程</a></p>
 <p><a href="https://docs.djangoproject.com/en/2.2/ref/templates/language/#templates" target="_blank" rel="noopener">Django 官网文档 The Django template language</a></p>
+<p><a href="https://docs.djangoproject.com/en/1.8/ref/templates/" target="_blank" rel="noopener">Django模板文档</a></p>
 <h3 id="建立虚拟环境并激活"><a href="#建立虚拟环境并激活" class="headerlink" title="建立虚拟环境并激活"></a>建立虚拟环境并激活</h3><p>虚拟环境是系统的一个位置，把它隔离出来，这是必须的返校隔离措施，之后我们还要把它公之于众——部署到服务器上。</p>
-<p>刚刚开始问题就出现了，Windows要怎么终端切换到目录来着？之前外星人入侵的项目明明用过，给忘了。之前就是只看了一眼就卡住，没有动手去做，这次让我来百度一鼓作气搞定。</p>
+<p>刚刚开始问题就出现了，Windows要怎么终端切换到目录来着？之前外星人入侵的项目明明用过，给忘了。之前就是只看了一眼，没有动手去做，所以才拖了这么久，这次让我一鼓作气搞定。</p>
 <pre><code>C:\Users\ASUS&gt;d:
 
 D:\&gt;cd learning_log
 
-D:\learning_log&gt;</code></pre><p>原来切换目录这么简单，我只是不知道格式（心虚，这我都不知道，原因还是以前都没怎么认真用过电脑）</p>
+D:\learning_log&gt;</code></pre><p>原来切换目录这么简单，我只是还不会用（心虚，这我都不记得了，原因还是以前都没怎么认真用过电脑）</p>
 <p>还有一个很蠢的问题也解决了，之前下载的是Anaconda 3，用的也一直是Anaconda 的Prompt，我这次直接cmd能有用才怪。不过好在总算是可以继续了。</p>
 <p>现在我们为项目新建了一个目录， 将其命名为learning_log，使用如下命令成功创建名为ll_env的虚拟环境：</p>
 <pre><code>python -m venv ll_env</code></pre><p>建立虚拟环境后， (Windows系统下)成功使用下面的命令激活它：</p>
@@ -582,11 +584,17 @@ python manage<span class="token punctuation">.</span>py migrate
 <span class="token keyword">from</span> learning_logs<span class="token punctuation">.</span>models <span class="token keyword">import</span> Topic<span class="token punctuation">,</span> Entry
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Topic<span class="token punctuation">)</span>
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Entry<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Django-shell"><a href="#Django-shell" class="headerlink" title="Django shell"></a>Django shell</h3><p>用于测试和排除故障的理想之地</p>
+<h3 id="Django-shell"><a href="#Django-shell" class="headerlink" title="Django shell"></a>Django shell</h3><pre><code>python manage.py shell</code></pre><blockquote>
+<p>Cr+Z,回车退出</p>
+</blockquote>
+<p>用于测试和排除故障的理想之地</p>
 <p><a href="https：//docs.djangoproject.com/en/7.8/topics/db/queries">更多关于如何查询数据的文档</a></p>
 <h2 id="创建网页：学习笔记主页"><a href="#创建网页：学习笔记主页" class="headerlink" title="创建网页：学习笔记主页"></a>创建网页：学习笔记主页</h2><p>定义URL、编写视图和编写模板。</p>
 <p>urls -&gt; views -&gt; html  添加网页步骤。</p>
-<h3 id="映射URL"><a href="#映射URL" class="headerlink" title="映射URL"></a>映射URL</h3><p>实际的URL模式是一个对函数url的调用，这个函数接受三个实参。</p>
+<h3 id="映射URL"><a href="#映射URL" class="headerlink" title="映射URL"></a>映射URL</h3><blockquote>
+<p>在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫<em>URL</em>（Uniform Resource Locator,统一资源定位器），它是WWW的统一资源定位标志，就是指网络地址。</p>
+</blockquote>
+<p>实际的URL模式是一个对函数url的调用，这个函数接受三个实参。</p>
 <pre class="line-numbers language-python"><code class="language-python">urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token comment" spellcheck="true">#主页</span>
     <span class="token comment" spellcheck="true">#第一个是正则表达式，r让Python将接下来的字符串视为原始字符串，引号正则表达式始于和终于何处</span>
@@ -823,30 +831,29 @@ urlpatterns = [
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/11/django-ru-men/">
+                <a href="/2020/09/19/django-hou-xu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Django入门">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Django后续">
                         
-                        <span class="card-title">Django入门</span>
+                        <span class="card-title">Django后续</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《Python从入门到实践》的第三个项目，开发一个叫做“学习笔记”（Learning log）的Web应用程序。
+                            《Python从入门到实践》收尾，用户账户以及部署
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -859,7 +866,6 @@ urlpatterns = [
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -886,7 +892,7 @@ urlpatterns = [
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="MATLAB学习">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="MATLAB学习">
                         
                         <span class="card-title">MATLAB学习</span>
                     </div>
@@ -1076,7 +1082,7 @@ urlpatterns = [
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.6k</span>
+            <span class="white-color">7.5k</span>
             
 
             <br>
