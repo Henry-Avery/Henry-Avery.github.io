@@ -275,7 +275,7 @@ LEPTURE
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -392,12 +392,12 @@ LEPTURE
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Blog/" target="_blank">
-                            <span class="chip bg-color">Blog</span>
-                        </a>
-                        
                         <a href="/tags/在更/" target="_blank">
                             <span class="chip bg-color">在更</span>
+                        </a>
+                        
+                        <a href="/tags/Blog/" target="_blank">
+                            <span class="chip bg-color">Blog</span>
                         </a>
                         
                     </div>
@@ -434,14 +434,14 @@ LEPTURE
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    514
+                    944
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -485,7 +485,27 @@ LEPTURE
 <p>您可以使用原始标签插件包装敏感内容。<br>找到正文里面<code>{ {</code>、<code>} }</code>、<code>{ %</code>、<code>% }</code>这样的语句，作如下修改：</p>
 <pre><code>{% raw %}	//敏感内容前加上这个
 Hello {{ sensitive }}	l/敏感内容被包装在中间
-{% endraw %}    //敏感内容后加上这个</code></pre>
+{% endraw %}    //敏感内容后加上这个</code></pre><h2 id="关于廖雪峰的Git教程小结"><a href="#关于廖雪峰的Git教程小结" class="headerlink" title="关于廖雪峰的Git教程小结"></a>关于廖雪峰的Git教程小结</h2><ol>
+<li><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<ol>
+<li>使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</li>
+<li>使用命令<code>git commit -m &lt;message&gt;</code>，完成。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+<p>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中。</p>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192" target="_blank" rel="noopener">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+<p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+<p>“有了远程仓库，妈妈再也不用担心我的硬盘了。”——Git点读机</p>
+
             </div>
             <hr />
 
@@ -591,7 +611,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="计算机书单">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="计算机书单">
                         
                         <span class="card-title">计算机书单</span>
                     </div>
@@ -648,7 +668,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="大一复盘总结">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="大一复盘总结">
                         
                         <span class="card-title">大一复盘总结</span>
                     </div>
@@ -838,7 +858,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.5k</span>
+            <span class="white-color">8.1k</span>
             
 
             <br>
