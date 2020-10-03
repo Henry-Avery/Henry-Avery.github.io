@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</loc>
+    <lastmod>2020-10-03</lastmod>
+  </url>  <url>
+    <loc>https://henryavery.cn/2020/10/03/guan-yu-git-he-github/</loc>
+    <lastmod>2020-10-03</lastmod>
+  </url>  <url>
     <loc>https://henryavery.cn/2020/08/31/cong-1-kai-shi-xie-blog/</loc>
-    <lastmod>2020-10-02</lastmod>
+    <lastmod>2020-10-03</lastmod>
   </url>  <url>
     <loc>https://henryavery.cn/2020/09/02/ji-suan-ji-shu-dan/</loc>
-    <lastmod>2020-10-01</lastmod>
+    <lastmod>2020-10-02</lastmod>
   </url>  <url>
     <loc>https://henryavery.cn/2020/09/19/django-hou-xu/</loc>
     <lastmod>2020-10-01</lastmod>
@@ -14,9 +20,6 @@
     <lastmod>2020-10-01</lastmod>
   </url>  <url>
     <loc>https://henryavery.cn/2020/09/26/wo-de-linux-si-fang-cai/</loc>
-    <lastmod>2020-09-26</lastmod>
-  </url>  <url>
-    <loc>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</loc>
     <lastmod>2020-09-26</lastmod>
   </url>  <url>
     <loc>https://henryavery.cn/2020/09/11/django-ru-men/</loc>

@@ -17,7 +17,7 @@ LEPTURE
 王垠
 要怎么写博客Markdown 简易入门教程
 廖雪峰写的Git教程
-超详细Hexo+Github博客搭建">
+建议window系统先参考教程安装好">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -290,7 +290,7 @@ LEPTURE
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -449,14 +449,14 @@ LEPTURE
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    944
+                    528
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
                 
@@ -481,6 +481,7 @@ LEPTURE
 <p><a href="http://www.yinwang.org/" target="_blank" rel="noopener">王垠</a></p>
 <h4 id="要怎么写博客"><a href="#要怎么写博客" class="headerlink" title="要怎么写博客"></a>要怎么写博客</h4><p><a href="https://blog.huihut.com/2017/01/25/MarkdownTutorial/#urllink" target="_blank" rel="noopener">Markdown 简易入门教程</a></p>
 <p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰写的Git教程</a></p>
+<p>建议window系统先参考教程安装好Git bash</p>
 <p><a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
 <h4 id="为什么要写博客"><a href="#为什么要写博客" class="headerlink" title="为什么要写博客"></a>为什么要写博客</h4><p>可以看看《暗时间》作者刘未鹏写的这篇博客文章</p>
 <p><a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">为什么你应该（从现在开始就）写博客</a></p>
@@ -500,27 +501,7 @@ LEPTURE
 <p>您可以使用原始标签插件包装敏感内容。<br>找到正文里面<code>{ {</code>、<code>} }</code>、<code>{ %</code>、<code>% }</code>这样的语句，作如下修改：</p>
 <pre><code>{% raw %}	//敏感内容前加上这个
 Hello {{ sensitive }}	l/敏感内容被包装在中间
-{% endraw %}    //敏感内容后加上这个</code></pre><h2 id="关于廖雪峰的Git教程小结"><a href="#关于廖雪峰的Git教程小结" class="headerlink" title="关于廖雪峰的Git教程小结"></a>关于廖雪峰的Git教程小结</h2><ol>
-<li><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
-<p>添加文件到Git仓库，分两步：</p>
-<ol>
-<li>使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</li>
-<li>使用命令<code>git commit -m &lt;message&gt;</code>，完成。</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</li>
-<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
-<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
-</ul>
-<p>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中。</p>
-<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192" target="_blank" rel="noopener">版本回退</a>一节，不过前提是没有推送到远程库。</p>
-<p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
-<p>“有了远程仓库，妈妈再也不用担心我的硬盘了。”——Git点读机</p>
-
+{% endraw %}    //敏感内容后加上这个</code></pre>
             </div>
             <hr />
 
@@ -626,7 +607,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="计算机书单">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="计算机书单">
                         
                         <span class="card-title">计算机书单</span>
                     </div>
@@ -683,7 +664,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="大一复盘总结">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="大一复盘总结">
                         
                         <span class="card-title">大一复盘总结</span>
                     </div>
@@ -873,7 +854,7 @@ Hello {{ sensitive }}	l/敏感内容被包装在中间
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.1k</span>
+            <span class="white-color">9.2k</span>
             
 
             <br>

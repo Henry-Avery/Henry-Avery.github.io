@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2020-10-01T02:09:54.681Z</updated>
+  <updated>2020-10-03T04:41:36.266Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Git和Github</title>
+    <link href="https://henryavery.cn/2020/10/03/guan-yu-git-he-github/"/>
+    <id>https://henryavery.cn/2020/10/03/guan-yu-git-he-github/</id>
+    <published>2020-10-03T04:21:35.000Z</published>
+    <updated>2020-10-03T04:41:36.266Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;a href=&quot;#关于廖雪峰的Git教程小结&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>《数学之美》读书笔记</title>
@@ -161,7 +189,7 @@
     <link href="https://henryavery.cn/2020/09/11/mei-sai-qi-hang/"/>
     <id>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</id>
     <published>2020-09-11T02:15:06.000Z</published>
-    <updated>2020-09-26T02:02:16.185Z</updated>
+    <updated>2020-10-03T06:51:08.598Z</updated>
     
     <summary type="html">
     
@@ -191,7 +219,7 @@
     <link href="https://henryavery.cn/2020/09/02/ji-suan-ji-shu-dan/"/>
     <id>https://henryavery.cn/2020/09/02/ji-suan-ji-shu-dan/</id>
     <published>2020-09-02T00:37:34.000Z</published>
-    <updated>2020-10-01T11:43:04.214Z</updated>
+    <updated>2020-10-02T12:49:40.903Z</updated>
     
     <summary type="html">
     
@@ -222,7 +250,7 @@
     <link href="https://henryavery.cn/2020/08/31/cong-1-kai-shi-xie-blog/"/>
     <id>https://henryavery.cn/2020/08/31/cong-1-kai-shi-xie-blog/</id>
     <published>2020-08-31T08:12:05.000Z</published>
-    <updated>2020-10-02T12:32:26.928Z</updated>
+    <updated>2020-10-03T04:23:40.290Z</updated>
     
     <summary type="html">
     
