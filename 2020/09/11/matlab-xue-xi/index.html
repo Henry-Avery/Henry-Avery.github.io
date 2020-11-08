@@ -8,11 +8,11 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="第一周信号处理实验课上课学习学校东区计算机学院708机房没有安装好MATLAB，而且有些机位不能联网，上课老师简单介绍了一下MATLAB和课后作业。
+    <meta name="description" content="第一周信号处理实验课上课学习学校东区计算机学院708机房没有安装好MATLAB，而且有些机位不能联网，上课简单介绍了一下MATLAB和课后作业。
 下次上课带自己的电脑去。
 
 课后作业一些MATLAB的简单操作，课程报告第二周后再提交。
-">
+回去">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -285,7 +285,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -410,6 +410,10 @@
                             <span class="chip bg-color">SHU</span>
                         </a>
                         
+                        <a href="/tags/Signal-Processing/" target="_blank">
+                            <span class="chip bg-color">Signal Processing</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -444,14 +448,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    189
+                    684
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -467,7 +471,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一周信号处理实验课"><a href="#第一周信号处理实验课" class="headerlink" title="第一周信号处理实验课"></a>第一周信号处理实验课</h2><h3 id="上课学习"><a href="#上课学习" class="headerlink" title="上课学习"></a>上课学习</h3><p>学校东区计算机学院708机房没有安装好MATLAB，而且有些机位不能联网，上课老师简单介绍了一下MATLAB和课后作业。</p>
+                <h2 id="第一周信号处理实验课"><a href="#第一周信号处理实验课" class="headerlink" title="第一周信号处理实验课"></a>第一周信号处理实验课</h2><h3 id="上课学习"><a href="#上课学习" class="headerlink" title="上课学习"></a>上课学习</h3><p>学校东区计算机学院708机房没有安装好MATLAB，而且有些机位不能联网，上课简单介绍了一下MATLAB和课后作业。</p>
 <p>下次上课带自己的电脑去。</p>
 <hr>
 <h3 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h3><p>一些MATLAB的简单操作，课程报告第二周后再提交。</p>
@@ -480,6 +484,65 @@
 <p>明天开始学。</p>
 <hr>
 <p>学了半天，看了两节课，还是不会做作业……</p>
+<hr>
+<h2 id="第五周信号处理实验课"><a href="#第五周信号处理实验课" class="headerlink" title="第五周信号处理实验课"></a>第五周信号处理实验课</h2><h3 id="Command-conv"><a href="#Command-conv" class="headerlink" title="Command conv"></a><strong>Command conv</strong></h3><p><em>First rule</em>: The two signals (input and impulse response) should be defined in the <strong>same time interval</strong>. </p>
+<p><em>Second rule</em>: When a signal consists of <strong>multiple parts</strong>, the time intervals in which each part is defined must <strong>not overlap</strong>.</p>
+<p><em>Third rule</em>: The output of the conv command has to be <strong>multiplied with the time step</strong> used in the definition of the input and impulse response signals, in order to correctly compute the output of the system. </p>
+<p><em>Fourth rule</em>: The output of the system is plotted in the <strong>double time interval</strong> of the one in which the input and impulse response signals are defined.</p>
+<pre class="line-numbers language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">%1st  way</span>
+ t1<span class="token operator">=</span><span class="token number">0</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">0.01</span><span class="token punctuation">;</span>
+ t2<span class="token operator">=</span><span class="token number">1</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+ t3<span class="token operator">=</span><span class="token number">2.01</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">;</span>
+ t<span class="token operator">=</span><span class="token punctuation">[</span>t1 t2 t3<span class="token punctuation">]</span><span class="token punctuation">;</span>
+ x1<span class="token operator">=</span><span class="token function">zeros</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ x2<span class="token operator">=</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>t2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ x3<span class="token operator">=</span><span class="token function">zeros</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>t3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ x<span class="token operator">=</span><span class="token punctuation">[</span>x1 x2 x3<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+ h<span class="token operator">=</span>x<span class="token punctuation">;</span>
+
+ y<span class="token operator">=</span><span class="token function">conv</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>h<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token punctuation">;</span>
+
+ <span class="token function">plot</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">20</span><span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token function">axis</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token number">6</span> <span class="token operator">-</span><span class="token punctuation">.</span><span class="token number">1</span> <span class="token number">1.1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ <span class="token function">legend</span><span class="token punctuation">(</span><span class="token string">'y(t)'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">%the two signals</span>
+ figure
+ <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>x<span class="token punctuation">,</span><span class="token number">0</span><span class="token operator">-</span>t<span class="token punctuation">,</span>h<span class="token punctuation">,</span><span class="token string">':'</span><span class="token punctuation">)</span>
+ <span class="token function">legend</span><span class="token punctuation">(</span><span class="token string">'x(t)'</span><span class="token punctuation">,</span><span class="token string">'h(t-\tau)=h(0-\tau)'</span><span class="token punctuation">)</span>
+ <span class="token function">ylim</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token punctuation">.</span><span class="token number">1</span> <span class="token number">1.1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ figure
+ <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>x<span class="token punctuation">,</span><span class="token number">2</span><span class="token operator">-</span>t<span class="token punctuation">,</span>h<span class="token punctuation">,</span><span class="token string">':'</span><span class="token punctuation">)</span>
+ <span class="token function">ylim</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token punctuation">.</span><span class="token number">1</span> <span class="token number">1.1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ <span class="token function">legend</span><span class="token punctuation">(</span><span class="token string">'x(t)'</span><span class="token punctuation">,</span><span class="token string">'h(t-\tau)=h(2-\tau)'</span><span class="token punctuation">)</span>
+
+
+ <span class="token comment" spellcheck="true">%2nd  way</span>
+ figure
+ t<span class="token operator">=</span><span class="token number">1</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+
+ x<span class="token operator">=</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ h<span class="token operator">=</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">size</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ y<span class="token operator">=</span><span class="token function">conv</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>h<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token punctuation">;</span>
+
+ <span class="token function">plot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">:</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+ <span class="token function">legend</span><span class="token punctuation">(</span><span class="token string">'y(t)'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Other-command"><a href="#Other-command" class="headerlink" title="Other command"></a>Other command</h3><pre class="line-numbers language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">% syms</span>
+<span class="token comment" spellcheck="true">% Create symbolic variables and functions</span>
+<span class="token comment" spellcheck="true">% 符号变量</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p>hold on是当前轴及图像保持而不被刷新，准备接受此后将绘制的图形，多图共存。即，启动图形保持功能，当前坐标轴和图形都将保持，从此绘制的图形都将添加在这个图形的基础上，并自动调整坐标轴的范围。</p>
+<p>hold off使当前轴及图像不再具备被刷新的性质，新图出现时，取消原图。即，关闭图形保持功能。</p>
+<hr>
+<p>area(x, y)：该函数以参数x和y绘制面积图。如果x和y为向量，则相当于函数plot(x, y)，并将0到y之间进行了填充。如果参数y为矩阵，则将y的每一列绘制面积图并进行累计求和。<br>area(y)：如果参数y为向量，则绘制面积图；如果y为矩阵则绘制每一列的面积图之和。</p>
+<hr>
+<p>simplify的调用格式为：simplify(S)，对表达式S进行化简</p>
+<hr>
 
             </div>
             <hr />
@@ -586,7 +649,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Django入门">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Django入门">
                         
                         <span class="card-title">Django入门</span>
                     </div>
@@ -639,7 +702,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="美赛启航">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="美赛启航">
                         
                         <span class="card-title">美赛启航</span>
                     </div>
@@ -852,7 +915,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.2k</span>
+            <span class="white-color">10.5k</span>
             
 
             <br>

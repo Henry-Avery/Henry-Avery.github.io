@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2020-10-03T04:41:36.266Z</updated>
+  <updated>2020-10-08T11:46:22.773Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>关于Git和Github</title>
-    <link href="https://henryavery.cn/2020/10/03/guan-yu-git-he-github/"/>
-    <id>https://henryavery.cn/2020/10/03/guan-yu-git-he-github/</id>
-    <published>2020-10-03T04:21:35.000Z</published>
-    <updated>2020-10-03T04:41:36.266Z</updated>
+    <title>VS使用技巧</title>
+    <link href="https://henryavery.cn/2020/10/07/vs-shi-yong-ji-qiao/"/>
+    <id>https://henryavery.cn/2020/10/07/vs-shi-yong-ji-qiao/</id>
+    <published>2020-10-07T02:36:41.000Z</published>
+    <updated>2020-10-08T11:46:22.773Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,35 @@
       
         
         
-          &lt;h2 id=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;a href=&quot;#关于廖雪峰的Git教程小结&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;VS常用快捷键&quot;&gt;&lt;a href=&quot;#VS常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;VS常用快捷键&quot;&gt;&lt;/a&gt;VS常用快捷键&lt;/h2&gt;&lt;h3 id=&quot;变量-方法-类-相关操作&quot;&gt;&lt;a href=&quot;#变量-方法-类-相关操作&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://henryavery.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="IDE" scheme="https://henryavery.cn/tags/IDE/"/>
+    
+      <category term="效率" scheme="https://henryavery.cn/tags/%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Git和Github</title>
+    <link href="https://henryavery.cn/2020/10/03/guan-yu-git-he-github/"/>
+    <id>https://henryavery.cn/2020/10/03/guan-yu-git-he-github/</id>
+    <published>2020-10-03T04:21:35.000Z</published>
+    <updated>2020-10-05T11:27:16.240Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;a href=&quot;#关于廖雪峰的Git教程小结&quot; class=&quot;headerlink&quot; title=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;/a&gt;关于廖雪峰的Git教程小结&lt;/h2&gt;&lt;p&gt;&lt;img
         
       
     
@@ -38,39 +66,9 @@
       <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
       <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
-    
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《数学之美》读书笔记</title>
-    <link href="https://henryavery.cn/2020/10/01/shu-xue-zhi-mei/"/>
-    <id>https://henryavery.cn/2020/10/01/shu-xue-zhi-mei/</id>
-    <published>2020-09-30T23:42:04.000Z</published>
-    <updated>2020-10-01T02:09:54.681Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;《数学之美》阅读笔记&quot;&gt;&lt;a href=&quot;#《数学之美》阅读笔记&quot; class=&quot;headerlink&quot; title=&quot;《数学之美》阅读笔记&quot;&gt;&lt;/a&gt;《数学之美》阅读笔记&lt;/h1&gt;&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="阅读笔记" scheme="https://henryavery.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
-      <category term="数学" scheme="https://henryavery.cn/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="NLP" scheme="https://henryavery.cn/tags/NLP/"/>
     
   </entry>
   
@@ -161,7 +159,7 @@
     <link href="https://henryavery.cn/2020/09/11/matlab-xue-xi/"/>
     <id>https://henryavery.cn/2020/09/11/matlab-xue-xi/</id>
     <published>2020-09-11T03:21:25.000Z</published>
-    <updated>2020-09-26T01:08:41.768Z</updated>
+    <updated>2020-10-14T13:01:52.698Z</updated>
     
     <summary type="html">
     
@@ -182,6 +180,8 @@
     
       <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
     
+      <category term="Signal Processing" scheme="https://henryavery.cn/tags/Signal-Processing/"/>
+    
   </entry>
   
   <entry>
@@ -189,7 +189,7 @@
     <link href="https://henryavery.cn/2020/09/11/mei-sai-qi-hang/"/>
     <id>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</id>
     <published>2020-09-11T02:15:06.000Z</published>
-    <updated>2020-10-03T06:51:08.598Z</updated>
+    <updated>2020-10-14T10:47:06.645Z</updated>
     
     <summary type="html">
     
@@ -267,9 +267,9 @@
       <category term="博客" scheme="https://henryavery.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Blog" scheme="https://henryavery.cn/tags/Blog/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
