@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2020-10-08T11:46:22.773Z</updated>
+  <updated>2020-11-15T09:36:34.429Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何阅读一篇科研论文</title>
+    <link href="https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/"/>
+    <id>https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/</id>
+    <published>2020-10-09T03:22:44.000Z</published>
+    <updated>2020-11-15T09:36:34.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;检索论文&quot;&gt;&lt;a href=&quot;#检索论文&quot; class=&quot;headerlink&quot; title=&quot;检索论文&quot;&gt;&lt;/a&gt;检索论文&lt;/h2&gt;&lt;p&gt;知网（学校资源库）、知乎、各大顶会……&lt;/p&gt;
+&lt;h2 id=&quot;下载论文&quot;&gt;&lt;a href=&quot;#下载论文&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="论文阅读" scheme="https://henryavery.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+      <category term="论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
+    
+      <category term="信号处理" scheme="https://henryavery.cn/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>VS使用技巧</title>
