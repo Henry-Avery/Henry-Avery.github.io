@@ -507,15 +507,14 @@
 <blockquote>
 <p>于是小波变换的出发点和STFT还是不同的。<strong>STFT是给信号加窗，分段做FFT</strong>；而小波直接把傅里叶变换的基给换了——将<strong>无限长的三角函数基</strong>换成了<strong>有限长的会衰减的小波基</strong>。这样<strong>不仅能够获取频率</strong>，还可以<strong>定位到时间</strong>了~</p>
 </blockquote>
-<p><img src="https://pic3.zhimg.com/80/94b5f53d29d655e0a4d90fa867027eda_720w.jpg" alt="img"></p>
-<p><img src="D:%5CDraft%5Cxiaobo.jpg" alt="xiaobo"></p>
+<p><img src="https://pic3.zhimg.com/80/94b5f53d29d655e0a4d90fa867027eda_720w.jpg" alt="小波变换"></p>
+<p><img src="D:%5CBlog2%5Csource_posts%5Cxiaobo.jpg" alt="小波"></p>
 <h5 id="可逆神经网络模型（Invertible-NN-INN）"><a href="#可逆神经网络模型（Invertible-NN-INN）" class="headerlink" title="可逆神经网络模型（Invertible NN, INN）"></a>可逆神经网络模型（Invertible NN, INN）</h5><p><a href="https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html" target="_blank" rel="noopener">可逆神经网络模型</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/268242678" target="_blank" rel="noopener">神经网络的可逆形式</a></p>
 <p><a href="https://www.jianshu.com/p/37c482fe4d2a" target="_blank" rel="noopener">可逆神经网络 Invertible Neural Networks</a></p>
 <p>对于一些问题，研究人员建立了复杂的理论模型，用于实现隐式参数到可测量值的映射，这种映射称之为前向过程。逆向过程即根据测量值得到隐式参数，这也是实际需要解决的问题。但是逆向过程难以解决，因为在前向过程中丢失了一些关键信息。</p>
 <p>如果直接用传统神经网络去训练逆向过程，则效果会很受限，因为逆向过程为一对多映射。神经网络训练出的模型，最好情况是识别最可能的解决方案；最差情况是采用多种解决方案的平均值。</p>
 <p>INN 有三个特征：（i）从输入到输出的映射是双射的，即它的逆存在（ii）正向和反向映射都是有效可计算的（iii）映射具有易处理的雅可比行列式，因此概率可以通过变量公式明确转换。</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/14196533-f47de6b7378accb4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1043/format/webp" alt="img"></p>
 <p>标准NN v.s. INN</p>
 <p>标准 NN 直接对逆向过程进行训练，但其需要一个监督损失（SL）项，来区分真正的 x 与预测的 x（我们可以暂时把 SL 理解为一个确定的代价函数），而 y-&gt;x 这种一对多映射使得传统 NN 受到很大限制。INN 只对前向过程使用 SL，而由于并没有一个确定的 x 值，因此预测的 x 属于无监督损失（USL），需要遵循之前的 p(x)；另外，潜在变量 z 需要服从高斯分布，也是属于 USL。</p>
 <p>由于在前向过程中会丢失一些信息，因此引入了额外的潜在输出变量 z，被训练去抓获与 x 有关的但并未包含在 y 内的信息。此外，需要训练网络根据高斯分布对 p(z) 进行调整。即，p(x|y) 被调整为一个确定的函数 x = g(y,z)，这个函数将已知的分布 p(z) 在满足 y 的情况下转换到 x 空间。</p>
