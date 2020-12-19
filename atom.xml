@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2020-11-28T11:23:05.160Z</updated>
+  <updated>2020-11-28T11:37:07.683Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -21,12 +21,26 @@
     <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
     <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
     <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2020-11-28T11:23:05.160Z</updated>
+    <updated>2020-11-28T11:37:07.683Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h1 id=&quot;计算机组成原理与结构体系&quot;&gt;&lt;a href=&quot;#计算机组成原理与结构体系&quot; class=&quot;headerlink&quot;
+        
+      
+    
     </summary>
     
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+      <category term="计算机组成原理" scheme="https://henryavery.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -35,12 +49,26 @@
     <link href="https://henryavery.cn/2020/11/28/shu-shu-ju-jie-gou/"/>
     <id>https://henryavery.cn/2020/11/28/shu-shu-ju-jie-gou/</id>
     <published>2020-11-28T11:22:43.000Z</published>
-    <updated>2020-11-28T11:22:43.794Z</updated>
+    <updated>2020-11-28T11:38:05.611Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h1 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot;
+        
+      
+    
     </summary>
     
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+      <category term="数据结构" scheme="https://henryavery.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -153,9 +181,9 @@
       <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
@@ -276,7 +304,7 @@
     <link href="https://henryavery.cn/2020/09/11/mei-sai-qi-hang/"/>
     <id>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</id>
     <published>2020-09-11T02:15:06.000Z</published>
-    <updated>2020-10-14T10:47:06.645Z</updated>
+    <updated>2020-12-19T04:28:28.056Z</updated>
     
     <summary type="html">
     
