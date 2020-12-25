@@ -503,14 +503,14 @@ IPADDR=192.168.224.130
 NETMASK=255.255.255.0
 NETWORK=192.168.224.0 
 GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件名不一样呢？（ifconfig-eth0和ifcfg-eth0）</p>
-<p>这里要么是版本的问题，要么就是一个笔误，造成的后果可能就是你三台虚拟机都能ping master而不能实现真正的互通</p>
-<p>（显示Unreachable）。</p>
+<p>这里要么是版本的问题，要么就是一个笔误，造成的后果可能就是你三台虚拟机都能ping master而不能实现真正的互通（会显示Unreachable）。</p>
 <p>因为如果你细心的话就会发现当你在复制的虚拟机上打开ifconfig-eth0时，其实是新建了一个名为ifconfig-eth0的文件，而不是打开了复制过来的ifcfg-eth0文件。（可以自己验证一下）这里只需要注意一下即可。</p>
 <p>我遇到的最坑的问题还是下面这个</p>
 <p><img src="https://images2015.cnblogs.com/blog/798663/201607/798663-20160711161510686-1749110137.png" alt="直接复制文件导致两台虚拟机Mac相同，即物理地址和备份的虚拟机重复"></p>
-<p>我是按照教程在windows中文件中直接将一个虚拟机进行复制了两份（克隆好像就没有问题），然后用vm打开， 选择我已经复制，结果虚拟机开机的时候出现了上面的日志消息提示，导致了我无法ping 通。解决方法如下（改不了的话先关闭一下虚拟机）：</p>
+<p>我是按照教程在windows中文件中直接将一个虚拟机进行复制了两份（克隆好像就没有问题），然后用vm打开， 选择我已经复制，结果虚拟机开机的时候出现了上面的日志消息提示，导致了我无法ping 通。解决方法如下（改不了的话先关闭一下虚拟机）： </p>
 <p><a href="https://www.cnblogs.com/nucdy/p/5660701.html" target="_blank" rel="noopener">如何更改Mac地址</a></p>
 <hr>
+<p>配置ssh等明天再说了，圣诞节快乐！</p>
 
             </div>
             <hr />
@@ -881,7 +881,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">27.7k</span>
+            <span class="white-color">27.8k</span>
             
 
             <br>
