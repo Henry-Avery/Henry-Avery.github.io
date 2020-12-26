@@ -282,7 +282,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -441,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    9 分
                 </div>
                 
                 
@@ -485,7 +485,7 @@
 <p>最后还是不得不吐槽一下老师给的参考教程版本实在是太老了，虽然我在这个很痛苦的过程中也学到了不少东西，但也带来了很多不必要的困扰，就拿centos6.5这个版本举例，现在都0202年了，官网上有的是centos7和8，那找起6.5来就是一个重复做功的过程，而教程后的链接也是失效的，简直是浪费感情。</p>
 <p>剩下的其实就只要按照老师给的教程来就行了，直到虚拟机之间互通这里，我碰到最麻烦的问题也还是版本的问题，吐槽最多的地方也还是教程太老以及不够仔细。</p>
 <hr>
-<p>下面是我在实验过程中遇到过的一些问题，仅供参考。</p>
+<h3 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h3><p>下面是我在实验过程中遇到过的一些问题，仅供参考。</p>
 <p>首先还是回到老师给的教程上里面，如果你看的足够仔细就会发现有个地方很奇怪，那就是在修改复制的（或者说克隆）虚拟机ip这里，原来教程这里写的是</p>
 <pre><code>修改ip：
 vim /etc/sysconfig/network-scripts/ifconfig-eth0
@@ -510,7 +510,48 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>我是按照教程在windows中文件中直接将一个虚拟机进行复制了两份（克隆好像就没有问题），然后用vm打开， 选择我已经复制，结果虚拟机开机的时候出现了上面的日志消息提示，导致了我无法ping 通。解决方法如下（改不了的话先关闭一下虚拟机）： </p>
 <p><a href="https://www.cnblogs.com/nucdy/p/5660701.html" target="_blank" rel="noopener">如何更改Mac地址</a></p>
 <hr>
-<p>配置ssh等明天再说了，圣诞节快乐！</p>
+<p><strong>ssh无密码验证原理：</strong></p>
+<p>节点A要实现无密码公钥认证连接到节点B上时，节点A是客户端，节点B是服务端，需要在客户端A上生成一个密钥对，包括一个公钥和一个私钥，而后将公钥复制到服务端B上。当客户端A通过ssh连接服务端B时，服务端B就会生成一个随机数并用客户端A的公钥对随机数进行加密，并发送给客户端A。客户端A收到加密数之后再用私钥进行解密，并将解密数回传给B，B确认解密数无误之后就允许A进行连接了。这就是一个公钥认证过程，其间不需要用户手工输入密码。重要过程是将客户端A公钥复制到B上。</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226101109645.png" alt="第一步就出问题"></p>
+<p>教程里第一步启用shh服务找不到文件，可能是版本不一样所以命令不一样了，不过很神奇的是我在第一台虚拟机上能够使用这条命令，但是复制的那两台上无法成功运行。所以我直接参考了<a href="https://www.cnblogs.com/opsprobe/p/9147934.html" target="_blank" rel="noopener">CentOS6.5下安装、配置SSH</a>（最后是使用putty需要自行安装），只要确认shh正常启用就行。以下是我成功运行的一些命令</p>
+<blockquote>
+<p>1.登录CentOS 6.5系统，使用root用户登录，如果为非root用户则执行 su 或 su - 或 su root 或 su - root 输入root密码切换为root用户。</p>
+<p>2.查看SSH是否安装（检查是否装了SSH包）。<br>输入命令：rpm -qa | grep ssh 或者（rpm -qa | grep openssh）</p>
+<p>3.查看SSH服务是否正在运行。<br>输入命令：/etc/init.d/sshd status 或者（service sshd status）</p>
+<p>4.若CentOS 6.5系统中SSH服务处于非运行状态则使用（service sshd start）命令开启SSH服务；停止SSH服务命令（service sshd stop）；重启SSH服务命令（service sshd restart）。为了演示效果，我这里先停止SSH服务，然后启动SSH服务，再接着重启SSH服务。[service sshd stop] -&gt; [/etc/init.d/sshd status] -&gt; [service sshd start]-&gt; [service sshd restart] -&gt; [/etc/init.d/sshd status] </p>
+<p>[重启后可输入：netstat -antp | grep sshd 查看是否启动22端口]</p>
+<p>5.检查sshd是否在本运行级别下设置为开机启动<br>输入命令：chkconfig –list sshd<br>CentOS 6.5系统中SSH服在本运行级别下已经设置为开机启动,如果没设置启动就使用如下命令[chkconfig –level 2345 sshd on]设置下即可。（每个级别需要分别开启）</p>
+</blockquote>
+<p>【常见的远程SSH登录工具有：securecrt、xshell、putty等..】</p>
+<p><a href="https://blog.csdn.net/wojiuguowei/article/details/79308090" target="_blank" rel="noopener">使用Xshell远程访问虚拟机</a></p>
+<p>先来看看按照老师给的教程能不能幸运地完成实验吧。</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226104550753.png" alt="很不幸，不能"></p>
+<p>最后一条重启命令一看就知道应该是service写错成servive了。</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226104910576.png" alt="正常重启"></p>
+<p>之后就是一路采坑，最后也不知道自己怎么搞定的，看了很多博客但好像最后都没怎么用上。</p>
+<p>这里具体问题还需要具体解决，可以在这篇博客的评论区把遇到的问题发出来，让大家帮忙看看。</p>
+<p><strong>scp连接远程传输报错The authenticity of host …… can‘t be established.</strong></p>
+<p><a href="https://blog.csdn.net/qq_35022803/article/details/108937779" target="_blank" rel="noopener">解决linux配置ssh免密登录遇到的异常：-bash: cd: /root/.ssh: Not a directory</a></p>
+<p>No such file：可能要先进入子目录（cd .ssh），然后在使用scp命令，否则找不到你要传输的文件</p>
+<hr>
+<p><strong>使用ssh实现windows主机与linxu虚拟机文件互传</strong></p>
+<p>这一步网上教程很多，但是可能还是不能完全符合我们的需求。</p>
+<p>首先在主机上安装SSH Secure Shell，这个软件的下载地址是：<a href="http://ccm.net/download/download-1423-ssh-secure-shell-windows，如果打不开，请自行百度解决。" target="_blank" rel="noopener">http://ccm.net/download/download-1423-ssh-secure-shell-windows，如果打不开，请自行百度解决。</a></p>
+<p>在实现互传文件之前先要令主机和虚拟机ping通，所以在这里先直接测试能不能ping通，别急着关防火墙和调整网络设置，如果之前的操作正确的话是可以直接跳过前两步的。</p>
+<blockquote>
+<p>在cmd中输入ipconfig查看本机ip，在terminal中输入ifconfig查看虚拟机ip</p>
+</blockquote>
+<p><a href="https://blog.csdn.net/jiechuhoudeshang/article/details/94407815?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.not_use_machine_learn_pai&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.not_use_machine_learn_pai" target="_blank" rel="noopener">虚拟机和主机相互ping不通方法总结</a></p>
+<p>为了使用虚拟机而关闭防火墙这种因小失大的做法是不大可取的，其实设置防火墙很简单，以win7为例，打开控制面板 &gt; 系统和安全 &gt; windows防火墙 &gt;高级设置 &gt;入站规则 &gt; 文件和打印机共享(回显请求 - ICMPv4-In) （专用，公用） &gt; 右键启用 即可</p>
+<p><strong>注意事项</strong>：直接打开SSH Secure File Transfer输入Hostname和Username然后输入密码。</p>
+<p><strong>注意用户名这里不是master和slave1或2，而是你登录虚拟机时的用户名，</strong>比如我三台虚拟机用户名都是centos，否则用户名和密码不匹配会一直让你输入密码。</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226143547752.png" alt="小波男神"></p>
+<hr>
+<p><strong>RSH互通</strong></p>
+<p>摆脱教程之后说不定还更简单了，而且碰巧找到了一篇可能是前两届某位学长写的博客，补充了没有的rsh部分，有兴趣可以看看，反正我是不想再多看了一眼了。</p>
+<p><a href="https://blog.csdn.net/kingdomkitty/article/details/79897572" target="_blank" rel="noopener">centos6.5 配置ssh与rsh</a></p>
+<hr>
+<p>至此，这次机组实验就差不多完成了，欢迎在评论留言区提出纠错和交流讨论！</p>
 
             </div>
             <hr />
@@ -618,7 +659,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SHU机组">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="SHU机组">
                         
                         <span class="card-title">SHU机组</span>
                     </div>
@@ -672,7 +713,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="SHU数据结构">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="SHU数据结构">
                         
                         <span class="card-title">SHU数据结构</span>
                     </div>
@@ -881,7 +922,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">27.8k</span>
+            <span class="white-color">29.1k</span>
             
 
             <br>
