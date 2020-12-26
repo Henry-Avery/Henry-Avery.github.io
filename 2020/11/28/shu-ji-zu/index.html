@@ -512,7 +512,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <hr>
 <p><strong>ssh无密码验证原理：</strong></p>
 <p>节点A要实现无密码公钥认证连接到节点B上时，节点A是客户端，节点B是服务端，需要在客户端A上生成一个密钥对，包括一个公钥和一个私钥，而后将公钥复制到服务端B上。当客户端A通过ssh连接服务端B时，服务端B就会生成一个随机数并用客户端A的公钥对随机数进行加密，并发送给客户端A。客户端A收到加密数之后再用私钥进行解密，并将解密数回传给B，B确认解密数无误之后就允许A进行连接了。这就是一个公钥认证过程，其间不需要用户手工输入密码。重要过程是将客户端A公钥复制到B上。</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226101109645.png" alt="第一步就出问题"></p>
+<p><img src="SHU%E6%9C%BA%E7%BB%84%5Cimage-20201226101109645.png" alt="第一步就出问题"></p>
 <p>教程里第一步启用shh服务找不到文件，可能是版本不一样所以命令不一样了，不过很神奇的是我在第一台虚拟机上能够使用这条命令，但是复制的那两台上无法成功运行。所以我直接参考了<a href="https://www.cnblogs.com/opsprobe/p/9147934.html" target="_blank" rel="noopener">CentOS6.5下安装、配置SSH</a>（最后是使用putty需要自行安装），只要确认shh正常启用就行。以下是我成功运行的一些命令</p>
 <blockquote>
 <p>1.登录CentOS 6.5系统，使用root用户登录，如果为非root用户则执行 su 或 su - 或 su root 或 su - root 输入root密码切换为root用户。</p>
@@ -525,9 +525,9 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>【常见的远程SSH登录工具有：securecrt、xshell、putty等..】</p>
 <p><a href="https://blog.csdn.net/wojiuguowei/article/details/79308090" target="_blank" rel="noopener">使用Xshell远程访问虚拟机</a></p>
 <p>先来看看按照老师给的教程能不能幸运地完成实验吧。</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226104550753.png" alt="很不幸，不能"></p>
+<p><img src="SHU%E6%9C%BA%E7%BB%84%5Cimage-20201226104550753.png" alt="很不幸，不能"></p>
 <p>最后一条重启命令一看就知道应该是service写错成servive了。</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226104910576.png" alt="正常重启"></p>
+<p><img src="SHU%E6%9C%BA%E7%BB%84/image-20201226104910576.png" alt="正常重启"></p>
 <p>之后就是一路采坑，最后也不知道自己怎么搞定的，看了很多博客但好像最后都没怎么用上。</p>
 <p>这里具体问题还需要具体解决，可以在这篇博客的评论区把遇到的问题发出来，让大家帮忙看看。</p>
 <p><strong>scp连接远程传输报错The authenticity of host …… can‘t be established.</strong></p>
@@ -545,7 +545,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>为了使用虚拟机而关闭防火墙这种因小失大的做法是不大可取的，其实设置防火墙很简单，以win7为例，打开控制面板 &gt; 系统和安全 &gt; windows防火墙 &gt;高级设置 &gt;入站规则 &gt; 文件和打印机共享(回显请求 - ICMPv4-In) （专用，公用） &gt; 右键启用 即可</p>
 <p><strong>注意事项</strong>：直接打开SSH Secure File Transfer输入Hostname和Username然后输入密码。</p>
 <p><strong>注意用户名这里不是master和slave1或2，而是你登录虚拟机时的用户名，</strong>比如我三台虚拟机用户名都是centos，否则用户名和密码不匹配会一直让你输入密码。</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201226143547752.png" alt="小波男神"></p>
+<p><img src="SHU%E6%9C%BA%E7%BB%84%5Cimage-20201226143547752.png" alt="小波男神"></p>
 <hr>
 <p><strong>RSH互通</strong></p>
 <p>摆脱教程之后说不定还更简单了，而且碰巧找到了一篇可能是前两届某位学长写的博客，补充了没有的rsh部分，有兴趣可以看看，反正我是不想再多看了一眼了。</p>
