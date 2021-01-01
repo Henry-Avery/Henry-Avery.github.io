@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2020-12-26T07:10:16.991Z</updated>
+  <updated>2021-01-01T11:03:15.284Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《人机共生》</title>
+    <link href="https://henryavery.cn/2021/01/01/ren-ji-gong-sheng/"/>
+    <id>https://henryavery.cn/2021/01/01/ren-ji-gong-sheng/</id>
+    <published>2021-01-01T10:54:04.000Z</published>
+    <updated>2021-01-01T11:03:15.284Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Man-Computer Symbiosis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;J. C. R. Licklider&lt;/strong&gt;&lt;br&gt;IRE Transactions on Human Factors in
+        
+      
+    
+    </summary>
+    
+      <category term="-未来" scheme="https://henryavery.cn/categories/%E6%9C%AA%E6%9D%A5/"/>
+    
+    
+      <category term="-论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SHU机组</title>
     <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
     <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
     <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2020-12-26T07:10:16.991Z</updated>
+    <updated>2020-12-31T01:38:16.715Z</updated>
     
     <summary type="html">
     
@@ -181,9 +208,9 @@
       <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
-    
       <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+      <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
     
   </entry>
   
