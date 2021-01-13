@@ -8,8 +8,9 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="计算机组成原理与结构体系实验一二三（实验箱）实验四（虚拟机）前期准备
-看一遍老师给的教程。（虽然它是一份老掉牙的教程，但是你首先得知道自己要干什么，然后才好跟上大家吐槽的脚步。建议先全部看一遍，而且最后的问题汇总其实更应该放到教程开头才对）">
+    <meta name="description" content="计算机组成原理与结构体系理论学习b站王道机组课程
+实验一二三（实验箱）实验四（虚拟机）前期准备
+看一遍老师给的教程。（虽然它是一份老掉牙的教程，但是你首先得知道自己要干什么，然后才好跟上大家吐槽的脚步。建议先全部看一遍，而且最后的问题汇总其">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -282,7 +283,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -441,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    15 分
                 </div>
                 
                 
@@ -464,7 +465,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机组成原理与结构体系"><a href="#计算机组成原理与结构体系" class="headerlink" title="计算机组成原理与结构体系"></a>计算机组成原理与结构体系</h1><h2 id="实验一二三（实验箱）"><a href="#实验一二三（实验箱）" class="headerlink" title="实验一二三（实验箱）"></a>实验一二三（实验箱）</h2><h2 id="实验四（虚拟机）"><a href="#实验四（虚拟机）" class="headerlink" title="实验四（虚拟机）"></a>实验四（虚拟机）</h2><h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><ul>
+                <h1 id="计算机组成原理与结构体系"><a href="#计算机组成原理与结构体系" class="headerlink" title="计算机组成原理与结构体系"></a>计算机组成原理与结构体系</h1><h2 id="理论学习"><a href="#理论学习" class="headerlink" title="理论学习"></a>理论学习</h2><p><a href="https://www.bilibili.com/video/BV1BE411D7ii" target="_blank" rel="noopener">b站王道机组课程</a></p>
+<h2 id="实验一二三（实验箱）"><a href="#实验一二三（实验箱）" class="headerlink" title="实验一二三（实验箱）"></a>实验一二三（实验箱）</h2><h2 id="实验四（虚拟机）"><a href="#实验四（虚拟机）" class="headerlink" title="实验四（虚拟机）"></a>实验四（虚拟机）</h2><h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><ul>
 <li><p>看一遍老师给的教程。（虽然它是一份老掉牙的教程，但是你首先得知道自己要干什么，然后才好跟上大家吐槽的脚步。建议先全部看一遍，而且最后的问题汇总其实更应该放到教程开头才对）</p>
 </li>
 <li><p>最好提前了解一点Linux操作系统的相关知识，不是很清楚也没关系，按照步骤把实验做一遍下来大概也就差不多了。</p>
@@ -551,11 +553,62 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>摆脱教程之后说不定还更简单了，而且碰巧找到了一篇可能是前两届某位学长写的博客，补充了没有的rsh部分，有兴趣可以看看，反正我是不想再多看了一眼了。</p>
 <p><a href="https://blog.csdn.net/kingdomkitty/article/details/79897572" target="_blank" rel="noopener">centos6.5 配置ssh与rsh</a></p>
 <hr>
+<p><a href="https://www.cnblogs.com/baimh/p/11139668.html" target="_blank" rel="noopener"><strong>连接外网</strong></a></p>
+<p><strong>下面摘抄了关于网络配置模式的介绍，可以详细了解下，可以对配置更加清晰；</strong></p>
+<blockquote>
+<p>桥接 通过使用物理机网卡 具有单独ip<br>NAT 把物理机为路由器进行上网</p>
+<p>下面是详细的解说：</p>
+<p>VMWare提供了三种工作模式，它们是bridged(bridged模式)、NAT(网络地址转换模式)和host-only(主机模式)。要想在网络管理和维护中合理应用它们，了解一下这三种工作模式。</p>
+<p><strong>1.bridged(桥接模式)</strong></p>
+<p>在bridged模式下，VMWare虚拟出来的操作系统就像是局域网中的一台独立的主机，它可以访问网内任何一台机器。在bridged模式下，需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。同时，由于这个虚拟系统是局域网中的一个独立的主机系统，那么就可以手工配置它的TCP/IP配置信息，以实现通过局域网的网关或路由器访问互联网。使用bridged模式的虚拟系统和宿主机器的关系，就像连接在同一个Hub上的两台电脑。想让它们相互通讯，就需要为虚拟系统配置IP地址和子网掩码，否则就无法通信。如果想利用VMWare在局域网内新建一个虚拟服务器，为局域网用户提供网络服务，就应该选择bridged模式。<br>这种方式最简单，直接将虚拟网卡桥接到一个物理网卡上面，和linux下一个网卡 绑定两个不同地址类似，实际上是将网卡设置为混杂模式，从而达到侦听多个IP的能力。在此种模式下，虚拟机内部的网卡（例如linux下的eth0)直接连到了物理网卡所在的网络上，可以想象为虚拟机和host机处于对等的地位，在网络关系上是平等的，没有谁在谁后面的问题。<br>使用这种方式很简单，前提是可以得到1个以上的地址。</p>
+<p><strong>2.NAT(网络地址转换模式)</strong></p>
+<p>使用NAT模式，就是让虚拟系统借助NAT(网络地址转换)功能，通过宿主机器所在的网络来访问公网。也就是说，使用NAT模式可以实现在虚拟系统里访问互联网。NAT模式下的虚拟系统的TCP/IP配置信息是由VMnet8(NAT)虚拟网络的DHCP服务器提供的，无法进行手工修改，因此虚拟系统也就无法和本局域网中的其他真实主机进行通讯。采用NAT模式最大的优势是虚拟系统接入互联网非常简单，你不需要进行任何其他的配置，只需要宿主机器能访问互联网即可。<br>这种方式也可以实现Host OS与Guest OS的双向访问。但网络内其他机器不能访问Guest OS，Guest OS可通过Host OS用NAT协议访问网络内其他机器。NAT方式的IP地址配置方法是由VMware的虚拟DHCP服务器中分配一个IP ，在这个IP地址中已经设置好路由，就是指向192.168.138.1的。</p>
+<p>如果想利用VMWare安装一个新的虚拟系统，在虚拟系统中不用进行任何手工配置就能直接访问互联网，建议你采用NAT模式。这种方式下host内部出现了一个虚拟的网卡vmnet8（默认情况下），如果有过 做nat服务器的经验，这里的vmnet8就相当于连接到内网的网卡，而虚拟机本身则相当于运 行在内网上的机器，虚拟机内的网卡（eth0）则独立于vmnet8。发现在这种方式下，vmware自带的dhcp会默认地加载到vmnet8界面上，这样虚拟机就可以使用dhcp服务。更为重要的是，vmware自带了nat服务，提供了从vmnet8到外网的地址转换，所以这种情况是一个实实在在的nat服务器在运行，只不过是供虚拟机用的。</p>
+</blockquote>
+<hr>
 <h2 id="AI科普：NVIDIA自动避障小车Jetbot-amp-口罩识别"><a href="#AI科普：NVIDIA自动避障小车Jetbot-amp-口罩识别" class="headerlink" title="AI科普：NVIDIA自动避障小车Jetbot &amp;口罩识别"></a>AI科普：NVIDIA自动避障小车Jetbot &amp;口罩识别</h2><p>讲师：侯宇涛，英伟达公司GPU/CUDA应用市场总监。何琨，英伟达开发者社区高级培训师。</p>
 <blockquote>
 <p>上机实验口罩识别就只是使用一下他们写的代码，挺无聊的。</p>
 </blockquote>
 <hr>
+<h2 id="实验五OpenMP"><a href="#实验五OpenMP" class="headerlink" title="实验五OpenMP"></a>实验五OpenMP</h2><p><a href="https://zhuanlan.zhihu.com/p/61857547" target="_blank" rel="noopener">OpenMP入门实例与分析</a></p>
+<p><strong>实验目的</strong></p>
+<p>1) 在Linux平台上编译和运行OpenMP程序；</p>
+<p>2) 在Windows平台上编译和运行OpenMP程序。</p>
+<p>3) 掌握OpenMP并行编程基础。</p>
+<p><strong>实验环境</strong></p>
+<p>1) 硬件环境：计算机一台；</p>
+<p>2) 软件环境：Linux、Win2003、GCC、MPICH、VS2008或其他版本Visual Studio；</p>
+<p><strong>实验内容</strong></p>
+<p>Linux下OpenMP程序的编译和运行。OpenMP是一个共享存储并行系统上的应用编程接口，支持C/C++和FORTRAN等语言，编译和运行简单的”Hello World”程序。在Linux下编辑hellomp.c源程序，或在Windows下编辑并通过附件中的FTP工具（端口号：1021）上传，用”gcc -fopenmp -O2 -o hellomp.out hellomp.c”命令编译，用”./hellomp.out”命令运行程序。</p>
+<p>注：在虚拟机中当使用vi编辑文件时，不是以ESC键退出插入模式，可以使用“Ctrl+c”进入命令模式，然后输入wq进行存盘退出。</p>
+<p>Linux下OpenMP环境，需要安装gcc(<strong>此处注意避坑</strong>)</p>
+<pre><code>yum intall gcc    (在redhat, centOS 下使用，用root安装，必须保证网络畅通)</code></pre><p><a href="https://blog.csdn.net/weixin_44160584/article/details/110872926?utm_medium=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v29-2.nonecase&depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v29-2.nonecase" target="_blank" rel="noopener">centos 6.5 yum安装报YumRepo Error: All mirror URLs are not using ftp, http[s] or file</a></p>
+<p><a href="https://bbs.csdn.net/topics/392269634" target="_blank" rel="noopener">Linux中安装gcc出现All mirror URLs are not using ftp,http[s] or file</a></p>
+<blockquote>
+<p>修改镜像配置：vim /etc/yum.repos.d/CentOS-Base.repo</p>
+<p>将配置文件中的#mirrorlist注释掉，取消注销baseurl的行，将$releasever改成你的centos的版本号,可用cat /etc/redhat-release查看</p>
+</blockquote>
+<p>如果能够正常安装好编译器就没有什么问题了，写好代码放在不同地方跑而已。</p>
+<p>测试代码如下：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <omp.h>
+#include <stdio.h>
+int main()
+{
+int nthreads,tid;
+omp_set_num_threads(8);
+#pragma omp parallel private(nthreads,tid)
+{
+tid=omp_get_thread_num();
+printf("Hello World from OMP thread %d\n",tid);
+if(tid==0)
+{
+nthreads=omp_get_num_threads();
+printf("Number of threads is %d\n",nthreads);
+}
+}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>先从本地传到虚拟机上去，编译然后运行正常就OK了。</p>
 
             </div>
             <hr />
@@ -662,7 +715,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="《人机共生》">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="《人机共生》">
                         
                         <span class="card-title">《人机共生》</span>
                     </div>
@@ -711,7 +764,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="SHU数据结构">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="SHU数据结构">
                         
                         <span class="card-title">SHU数据结构</span>
                     </div>
@@ -920,7 +973,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">44.7k</span>
+            <span class="white-color">46.5k</span>
             
 
             <br>

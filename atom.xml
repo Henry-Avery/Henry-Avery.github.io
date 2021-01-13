@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-01-01T11:03:15.284Z</updated>
+  <updated>2021-01-07T00:45:32.627Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Docker学习</title>
+    <link href="https://henryavery.cn/2021/01/02/docker/"/>
+    <id>https://henryavery.cn/2021/01/02/docker/</id>
+    <published>2021-01-02T08:39:14.000Z</published>
+    <updated>2021-01-07T00:45:32.627Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么要学习Docker&quot;&gt;&lt;a href=&quot;#为什么要学习Docker&quot; class=&quot;headerlink&quot; title=&quot;为什么要学习Docker?&quot;&gt;&lt;/a&gt;为什么要学习Docker?&lt;/h2&gt;&lt;p&gt;为了解决环境配置问题&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Docker" scheme="https://henryavery.cn/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>《人机共生》</title>
@@ -48,7 +75,7 @@
     <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
     <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
     <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2020-12-31T01:38:16.715Z</updated>
+    <updated>2021-01-13T08:55:40.852Z</updated>
     
     <summary type="html">
     
@@ -56,7 +83,7 @@
       
         
         
-          &lt;h1 id=&quot;计算机组成原理与结构体系&quot;&gt;&lt;a href=&quot;#计算机组成原理与结构体系&quot; class=&quot;headerlink&quot; title=&quot;计算机组成原理与结构体系&quot;&gt;&lt;/a&gt;计算机组成原理与结构体系&lt;/h1&gt;&lt;h2 id=&quot;实验一二三（实验箱）&quot;&gt;&lt;a
+          &lt;h1 id=&quot;计算机组成原理与结构体系&quot;&gt;&lt;a href=&quot;#计算机组成原理与结构体系&quot; class=&quot;headerlink&quot; title=&quot;计算机组成原理与结构体系&quot;&gt;&lt;/a&gt;计算机组成原理与结构体系&lt;/h1&gt;&lt;h2 id=&quot;理论学习&quot;&gt;&lt;a href=&quot;#理论学习&quot;
         
       
     
@@ -409,9 +436,9 @@
       <category term="博客" scheme="https://henryavery.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Blog" scheme="https://henryavery.cn/tags/Blog/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
