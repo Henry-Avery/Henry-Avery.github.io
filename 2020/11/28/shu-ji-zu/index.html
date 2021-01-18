@@ -283,7 +283,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -442,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    4.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    16 分
                 </div>
                 
                 
@@ -508,7 +508,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>这里要么是版本的问题，要么就是一个笔误，造成的后果可能就是你三台虚拟机都能ping master而不能实现真正的互通（会显示Unreachable）。</p>
 <p>因为如果你细心的话就会发现当你在复制的虚拟机上打开ifconfig-eth0时，其实是新建了一个名为ifconfig-eth0的文件，而不是打开了复制过来的ifcfg-eth0文件。（可以自己验证一下）这里只需要注意一下即可。</p>
 <p>我遇到的最坑的问题还是下面这个</p>
-<p><img src="https://images2015.cnblogs.com/blog/798663/201607/798663-20160711161510686-1749110137.png" alt="直接复制文件导致两台虚拟机Mac相同，即物理地址和备份的虚拟机重复"></p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/798663-20160711161510686-1749110137.png" alt="直接复制文件导致两台虚拟机Mac相同，即物理地址和备份的虚拟机重复"></p>
 <p>我是按照教程在windows中文件中直接将一个虚拟机进行复制了两份（克隆好像就没有问题），然后用vm打开， 选择我已经复制，结果虚拟机开机的时候出现了上面的日志消息提示，导致了我无法ping 通。解决方法如下（改不了的话先关闭一下虚拟机）： </p>
 <p><a href="https://www.cnblogs.com/nucdy/p/5660701.html" target="_blank" rel="noopener">如何更改Mac地址</a></p>
 <hr>
@@ -527,9 +527,9 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>【常见的远程SSH登录工具有：securecrt、xshell、putty等..】</p>
 <p><a href="https://blog.csdn.net/wojiuguowei/article/details/79308090" target="_blank" rel="noopener">使用Xshell远程访问虚拟机</a></p>
 <p>先来看看按照老师给的教程能不能幸运地完成实验吧。</p>
-<p><img src="http://m.qpic.cn/psc?/V50yGAmm4Y7rG60gKAT73IXxN50OzhRf/TmEUgtj9EK6.7V8ajmQrEO.ppBnH*tqMOLzwRDz6*3tipf9omh42TdD1knDOKnvgnqHk12EBts5ofBUbkMtFlpz30hfXx1o7A1ag5R4t.D8!/b&bo=uQIcAQAAAAADF5Q!&rf=viewer_4" alt="很不幸，不能"></p>
+<p>![很不幸，不能](<a href="https://gitee.com/henry-avery/my_pic_bed/raw/master/psc" target="_blank" rel="noopener">https://gitee.com/henry-avery/my_pic_bed/raw/master/psc</a> (1).png)</p>
 <p>最后一条重启命令一看就知道应该是又把service写错成servive了。</p>
-<p><img src="http://m.qpic.cn/psc?/V50yGAmm4Y7rG60gKAT73IXxN50OzhRf/TmEUgtj9EK6.7V8ajmQrEIykZWNRFqOVdr.r3m328d0Nji7Ef9TLO6Rcs91cZ7ktX1Byo6zWcdswrWPIxhDu*VBUyv0SWB8VQpjjzz3MZc8!/b&bo=kgJpAAAAAAADF8s!&rf=viewer_4" alt="正常重启"></p>
+<p>![正常重启](<a href="https://gitee.com/henry-avery/my_pic_bed/raw/master/psc" target="_blank" rel="noopener">https://gitee.com/henry-avery/my_pic_bed/raw/master/psc</a> (2).png)</p>
 <p>之后就是一路采坑，最后也不知道自己怎么搞定的，看了很多博客但好像最后都没怎么用上。</p>
 <p>而且这里具体问题还需要具体解决，可以在这篇博客的评论区把遇到的问题发出来，让大家帮忙看看。</p>
 <p><strong>scp连接远程传输报错The authenticity of host …… can‘t be established.</strong></p>
@@ -547,7 +547,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p>为了使用虚拟机而关闭防火墙这种因小失大的做法是不大可取的，其实设置防火墙很简单，以win7为例，打开控制面板 &gt; 系统和安全 &gt; windows防火墙 &gt;高级设置 &gt;入站规则 &gt; 文件和打印机共享(回显请求 - ICMPv4-In) （专用，公用） &gt; 右键启用 即可</p>
 <p><strong>注意事项</strong>：直接打开SSH Secure File Transfer输入Hostname和Username然后输入密码。</p>
 <p><strong>注意用户名这里不是master和slave1或2，而是你登录虚拟机时的用户名，</strong>比如我三台虚拟机用户名都是centos，否则用户名和密码不匹配会一直让你输入密码。</p>
-<p><img src="http://m.qpic.cn/psc?/V50yGAmm4Y7rG60gKAT73IXxN50OzhRf/TmEUgtj9EK6.7V8ajmQrEIqykNQi72LEQbiB8NGoDiU0g8PHkjAGQbQf7tQhANc.jPEUVT*U94AQPYLN8vIqoi9zpPngi.NPWoMz44ioQtc!/b&bo=gAcPBAAAAAADR.4!&rf=viewer_4" alt="小波男神镇贴"></p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/psc.png" alt="小波男神镇贴"></p>
 <hr>
 <p><strong>RSH互通</strong></p>
 <p>摆脱教程之后说不定还更简单了，而且碰巧找到了一篇可能是前两届某位学长写的博客，补充了没有的rsh部分，有兴趣可以看看，反正我是不想再多看了一眼了。</p>
@@ -582,7 +582,7 @@ GATEWAY=192.168.224.2 </code></pre><p>同样是改IPADDR，为什么两个文件
 <p><strong>实验内容</strong></p>
 <p>Linux下OpenMP程序的编译和运行。OpenMP是一个共享存储并行系统上的应用编程接口，支持C/C++和FORTRAN等语言，编译和运行简单的”Hello World”程序。在Linux下编辑hellomp.c源程序，或在Windows下编辑并通过附件中的FTP工具（端口号：1021）上传，用”gcc -fopenmp -O2 -o hellomp.out hellomp.c”命令编译，用”./hellomp.out”命令运行程序。</p>
 <p>注：在虚拟机中当使用vi编辑文件时，不是以ESC键退出插入模式，可以使用“Ctrl+c”进入命令模式，然后输入wq进行存盘退出。</p>
-<p>Linux下OpenMP环境，需要安装gcc(<strong>此处注意避坑</strong>)</p>
+<p>Linux下OpenMP环境，需要安装gcc(<strong>此处注意避坑</strong>，6.5版本太老需换源，可参考以下链接提供方法)</p>
 <pre><code>yum intall gcc    (在redhat, centOS 下使用，用root安装，必须保证网络畅通)</code></pre><p><a href="https://blog.csdn.net/weixin_44160584/article/details/110872926?utm_medium=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v29-2.nonecase&depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v29-2.nonecase" target="_blank" rel="noopener">centos 6.5 yum安装报YumRepo Error: All mirror URLs are not using ftp, http[s] or file</a></p>
 <p><a href="https://bbs.csdn.net/topics/392269634" target="_blank" rel="noopener">Linux中安装gcc出现All mirror URLs are not using ftp,http[s] or file</a></p>
 <blockquote>
@@ -609,6 +609,59 @@ printf("Number of threads is %d\n",nthreads);
 }
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>先从本地传到虚拟机上去，编译然后运行正常就OK了。</p>
+<p><strong>实验报告</strong></p>
+<p><strong>实验目的</strong></p>
+<p>1) 在Linux平台上编译和运行OpenMP程序；</p>
+<p>2) 在Windows平台上编译和运行OpenMP程序。</p>
+<p>3) 掌握OpenMP并行编程基础。</p>
+<p><strong>实验环境</strong></p>
+<p>1) 硬件环境：计算机一台；</p>
+<p>2) 软件环境：Linux（centOS6.5）、Win10、GCC、G++、VS2019</p>
+<p><strong>问题描述</strong></p>
+<p>对于一个大向量（所有元素全部大于 0）， 把它的前半部分全部平方，后半部分全部开方取整。</p>
+<p>将所得的新向量中的奇数个数输出。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">vector<int> v_i{}//初始给定大小的大向量（从1e100~1e10000）
+vector<int> v_ans{};//新生成的向量，大小与向量v_i相同
+clock_t s, f;//记录时间
+double duration;//计算时间长度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>实验过程</strong></p>
+<p>数据量变动，大于cache</p>
+<p>L1缓存256KB，L2缓存1.0MB，L3缓存6.0MB</p>
+<p>纸质打印</p>
+<p><strong>实验结果</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">s :0.372000
+- size of v_ans:        2522907
+p :1.378000
+- size of v_ans:        2522907<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>代码附录</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">/*核心代码示例*/    
+s = clock();//计时开始
+#pragma omp parallel for reduction(+:cnt_ans) default(shared)  num_threads(10)
+//openmp并行计算，开启十个线程
+    for (int i = 0; i < len; i++)
+    {
+        auto& e = v_i[i];
+        int t = 0;
+
+        if (i < len / 2)
+        {
+            t = pow(e, 2);
+        }
+        else
+        {
+            t = (int)sqrt(e);
+        }
+        if (t % 2 == 1)
+        {
+            cnt_ans += 1;//计数器，计算新向量奇数个数
+        }
+    }
+    f = clock();//计时结束
+    duration = (double)(f - s) / CLOCKS_PER_SEC;//计算计时时间
+    printf("s :%f\n", duration);//输出并行计算计时时间<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>参考资料</strong></p>
+<p><a href="https://blog.csdn.net/yt_42370304/article/details/83904121" target="_blank" rel="noopener">linux 上查询cache 大小的方法</a></p>
+<p><a href="https://blog.csdn.net/azri81226/article/details/101691139?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control" target="_blank" rel="noopener">并行程序耗时过大问题</a></p>
 
             </div>
             <hr />
@@ -715,7 +768,7 @@ printf("Number of threads is %d\n",nthreads);
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="《人机共生》">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="《人机共生》">
                         
                         <span class="card-title">《人机共生》</span>
                     </div>
@@ -764,7 +817,7 @@ printf("Number of threads is %d\n",nthreads);
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="SHU数据结构">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="SHU数据结构">
                         
                         <span class="card-title">SHU数据结构</span>
                     </div>
@@ -973,7 +1026,7 @@ printf("Number of threads is %d\n",nthreads);
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">46.5k</span>
+            <span class="white-color">47.2k</span>
             
 
             <br>

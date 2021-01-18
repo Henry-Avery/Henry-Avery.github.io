@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-01-07T00:45:32.627Z</updated>
+  <updated>2021-01-18T23:20:31.810Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于如何卖出一瓶水</title>
+    <link href="https://henryavery.cn/2021/01/15/guan-yu-yi-ping-shui/"/>
+    <id>https://henryavery.cn/2021/01/15/guan-yu-yi-ping-shui/</id>
+    <published>2021-01-15T13:03:31.000Z</published>
+    <updated>2021-01-18T23:20:31.810Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://gitee.com/henry-avery/my_pic_bed/raw/master/v2-569c7994e7598714d44790fbacbf065a_b.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://henryavery.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="商务" scheme="https://henryavery.cn/tags/%E5%95%86%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>关于Docker学习</title>
@@ -75,7 +101,7 @@
     <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
     <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
     <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2021-01-13T08:55:40.852Z</updated>
+    <updated>2021-01-17T13:46:01.955Z</updated>
     
     <summary type="html">
     
@@ -235,9 +261,9 @@
       <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
@@ -436,9 +462,9 @@
       <category term="博客" scheme="https://henryavery.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Blog" scheme="https://henryavery.cn/tags/Blog/"/>
-    
       <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
+    
+      <category term="Blog" scheme="https://henryavery.cn/tags/Blog/"/>
     
   </entry>
   
