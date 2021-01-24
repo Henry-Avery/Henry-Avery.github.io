@@ -283,7 +283,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -442,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.5k
+                    6.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    22 分
                 </div>
                 
                 
@@ -662,6 +662,63 @@ s = clock();//计时开始
 <p><strong>参考资料</strong></p>
 <p><a href="https://blog.csdn.net/yt_42370304/article/details/83904121" target="_blank" rel="noopener">linux 上查询cache 大小的方法</a></p>
 <p><a href="https://blog.csdn.net/azri81226/article/details/101691139?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control" target="_blank" rel="noopener">并行程序耗时过大问题</a></p>
+<h2 id="实验六HPL安装和测试"><a href="#实验六HPL安装和测试" class="headerlink" title="实验六HPL安装和测试"></a>实验六HPL安装和测试</h2><h3 id="Linpack背景及内容"><a href="#Linpack背景及内容" class="headerlink" title="Linpack背景及内容"></a><strong>Linpack背景及内容</strong></h3><p><a href="https://blog.csdn.net/hanzhenbushihu/article/details/88416724" target="_blank" rel="noopener">HPL与HPCG测试 (一)</a></p>
+<p><a href="https://blog.csdn.net/sishuiliunian0710/article/details/20493101/" target="_blank" rel="noopener"></a></p>
+<p><a href="https://wenku.baidu.com/view/ce44c4a5b8f67c1cfad6b8f8.html" target="_blank" rel="noopener"></a></p>
+<p>（1）背景介绍</p>
+<p>LINPACK全名Linear Equations Package，是近年来较为常用的一种计算机系统性能测试的线性方程程序包，内容包括求解稠密矩阵运算，带状的线性方程，求解最小平方问题以及其它各种矩阵运算。它最早由来自Tennessee 大学的超级计算专家Jack Dongarra提出。程序用FORTRAN编写，在此基础上还有C，JAVA等版本。Linpack使用线性代数方程组，利用选主元高斯消去法在分布式内存计算机上按双精度(64 bits)算法，测量求解稠密线性方程组所需的时间。Linpack的结果按每秒浮点运算次数（flops）表示。第一个Linpack测试报告出现在1979年的Linpack用户手册上，最初LINPACK包并不是要制订一个测试计算机性能的统一标准，而是提供了一些很常用的计算方法的实现程序，但是由于这一程序包被广泛使用，就为通过Linpack 例程来比较不同计算机的性能提供了可能，从而发展出一套完整的Linpack 测试标准。</p>
+<p>（2）测试标准的内容</p>
+<p>LINPACK标准可以解决的问题有：</p>
+<p> 1) 各种矩阵分解(Matrix factorization)，如LU分解，Cholesky分解， Schur，Gauss分解，SVD分解，QR分解，generalized Schur分解等</p>
+<p>2) 矢量运算（Vector operation），如Copy，Add，scalar multiple，Interchange</p>
+<p>3) 存储模式（Storage Modes），如full，banded，symmetric </p>
+<p>Linpack原始版本的问题规模为100×100的矩阵，目前的Linpack测试分成三个层次的问题规模和优化选择： </p>
+<p>—- 100×100的矩阵</p>
+<p>在该测试中，不允许对Linpack测试程序进行任何修改，哪怕是注释行。 所有的优化工作只能在编译器里完成。</p>
+<hr>
+<p>—- 1000×1000的矩阵</p>
+<p>该测试也叫“面向峰值性能的测试”，在该测试中，要求有所放宽，允许对算法和软件进行修改或替换，并尽量利用系统的硬件特点，以达到尽可能高的性能。但是所有的优化都必须保持和标准算法如高斯消去法相同的相对精度，而且必须使用Linpack的主程序进行调用。测试者可修改或替换其中的过程调用例程DGEFA 和DGESL 。其中DGEFA 是Linpack 软件包中标准的高斯消去LU 分解过程，而DGESL 是根据分解后得到的结果回代求解过程。</p>
+<hr>
+<p>—- 针对大规模并行计算系统的测试，即Highly Parallel Computing。</p>
+<p>在这一测试中，问题规模限制被取消，针对现代的并行计算机，要求最宽松，即用户可对任意大小的问题规模，使用任意个数的CPU ，使用各种优化方法（必须基于高斯消去法）来执行该测试程序，寻求最佳的测试结果。</p>
+<p>目前，用Linpack基准测试出的最高性能指标已经成为衡量机器性能的标准之一，这个数字可以作为对系统峰值性能的一个修正。</p>
+<h3 id="HPL基准测试"><a href="#HPL基准测试" class="headerlink" title="HPL基准测试"></a><strong>HPL基准测试</strong></h3><p>（1）概述</p>
+<p>HPL，即High Performance Linpack，目前已经成为国际标准的Linpack基准测试程序，其1.0版于2000年9月发布，是第一个标准的公开版本并行Linpack测试软件包，一般用于全世界TOP500超级计算机上的并行超级计算机排名。HPL测试标准的用户自由度要大很多，使用者可以选择矩阵的规模，分块大小，分解方法等等一系列的各种参数，都是按需要更改的。 </p>
+<p>HPL软件包需要在配备了MPI环境下的系统中才能运行，还需要底层有线性代数子程序包BLAS的支持（或者有另一种向量信号图像处理库VSIPL也可）。</p>
+<p>HPL软件包不仅提供了完整的Linpack测试程序，还进行了全面细致的计时工作，最后可以得到求解的精确性和计算所花费的总时间。该软件在系统上所能达到的最佳性能值适合很多因素有关的。</p>
+<p>（2）主算法</p>
+<p>该软件包是用来求一个N维的线性方程组A x = b的解，首先通过选局部列主元的方法对Nⅹ(N+1)的[A b]系数矩阵进行LU分解成如下形式：</p>
+<p>[A b]=[[L,U] y]</p>
+<p>由于下三角矩阵L因子所作的变换在分解的过程中也逐步应用到b上，所以最后方程组的解x就可以由转化为求解上三角矩阵U作为系数矩阵的线性方程组 U x = y从而得到。</p>
+<p>为了保证良好的负载平衡和算法的可扩展性，数据是以循环块的方式分布到一个P x Q的由所有进程组成的2维网格中。N x (N+1)的系数矩阵首先在逻辑上被分成一个个Nb x Nb大小的数据块，然后循环的分配到P x Q进程网格上去处理。这个分配的工作在矩阵的行、列两个方向同时进行。</p>
+<p>在前面所提到的N，Nb，P，Q都是可以根据集群的具体配置和用户需要而随时修改的，也是HPL测试中十分关键和重要的几个参数。详细内容请看后面。</p>
+<h3 id="HPL的安装及使用"><a href="#HPL的安装及使用" class="headerlink" title="HPL的安装及使用"></a><strong>HPL的安装及使用</strong></h3><p>主要软件包：</p>
+<p>hpl-2.1.tar.gz</p>
+<p>GotoBLAS2-1.13.tar.gz</p>
+<p>openmpi-1.6.5.tar.gz</p>
+<p><strong>HPL的安装过程</strong></p>
+<p>（1）安装gotoblas</p>
+<p>注：出于提高性能的因数，选择GOTO BLAS，作为HPL调用的底层线性代数子程序包</p>
+<p>目前最新版本为GotoBLAS2</p>
+<p>下载GotoBLAS2-1.13.tar.gz</p>
+<p>（网址<a href="https://www.tacc.utexas.edu/tacc-projects/gotoblas2）" target="_blank" rel="noopener">https://www.tacc.utexas.edu/tacc-projects/gotoblas2）</a></p>
+<blockquote>
+<p>这个网址not found，直接在学习通下载</p>
+</blockquote>
+<p>执行步骤：</p>
+<blockquote>
+<p>需要在虚拟机上进行，先把文件传到虚拟机上</p>
+</blockquote>
+<p>在usr/local/mathlib/goto下解压：（随便什么位置应该都可以）</p>
+<p>$ tar -zxvf GotoBLAS2-1.13.tar.gz</p>
+<p>$ cd GotoBLAS2</p>
+<p>$ make  （TARGET=NEHALEM）</p>
+<p>注：可直接输入#make既可 也可自己选择参数 类似</p>
+<p> $ make CC=gcc  BINARY=64 TARGET=NEHALEM </p>
+<p>依次是编译器 库的位数和cpu的类型（architecture），具体可选择的参数可从GotoBLAS2的目录下02QuickInstall.txt的查找</p>
+<p>（3）安装openmpi</p>
+<p>（4）安装HPL</p>
+<p>（5）编译</p>
 
             </div>
             <hr />
@@ -768,7 +825,7 @@ s = clock();//计时开始
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="《人机共生》">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="《人机共生》">
                         
                         <span class="card-title">《人机共生》</span>
                     </div>
@@ -817,7 +874,7 @@ s = clock();//计时开始
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="SHU数据结构">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="SHU数据结构">
                         
                         <span class="card-title">SHU数据结构</span>
                     </div>
@@ -1026,7 +1083,7 @@ s = clock();//计时开始
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">47.2k</span>
+            <span class="white-color">49.5k</span>
             
 
             <br>
