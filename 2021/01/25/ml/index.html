@@ -444,14 +444,14 @@ Coursera">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
                 
@@ -519,7 +519,42 @@ Coursera">
 <h3 id="4-6-正规方程Normal-Equation"><a href="#4-6-正规方程Normal-Equation" class="headerlink" title="4.6 正规方程Normal Equation"></a>4.6 正规方程Normal Equation</h3><p>正规方程是通过求解下面的方程来找出使得代价函数最小的参数的：$\frac{\partial}{\partial{\theta_{j}}}J\left( {\theta_{j}} \right)=0$   </p>
 <p>利用正规方程解出向量 $\theta ={{\left( {X^T}X \right)}^{-1}}{X^{T}}y$   。 上标<strong>T</strong>代表矩阵转置，上标-1 代表矩阵的逆。</p>
 <p>总结一下，只要特征变量的数目并不大，标准方程是一个很好的计算参数的替代方法。具体地说，只要特征变量数量小于一万，我通常使用标准方程法，而不使用梯度下降法。</p>
-<h3 id="4-7-正规方程及不可逆性（可选）"><a href="#4-7-正规方程及不可逆性（可选）" class="headerlink" title="4.7 正规方程及不可逆性（可选）"></a>4.7 正规方程及不可逆性（可选）</h3><h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h1 id="第3天"><a href="#第3天" class="headerlink" title="第3天"></a>第3天</h1><h1 id="第4天"><a href="#第4天" class="headerlink" title="第4天"></a>第4天</h1><h1 id="第5天"><a href="#第5天" class="headerlink" title="第5天"></a>第5天</h1><h1 id="第6天"><a href="#第6天" class="headerlink" title="第6天"></a>第6天</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>申请Coursera奖学金拿证书</p>
+<h3 id="4-7-正规方程及不可逆性（可选）"><a href="#4-7-正规方程及不可逆性（可选）" class="headerlink" title="4.7 正规方程及不可逆性（可选）"></a>4.7 正规方程及不可逆性（可选）</h3><p><strong>增加内容：</strong></p>
+
+
+$\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$ 的推导过程：
+
+$J\left( \theta \right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left( {h_{\theta}}\left( {x^{(i)}} \right)-{y^{(i)}} \right)}^{2}}}$ 其中：${h_{\theta}}\left( x \right)={\theta^{T}}X={\theta_{0}}{x_{0}}+{\theta_{1}}{x_{1}}+{\theta_{2}}{x_{2}}+...+{\theta_{n}}{x_{n}}$
+
+将向量表达形式转为矩阵表达形式，则有$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{2}}$ ，其中$X$为$m$行$n$列的矩阵（$m$为样本个数，$n$为特征个数），$\theta$为$n$行1列的矩阵，$y$为$m$行1列的矩阵，对$J(\theta )$进行如下变换
+
+$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)$
+
+ $=\frac{1}{2}\left( {{\theta }^{T}}{{X}^{T}}-{{y}^{T}} \right)\left(X\theta -y \right)$
+
+ $=\frac{1}{2}\left( {{\theta }^{T}}{{X}^{T}}X\theta -{{\theta}^{T}}{{X}^{T}}y-{{y}^{T}}X\theta -{{y}^{T}}y \right)$
+
+接下来对$J(\theta )$偏导，需要用到以下几个矩阵的求导法则:
+
+$\frac{dAB}{dB}={{A}^{T}}$
+
+$\frac{d{{X}^{T}}AX}{dX}=2AX$
+
+所以有:
+
+$\frac{\partial J\left( \theta \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}y -{}({{y}^{T}}X )^{T}-0 \right)$
+
+$=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}y -{{X}^{T}}y -0 \right)$
+
+ $={{X}^{T}}X\theta -{{X}^{T}}y$
+
+令$\frac{\partial J\left( \theta \right)}{\partial \theta }=0$,
+
+则有$\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$
+
+
+
+<h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h1 id="第3天"><a href="#第3天" class="headerlink" title="第3天"></a>第3天</h1><h1 id="第4天"><a href="#第4天" class="headerlink" title="第4天"></a>第4天</h1><h1 id="第5天"><a href="#第5天" class="headerlink" title="第5天"></a>第5天</h1><h1 id="第6天"><a href="#第6天" class="headerlink" title="第6天"></a>第6天</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>申请Coursera奖学金拿证书</p>
 <blockquote>
 <p>I am a Master student at Shang Hai  University which located in China，I’m so sorry I’m so poor to afford the cost in China All my income is just enough to cover my living expense, so I don’t have extra money to register the class. Furthermore, I want to save money for my family Since my parents have been working so hard to support me.For nowadays ，machine learning is so hot not only in China but also in the world I request Coursera for financial aid, and I promise I will finish the course in time. I think Coursera is a very good platform for people to learn something they need, and sincerely hoping to learn something. This program provided by Coursera is a great opportunity for a poor student like me to pursue the course, and I hope I can get the chance. Thank you for your consideration. I hope you can agree with my application. I look forward to your reply.Thank you so much</p>
 </blockquote>
@@ -870,7 +905,7 @@ Coursera">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.2k</span>
+            <span class="white-color">52.5k</span>
             
 
             <br>
