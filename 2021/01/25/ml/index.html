@@ -444,14 +444,14 @@ Coursera">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
                 
@@ -505,7 +505,31 @@ Coursera">
 <p>如果太小了，即我的学习速率太小，结果就是只能这样像小宝宝一样一点点地挪动，去努力接近最低点，这样就需要很多步才能到达最低点，所以如果太小的话，可能会很慢，因为它会一点点挪动，它会需要很多步才能到达全局最低点。</p>
 <p>如果太大，那么梯度下降法可能会越过最低点，甚至可能无法收敛，下一次迭代又移动了一大步，越过一次，又越过一次，一次次越过最低点，直到你发现实际上离最低点越来越远，所以，如果太大，它会导致无法收敛，甚至发散。</p>
 <h3 id="2-7-梯度下降（gradient-descent）的线性回归"><a href="#2-7-梯度下降（gradient-descent）的线性回归" class="headerlink" title="2.7 梯度下降（gradient descent）的线性回归"></a>2.7 梯度下降（gradient descent）的线性回归</h3><p>实际上，在机器学习中，通常不太会给算法起名字，但这个名字”<strong>批量梯度下降</strong>”，指的是在梯度下降的每一步中，我们都用到了所有的训练样本，在梯度下降中，在计算微分求导项时，我们需要进行求和运算，所以，在每一个单独的梯度下降中，我们最终都要计算这样一个东西，这个项需要对所有m个训练样本求和。</p>
-<h2 id="线性代数回顾-Linear-Algebra-Review"><a href="#线性代数回顾-Linear-Algebra-Review" class="headerlink" title="线性代数回顾(Linear Algebra Review)"></a>线性代数回顾(Linear Algebra Review)</h2><h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h1 id="第3天"><a href="#第3天" class="headerlink" title="第3天"></a>第3天</h1><h1 id="第4天"><a href="#第4天" class="headerlink" title="第4天"></a>第4天</h1><h1 id="第5天"><a href="#第5天" class="headerlink" title="第5天"></a>第5天</h1><h1 id="第6天"><a href="#第6天" class="headerlink" title="第6天"></a>第6天</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>申请Coursera奖学金拿证书</p>
+<h2 id="线性代数回顾-Linear-Algebra-Review"><a href="#线性代数回顾-Linear-Algebra-Review" class="headerlink" title="线性代数回顾(Linear Algebra Review)"></a>线性代数回顾(Linear Algebra Review)</h2><p><strong>matlab</strong>中矩阵转置：直接打一撇，<code>x=y&#39;</code>。</p>
+<h2 id="多变量线性回归-Linear-Regression-with-Multiple-Variables"><a href="#多变量线性回归-Linear-Regression-with-Multiple-Variables" class="headerlink" title="多变量线性回归(Linear Regression with Multiple Variables)"></a>多变量线性回归(Linear Regression with Multiple Variables)</h2><h3 id="4-1-多维特征"><a href="#4-1-多维特征" class="headerlink" title="4.1 多维特征"></a>4.1 多维特征</h3><h3 id="4-2-多变量梯度下降"><a href="#4-2-多变量梯度下降" class="headerlink" title="4.2 多变量梯度下降"></a>4.2 多变量梯度下降</h3><p>与单变量线性回归类似，在多变量线性回归中，我们也构建一个代价函数，则这个代价函数是所有建模误差的平方和</p>
+<p>我们的目标和单变量线性回归问题中一样，是要找出使得代价函数最小的一系列参数。 多变量线性回归的批量梯度下降算法为：</p>
+<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/41797ceb7293b838a3125ba945624cf6.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/41797ceb7293b838a3125ba945624cf6.png" alt="img"></a></p>
+<p>即：</p>
+<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/6bdaff07783e37fcbb1f8765ca06b01b.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/6bdaff07783e37fcbb1f8765ca06b01b.png" alt="img"></a></p>
+<p>求导数后得到：</p>
+<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/dd33179ceccbd8b0b59a5ae698847049.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/dd33179ceccbd8b0b59a5ae698847049.png" alt="img"></a></p>
+<p><strong>Python</strong> 代码：</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">computeCost</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> theta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    inner <span class="token operator">=</span> np<span class="token punctuation">.</span>power<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>X <span class="token operator">*</span> theta<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>inner<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> len<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-3-梯度下降法实践1-特征缩放"><a href="#4-3-梯度下降法实践1-特征缩放" class="headerlink" title="4.3 梯度下降法实践1-特征缩放"></a>4.3 梯度下降法实践1-特征缩放</h3><p>在我们面对多维特征问题的时候，我们要保证这些特征都具有相近的尺度，这将帮助梯度下降算法更快地收敛。</p>
+<h3 id="4-4-梯度下降法实践2-学习率"><a href="#4-4-梯度下降法实践2-学习率" class="headerlink" title="4.4 梯度下降法实践2-学习率"></a>4.4 梯度下降法实践2-学习率</h3><p>梯度下降算法收敛所需要的迭代次数根据模型的不同而不同，我们不能提前预知，我们可以绘制迭代次数和代价函数的图表来观测算法在何时趋于收敛。</p>
+<p>梯度下降算法的每次迭代受到学习率的影响，如果学习率a过小，则达到收敛所需的迭代次数会非常高；如果学习率a过大，每次迭代可能不会减小代价函数，可能会越过局部最小值导致无法收敛。</p>
+<h3 id="4-5-特征和多项式回归"><a href="#4-5-特征和多项式回归" class="headerlink" title="4.5 特征和多项式回归"></a>4.5 特征和多项式回归</h3><p>注：如果我们采用多项式回归模型，在运行梯度下降算法前，特征缩放非常有必要。</p>
+<h3 id="4-6-正规方程"><a href="#4-6-正规方程" class="headerlink" title="4.6 正规方程"></a>4.6 正规方程</h3><p>正规方程是通过求解下面的方程来找出使得代价函数最小的参数的：</p>
+
+
+Hello {{ sensitive }}	
+   
+
+
+
+<h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h1 id="第3天"><a href="#第3天" class="headerlink" title="第3天"></a>第3天</h1><h1 id="第4天"><a href="#第4天" class="headerlink" title="第4天"></a>第4天</h1><h1 id="第5天"><a href="#第5天" class="headerlink" title="第5天"></a>第5天</h1><h1 id="第6天"><a href="#第6天" class="headerlink" title="第6天"></a>第6天</h1><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>申请Coursera奖学金拿证书</p>
 <blockquote>
 <p>I am a Master student at Shang Hai  University which located in China，I’m so sorry I’m so poor to afford the cost in China All my income is just enough to cover my living expense, so I don’t have extra money to register the class. Furthermore, I want to save money for my family Since my parents have been working so hard to support me.For nowadays ，machine learning is so hot not only in China but also in the world I request Coursera for financial aid, and I promise I will finish the course in time. I think Coursera is a very good platform for people to learn something they need, and sincerely hoping to learn something. This program provided by Coursera is a great opportunity for a poor student like me to pursue the course, and I hope I can get the chance. Thank you for your consideration. I hope you can agree with my application. I look forward to your reply.Thank you so much</p>
 </blockquote>
@@ -856,7 +880,7 @@ Coursera">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">51.6k</span>
+            <span class="white-color">52.1k</span>
             
 
             <br>
