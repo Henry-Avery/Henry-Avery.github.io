@@ -507,12 +507,7 @@ Coursera">
 <h3 id="2-7-梯度下降（gradient-descent）的线性回归"><a href="#2-7-梯度下降（gradient-descent）的线性回归" class="headerlink" title="2.7 梯度下降（gradient descent）的线性回归"></a>2.7 梯度下降（gradient descent）的线性回归</h3><p>实际上，在机器学习中，通常不太会给算法起名字，但这个名字”<strong>批量梯度下降</strong>”，指的是在梯度下降的每一步中，我们都用到了所有的训练样本，在梯度下降中，在计算微分求导项时，我们需要进行求和运算，所以，在每一个单独的梯度下降中，我们最终都要计算这样一个东西，这个项需要对所有m个训练样本求和。</p>
 <h2 id="线性代数回顾-Linear-Algebra-Review"><a href="#线性代数回顾-Linear-Algebra-Review" class="headerlink" title="线性代数回顾(Linear Algebra Review)"></a>线性代数回顾(Linear Algebra Review)</h2><p><strong>matlab</strong>中矩阵转置：直接打一撇，<code>x=y&#39;</code>。</p>
 <h2 id="多变量线性回归-Linear-Regression-with-Multiple-Variables"><a href="#多变量线性回归-Linear-Regression-with-Multiple-Variables" class="headerlink" title="多变量线性回归(Linear Regression with Multiple Variables)"></a>多变量线性回归(Linear Regression with Multiple Variables)</h2><h3 id="4-1-多维特征"><a href="#4-1-多维特征" class="headerlink" title="4.1 多维特征"></a>4.1 多维特征</h3><h3 id="4-2-多变量梯度下降"><a href="#4-2-多变量梯度下降" class="headerlink" title="4.2 多变量梯度下降"></a>4.2 多变量梯度下降</h3><p>与单变量线性回归类似，在多变量线性回归中，我们也构建一个代价函数，则这个代价函数是所有建模误差的平方和</p>
-<p>我们的目标和单变量线性回归问题中一样，是要找出使得代价函数最小的一系列参数。 多变量线性回归的批量梯度下降算法为：</p>
-<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/41797ceb7293b838a3125ba945624cf6.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/41797ceb7293b838a3125ba945624cf6.png" alt="img"></a></p>
-<p>即：</p>
-<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/6bdaff07783e37fcbb1f8765ca06b01b.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/6bdaff07783e37fcbb1f8765ca06b01b.png" alt="img"></a></p>
-<p>求导数后得到：</p>
-<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/images/dd33179ceccbd8b0b59a5ae698847049.png" target="_blank" rel="noopener"><img src="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/raw/master/images/dd33179ceccbd8b0b59a5ae698847049.png" alt="img"></a></p>
+<p>我们的目标和单变量线性回归问题中一样，是要找出使得代价函数最小的一系列参数。 </p>
 <p><strong>Python</strong> 代码：</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">computeCost</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> theta<span class="token punctuation">)</span><span class="token punctuation">:</span>
     inner <span class="token operator">=</span> np<span class="token punctuation">.</span>power<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>X <span class="token operator">*</span> theta<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token operator">-</span> y<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
@@ -524,7 +519,7 @@ Coursera">
 <h3 id="4-6-正规方程"><a href="#4-6-正规方程" class="headerlink" title="4.6 正规方程"></a>4.6 正规方程</h3><p>正规方程是通过求解下面的方程来找出使得代价函数最小的参数的：</p>
 
 
-Hello {{ $\frac{\partial}{\partial{\theta_{j}}}J\left( {\theta_{j}} \right)=0$  }}	
+$\frac{\partial}{\partial{\theta_{j}}}J\left( {\theta_{j}} \right)=0$
    
 
 
