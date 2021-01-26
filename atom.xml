@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-01-22T11:41:37.406Z</updated>
+  <updated>2021-01-26T04:13:02.287Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>吴恩达的机器学习课程笔记</title>
+    <link href="https://henryavery.cn/2021/01/25/ml/"/>
+    <id>https://henryavery.cn/2021/01/25/ml/</id>
+    <published>2021-01-25T07:30:42.000Z</published>
+    <updated>2021-01-26T04:13:02.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;吴恩达机器学习&quot;&gt;&lt;a href=&quot;#吴恩达机器学习&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="机器学习" scheme="https://henryavery.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Processing</title>
@@ -49,7 +75,7 @@
     <link href="https://henryavery.cn/2021/01/22/2021/"/>
     <id>https://henryavery.cn/2021/01/22/2021/</id>
     <published>2021-01-22T11:40:42.000Z</published>
-    <updated>2021-01-24T13:54:52.275Z</updated>
+    <updated>2021-01-26T04:07:35.047Z</updated>
     
     <summary type="html">
     
@@ -464,7 +490,7 @@
     <link href="https://henryavery.cn/2020/09/11/mei-sai-qi-hang/"/>
     <id>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</id>
     <published>2020-09-11T02:15:06.000Z</published>
-    <updated>2020-12-19T04:28:28.056Z</updated>
+    <updated>2021-01-25T07:48:51.053Z</updated>
     
     <summary type="html">
     
@@ -517,34 +543,6 @@
       <category term="书" scheme="https://henryavery.cn/tags/%E4%B9%A6/"/>
     
       <category term="待更" scheme="https://henryavery.cn/tags/%E5%BE%85%E6%9B%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从1开始写Blog</title>
-    <link href="https://henryavery.cn/2020/08/31/cong-1-kai-shi-xie-blog/"/>
-    <id>https://henryavery.cn/2020/08/31/cong-1-kai-shi-xie-blog/</id>
-    <published>2020-08-31T08:12:05.000Z</published>
-    <updated>2020-10-03T04:23:40.290Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="博客" scheme="https://henryavery.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="Blog" scheme="https://henryavery.cn/tags/Blog/"/>
-    
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
