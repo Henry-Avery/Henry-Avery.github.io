@@ -557,23 +557,19 @@ $=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}y -{{X}^{T}}y -0 \right)$
 
 
 <h2 id="Octave教程-Octave-Tutorial"><a href="#Octave教程-Octave-Tutorial" class="headerlink" title="Octave教程(Octave Tutorial)"></a>Octave教程(Octave Tutorial)</h2><p>现在大家都用python了，octave不想再浪费时间去搞了，反正作业可以用matlab一样可以做。5.6向量化看一下，当你使用向量化地实现线性回归，通常运行速度就会比你以前用你的<strong>for循环</strong>快的多，也就是自己写代码更新。</p>
-<h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h2 id="逻辑回归-Logistic-Regression"><a href="#逻辑回归-Logistic-Regression" class="headerlink" title="逻辑回归(Logistic Regression)"></a>逻辑回归(Logistic Regression)</h2><h3 id="6-1-分类问题"><a href="#6-1-分类问题" class="headerlink" title="6.1 分类问题"></a>6.1 分类问题</h3>
-
-我们将学习一种叫做逻辑回归 (**Logistic Regression**) 的算法，这是目前最流行使用最广泛的一种学习算法。
-
-我们从二元的分类问题开始讨论。
-
-我们将因变量(**dependent variable**)可能属于的两个类分别称为负向类（**negative class**）和正向类（**positive class**），则因变量，其中 0 表示负向类，1 表示正向类。
-
-顺便说一下，**逻辑回归算法是分类算法**，我们将它作为分类算法使用。有时候可能因为这个算法的名字中出现了“回归”使你感到困惑，但逻辑回归算法实际上是一种分类算法
-
-### 6.2 假说表示
+<h1 id="第2天"><a href="#第2天" class="headerlink" title="第2天"></a>第2天</h1><h2 id="逻辑回归-Logistic-Regression"><a href="#逻辑回归-Logistic-Regression" class="headerlink" title="逻辑回归(Logistic Regression)"></a>逻辑回归(Logistic Regression)</h2><h3 id="6-1-分类问题"><a href="#6-1-分类问题" class="headerlink" title="6.1 分类问题"></a>6.1 分类问题</h3><p>我们将学习一种叫做逻辑回归 (<strong>Logistic Regression</strong>) 的算法，这是目前最流行使用最广泛的一种学习算法。</p>
+<p>我们从二元的分类问题开始讨论。</p>
+<p>我们将因变量(<strong>dependent variable</strong>)可能属于的两个类分别称为负向类（<strong>negative class</strong>）和正向类（<strong>positive class</strong>），则因变量，其中 0 表示负向类，1 表示正向类。</p>
+<p>顺便说一下，<strong>逻辑回归算法是分类算法</strong>，我们将它作为分类算法使用。有时候可能因为这个算法的名字中出现了“回归”使你感到困惑，但逻辑回归算法实际上是一种分类算法</p>
+<h3 id="6-2-假说表示"><a href="#6-2-假说表示" class="headerlink" title="6.2 假说表示"></a>6.2 假说表示</h3>
 
 逻辑回归模型的假设是： $h_\theta \left( x \right)=g\left(\theta^{T}X \right)$ 其中： $X$ 代表特征向量 $g$ 代表逻辑函数（**logistic function**)是一个常用的逻辑函数为**S**形函数（**Sigmoid function**），公式为： $g\left( z \right)=\frac{1}{1+{{e}^{-z}}}$。
 
 $h_\theta \left( x \right)$的作用是，对于给定的输入变量，根据选择的参数计算输出变量=1的可能性（**estimated probablity**）即$h_\theta \left( x \right)=P\left( y=1|x;\theta \right)$ 例如，如果对于给定的$x$，通过已经确定的参数计算得出$h_\theta \left( x \right)=0.7$，则表示有70%的几率$y$为正向类，相应地$y$为负向类的几率为1-0.7=0.3。
 
-### 6.3 判定边界
+
+
+<h3 id="6-3-判定边界"><a href="#6-3-判定边界" class="headerlink" title="6.3 判定边界"></a>6.3 判定边界</h3>
 
 现在讲下决策边界(**decision boundary**)的概念。这个概念能更好地帮助我们理解逻辑回归的假设函数在计算什么。
 
@@ -581,7 +577,9 @@ $h_\theta \left( x \right)$的作用是，对于给定的输入变量，根据�
 
 我们可以用非常复杂的模型来适应非常复杂形状的判定边界。
 
-### 6.4 代价函数
+
+
+<h3 id="6-4-代价函数"><a href="#6-4-代价函数" class="headerlink" title="6.4 代价函数"></a>6.4 代价函数</h3>
 
 定义用来拟合参数的优化目标或者叫代价函数，这便是监督学习问题中的逻辑回归模型的拟合问题。
 
