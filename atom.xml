@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-02-01T13:42:23.992Z</updated>
+  <updated>2021-02-10T12:33:29.807Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>read1</title>
+    <link href="https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/"/>
+    <id>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</id>
+    <published>2021-02-10T12:33:29.000Z</published>
+    <updated>2021-02-10T12:33:29.807Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021年度计划</title>
+    <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
+    <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
+    <published>2021-02-10T12:18:03.000Z</published>
+    <updated>2021-02-10T12:19:34.833Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="计划" scheme="https://henryavery.cn/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="年度计划" scheme="https://henryavery.cn/tags/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020年终总结</title>
+    <link href="https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/"/>
+    <id>https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/</id>
+    <published>2021-02-10T12:14:30.000Z</published>
+    <updated>2021-02-10T12:16:00.893Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="年终总结" scheme="https://henryavery.cn/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>2021一月复盘</title>
@@ -98,10 +148,10 @@
   
   <entry>
     <title>2021寒假计划</title>
-    <link href="https://henryavery.cn/2021/01/22/2021/"/>
-    <id>https://henryavery.cn/2021/01/22/2021/</id>
+    <link href="https://henryavery.cn/2021/01/22/2021-han-jia-ji-hua/"/>
+    <id>https://henryavery.cn/2021/01/22/2021-han-jia-ji-hua/</id>
     <published>2021-01-22T11:40:42.000Z</published>
-    <updated>2021-01-28T11:16:03.513Z</updated>
+    <updated>2021-02-10T11:59:32.271Z</updated>
     
     <summary type="html">
     
@@ -393,9 +443,9 @@
       <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
       <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
+    
+      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
@@ -450,94 +500,6 @@
     
     
       <category term="Python" scheme="https://henryavery.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django入门</title>
-    <link href="https://henryavery.cn/2020/09/11/django-ru-men/"/>
-    <id>https://henryavery.cn/2020/09/11/django-ru-men/</id>
-    <published>2020-09-11T12:53:01.000Z</published>
-    <updated>2020-09-26T01:09:27.859Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Django入门&quot;&gt;&lt;a href=&quot;#Django入门&quot; class=&quot;headerlink&quot; title=&quot;Django入门&quot;&gt;&lt;/a&gt;Django入门&lt;/h1&gt;&lt;h2 id=&quot;建立项目&quot;&gt;&lt;a href=&quot;#建立项目&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Python" scheme="https://henryavery.cn/tags/Python/"/>
-    
-      <category term="Django" scheme="https://henryavery.cn/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MATLAB学习</title>
-    <link href="https://henryavery.cn/2020/09/11/matlab-xue-xi/"/>
-    <id>https://henryavery.cn/2020/09/11/matlab-xue-xi/</id>
-    <published>2020-09-11T03:21:25.000Z</published>
-    <updated>2020-10-14T13:01:52.698Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;第一周信号处理实验课&quot;&gt;&lt;a href=&quot;#第一周信号处理实验课&quot; class=&quot;headerlink&quot; title=&quot;第一周信号处理实验课&quot;&gt;&lt;/a&gt;第一周信号处理实验课&lt;/h2&gt;&lt;h3 id=&quot;上课学习&quot;&gt;&lt;a href=&quot;#上课学习&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-      <category term="MATLAB" scheme="https://henryavery.cn/tags/MATLAB/"/>
-    
-      <category term="Signal Processing" scheme="https://henryavery.cn/tags/Signal-Processing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美赛启航</title>
-    <link href="https://henryavery.cn/2020/09/11/mei-sai-qi-hang/"/>
-    <id>https://henryavery.cn/2020/09/11/mei-sai-qi-hang/</id>
-    <published>2020-09-11T02:15:06.000Z</published>
-    <updated>2021-01-25T07:48:51.053Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;h3 id=&quot;美国大学生数学建模竞赛（MCM-ICM）&quot;&gt;&lt;a href=&quot;#美国大学生数学建模竞赛（MCM-ICM）&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="比赛" scheme="https://henryavery.cn/categories/%E6%AF%94%E8%B5%9B/"/>
-    
-    
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
-    
-      <category term="美赛" scheme="https://henryavery.cn/tags/%E7%BE%8E%E8%B5%9B/"/>
-    
-      <category term="数模" scheme="https://henryavery.cn/tags/%E6%95%B0%E6%A8%A1/"/>
     
   </entry>
   
