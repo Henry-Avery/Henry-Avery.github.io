@@ -283,7 +283,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -442,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.2k
+                    6.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    24 分
                 </div>
                 
                 
@@ -709,16 +709,113 @@ s = clock();//计时开始
 <blockquote>
 <p>需要在虚拟机上进行，先把文件传到虚拟机上</p>
 </blockquote>
-<p>在usr/local/mathlib/goto下解压：（随便什么位置应该都可以）</p>
+<p>在usr/local/mathlib/goto下解压：（随便什么位置应该都可以，我全部放在桌面了）</p>
 <p>$ tar -zxvf GotoBLAS2-1.13.tar.gz</p>
 <p>$ cd GotoBLAS2</p>
 <p>$ make  （TARGET=NEHALEM）</p>
 <p>注：可直接输入#make既可 也可自己选择参数 类似</p>
 <p> $ make CC=gcc  BINARY=64 TARGET=NEHALEM </p>
+<p>（新的intel都要有后面这个参数）</p>
 <p>依次是编译器 库的位数和cpu的类型（architecture），具体可选择的参数可从GotoBLAS2的目录下02QuickInstall.txt的查找</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228101841554.png" alt></p>
 <p>（3）安装openmpi</p>
+<p> <strong>安装tar压缩的安装包</strong></p>
+<p>tar -zxvf <em>**</em>.tar.gz</p>
+<p>tar -jxvf <em>**</em>.tar.bz(或bz2)<br> 1、用CD命令进入解压缩后的目录<br> 2、输入编译文件命令：./configure（有的压缩包已经编译过，这一步可以省去）<br> 3、然后是命令：make<br> 4、再是安装文件命令：make install<br> 5、安装完毕<br>————————————————<br><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228103352342.png" alt="make好久之后"></p>
 <p>（4）安装HPL</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228110042073.png" alt="又是文件名的问题，自己打开文件夹确认"></p>
 <p>（5）编译</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228110150035.png" alt="貌似成功编译了"></p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228110340435.png" alt="任务说明，mpicc写错了"></p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228110248444.png" alt="快速成功"></p>
+<p>运行</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228110838391.png" alt="没配置好结点，把结点名设置一下试试"></p>
+<p>改好结点还是遇到错误</p>
+<p><a href="https://www.cnblogs.com/codingmengmeng/p/7456539.html" target="_blank" rel="noopener">Linux中error while loading shared libraries错误解决办法</a></p>
+<p>原因：默认情况下，编译器只会使用/lib和/usr/lib这两个目录下的库文件，通常通过源码包进行安装时，如果不指定–prefix，会将库安装在/usr/local/lib目录下；当运行程序需要链接动态库时，提示找不到相关的.so库，会报错。也就是说，/usr/local/lib目录不在系统默认的库搜索目录中，需要将目录加进去。</p>
+<p>也可能是由于我安装位置的问题，<strong>安装共享库后要注意共享库路径设置问题</strong>，解决方法如下，第二部排错后成功</p>
+<p><a href="https://www.cnblogs.com/lcw/p/3341257.html" target="_blank" rel="noopener">【linux排错】”error while loading shared libraries: xxx.so.x” 错误的原因和解决办法</a></p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/image-20210228112440345.png" alt="大概用了一个多小时搞定"></p>
+<p>然后就是慢慢调参写报告了。</p>
+<p>使用gcc编译器的情况下测试，当进程数为4时，测试结果如下表：</p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>NB</th>
+<th>P</th>
+<th>Q</th>
+<th>Time</th>
+<th>Gflops</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1960</td>
+<td>60</td>
+<td>2</td>
+<td>2</td>
+<td>0.83</td>
+<td>6.079</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>80</td>
+<td>2</td>
+<td>2</td>
+<td>0.84</td>
+<td>6.015</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>60</td>
+<td>2</td>
+<td>2</td>
+<td>0.91</td>
+<td>6.319</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>80</td>
+<td>2</td>
+<td>2</td>
+<td>0.93</td>
+<td>6.165</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>60</td>
+<td>4</td>
+<td>1</td>
+<td>1.28</td>
+<td>3.940</td>
+</tr>
+<tr>
+<td>1960</td>
+<td>80</td>
+<td>4</td>
+<td>1</td>
+<td>1.27</td>
+<td>3.949</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>60</td>
+<td>4</td>
+<td>1</td>
+<td>1.40</td>
+<td>4.105</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>80</td>
+<td>4</td>
+<td>1</td>
+<td>1.37</td>
+<td>4.176</td>
+</tr>
+</tbody></table>
+<p><strong>参考资料</strong></p>
+<p><a href="https://wenku.baidu.com/view/ce44c4a5b8f67c1cfad6b8f8.html#" target="_blank" rel="noopener">实验报告</a></p>
 
             </div>
             <hr />
@@ -825,7 +922,7 @@ s = clock();//计时开始
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="《人机共生》">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="《人机共生》">
                         
                         <span class="card-title">《人机共生》</span>
                     </div>
@@ -874,7 +971,7 @@ s = clock();//计时开始
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="SHU数据结构">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="SHU数据结构">
                         
                         <span class="card-title">SHU数据结构</span>
                     </div>
@@ -1083,7 +1180,7 @@ s = clock();//计时开始
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">68.3k</span>
+            <span class="white-color">76k</span>
             
 
             <br>
