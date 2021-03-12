@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://henryavery.cn/2020/09/26/wo-de-linux-si-fang-cai/</loc>
+    
+    <lastmod>2021-03-12T02:27:54.964Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2020/09/11/django-ru-men/</loc>
+    
+    <lastmod>2021-03-12T02:27:30.091Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://henryavery.cn/2021/03/05/er-yue/</loc>
     
     <lastmod>2021-03-06T12:59:09.516Z</lastmod>
@@ -173,20 +187,6 @@
     <loc>https://henryavery.cn/2020/09/19/django-hou-xu/</loc>
     
     <lastmod>2020-10-01T02:36:38.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2020/09/26/wo-de-linux-si-fang-cai/</loc>
-    
-    <lastmod>2020-09-26T05:25:53.049Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2020/09/11/django-ru-men/</loc>
-    
-    <lastmod>2020-09-26T01:09:27.859Z</lastmod>
     
   </url>
   
