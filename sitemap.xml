@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</loc>
+    
+    <lastmod>2021-03-28T13:52:41.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/03/28/2021-3/</loc>
+    
+    <lastmod>2021-03-28T13:19:35.277Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/03/25/da-er-dong-ji-xue-qi-zong-jie/</loc>
+    
+    <lastmod>2021-03-26T11:31:32.937Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2020/11/28/shu-ji-zu/</loc>
+    
+    <lastmod>2021-03-25T01:56:47.375Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</loc>
+    
+    <lastmod>2021-03-25T01:38:57.395Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://henryavery.cn/2020/09/26/wo-de-linux-si-fang-cai/</loc>
     
     <lastmod>2021-03-12T02:27:54.964Z</lastmod>
@@ -23,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</loc>
-    
-    <lastmod>2021-02-28T13:12:21.001Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://henryavery.cn/2021/01/22/2021-han-jia-ji-hua/</loc>
     
     <lastmod>2021-02-28T13:12:19.635Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2020/11/28/shu-ji-zu/</loc>
-    
-    <lastmod>2021-02-28T07:23:49.412Z</lastmod>
     
   </url>
   
@@ -61,13 +82,6 @@
     <loc>https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/</loc>
     
     <lastmod>2021-02-19T03:27:35.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</loc>
-    
-    <lastmod>2021-02-16T01:11:16.940Z</lastmod>
     
   </url>
   
@@ -233,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://henryavery.cn/categories/index.html</loc>
+    <loc>https://henryavery.cn/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://henryavery.cn/archives/index.html</loc>
+    <loc>https://henryavery.cn/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

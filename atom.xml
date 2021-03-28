@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-03-06T12:59:09.516Z</updated>
+  <updated>2021-03-28T13:19:35.277Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021_3</title>
+    <link href="https://henryavery.cn/2021/03/28/2021-3/"/>
+    <id>https://henryavery.cn/2021/03/28/2021-3/</id>
+    <published>2021-03-28T13:19:04.000Z</published>
+    <updated>2021-03-28T13:19:35.277Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;三月复盘（）&quot;&gt;&lt;a href=&quot;#三月复盘（）&quot; class=&quot;headerlink&quot; title=&quot;三月复盘（）&quot;&gt;&lt;/a&gt;三月复盘（）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：&quot;&gt;&lt;a href=&quot;#本月关键词：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SHU智科大二冬季学期总结</title>
+    <link href="https://henryavery.cn/2021/03/25/da-er-dong-ji-xue-qi-zong-jie/"/>
+    <id>https://henryavery.cn/2021/03/25/da-er-dong-ji-xue-qi-zong-jie/</id>
+    <published>2021-03-25T01:30:00.000Z</published>
+    <updated>2021-03-26T11:31:32.937Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;课程总览&quot;&gt;&lt;a href=&quot;#课程总览&quot; class=&quot;headerlink&quot; title=&quot;课程总览&quot;&gt;&lt;/a&gt;课程总览&lt;/h3&gt;&lt;p&gt;这个学期一共十周，寒假前八周，五周寒假之后再上两周课，然后是两周的考试周。&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="课程总结" scheme="https://henryavery.cn/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+  </entry>
   
   <entry>
     <title>2月复盘</title>
@@ -76,7 +127,7 @@
     <link href="https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</id>
     <published>2021-02-10T12:33:29.000Z</published>
-    <updated>2021-02-16T01:11:16.940Z</updated>
+    <updated>2021-03-25T01:38:57.395Z</updated>
     
     <summary type="html">
     
@@ -87,9 +138,9 @@
           &lt;p&gt;《CS：APP》&lt;/p&gt;
 &lt;p&gt;《算法导论》&lt;/p&gt;
 &lt;p&gt;《自私的基因》&lt;/p&gt;
-&lt;p&gt;《第五项修炼》&lt;/p&gt;
+&lt;p&gt;《傲慢与偏见》&lt;/p&gt;
 &lt;p&gt;《维特根斯坦传》&lt;/p&gt;
-&lt;p&gt;《杰克韦尔奇自传》&lt;/p&gt;
+&lt;p&gt;《图解HTTP》&lt;/p&gt;
 
         
       
@@ -108,7 +159,7 @@
     <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
     <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-02-28T13:12:21.001Z</updated>
+    <updated>2021-03-28T13:52:41.310Z</updated>
     
     <summary type="html">
     
@@ -384,7 +435,7 @@
     <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
     <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
     <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2021-02-28T07:23:49.412Z</updated>
+    <updated>2021-03-25T01:56:47.375Z</updated>
     
     <summary type="html">
     
@@ -491,62 +542,6 @@
       <category term="论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
     
       <category term="信号处理" scheme="https://henryavery.cn/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS使用技巧</title>
-    <link href="https://henryavery.cn/2020/10/07/vs-shi-yong-ji-qiao/"/>
-    <id>https://henryavery.cn/2020/10/07/vs-shi-yong-ji-qiao/</id>
-    <published>2020-10-07T02:36:41.000Z</published>
-    <updated>2020-10-08T11:46:22.773Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;VS常用快捷键&quot;&gt;&lt;a href=&quot;#VS常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;VS常用快捷键&quot;&gt;&lt;/a&gt;VS常用快捷键&lt;/h2&gt;&lt;h3 id=&quot;变量-方法-类-相关操作&quot;&gt;&lt;a href=&quot;#变量-方法-类-相关操作&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="https://henryavery.cn/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="IDE" scheme="https://henryavery.cn/tags/IDE/"/>
-    
-      <category term="效率" scheme="https://henryavery.cn/tags/%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Git和Github</title>
-    <link href="https://henryavery.cn/2020/10/03/guan-yu-git-he-github/"/>
-    <id>https://henryavery.cn/2020/10/03/guan-yu-git-he-github/</id>
-    <published>2020-10-03T04:21:35.000Z</published>
-    <updated>2020-10-05T11:27:16.240Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;a href=&quot;#关于廖雪峰的Git教程小结&quot; class=&quot;headerlink&quot; title=&quot;关于廖雪峰的Git教程小结&quot;&gt;&lt;/a&gt;关于廖雪峰的Git教程小结&lt;/h2&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Git" scheme="https://henryavery.cn/tags/Git/"/>
-    
-      <category term="在更" scheme="https://henryavery.cn/tags/%E5%9C%A8%E6%9B%B4/"/>
     
   </entry>
   
