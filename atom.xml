@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-03-28T13:19:35.277Z</updated>
+  <updated>2021-04-01T23:54:13.038Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2021_3</title>
-    <link href="https://henryavery.cn/2021/03/28/2021-3/"/>
-    <id>https://henryavery.cn/2021/03/28/2021-3/</id>
-    <published>2021-03-28T13:19:04.000Z</published>
-    <updated>2021-03-28T13:19:35.277Z</updated>
+    <title>Tensorflow学习笔记</title>
+    <link href="https://henryavery.cn/2021/04/01/tensorflow/"/>
+    <id>https://henryavery.cn/2021/04/01/tensorflow/</id>
+    <published>2021-04-01T06:02:20.000Z</published>
+    <updated>2021-04-01T23:54:13.038Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,34 @@
       
         
         
-          &lt;h1 id=&quot;三月复盘（）&quot;&gt;&lt;a href=&quot;#三月复盘（）&quot; class=&quot;headerlink&quot; title=&quot;三月复盘（）&quot;&gt;&lt;/a&gt;三月复盘（）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：&quot;&gt;&lt;a href=&quot;#本月关键词：&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;TensorFlow 是一个开源的、基于 Python 的机器学习框架，它由 Google
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="TensorFlow" scheme="https://henryavery.cn/tags/TensorFlow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3月复盘</title>
+    <link href="https://henryavery.cn/2021/03/28/2021-3/"/>
+    <id>https://henryavery.cn/2021/03/28/2021-3/</id>
+    <published>2021-03-28T13:19:04.000Z</published>
+    <updated>2021-04-04T12:41:02.202Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;三月复盘（4-3）&quot;&gt;&lt;a href=&quot;#三月复盘（4-3）&quot; class=&quot;headerlink&quot; title=&quot;三月复盘（4.3）&quot;&gt;&lt;/a&gt;三月复盘（4.3）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：看开&quot;&gt;&lt;a href=&quot;#本月关键词：看开&quot;
         
       
     
@@ -37,6 +64,8 @@
     
       <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
     
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
@@ -69,8 +98,8 @@
   
   <entry>
     <title>2月复盘</title>
-    <link href="https://henryavery.cn/2021/03/05/er-yue/"/>
-    <id>https://henryavery.cn/2021/03/05/er-yue/</id>
+    <link href="https://henryavery.cn/2021/03/05/2021-2/"/>
+    <id>https://henryavery.cn/2021/03/05/2021-2/</id>
     <published>2021-03-05T12:52:43.000Z</published>
     <updated>2021-03-06T12:59:09.516Z</updated>
     
@@ -127,7 +156,7 @@
     <link href="https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</id>
     <published>2021-02-10T12:33:29.000Z</published>
-    <updated>2021-03-25T01:38:57.395Z</updated>
+    <updated>2021-04-02T00:09:05.467Z</updated>
     
     <summary type="html">
     
@@ -135,13 +164,8 @@
       
         
         
-          &lt;p&gt;《CS：APP》&lt;/p&gt;
-&lt;p&gt;《算法导论》&lt;/p&gt;
-&lt;p&gt;《自私的基因》&lt;/p&gt;
-&lt;p&gt;《傲慢与偏见》&lt;/p&gt;
-&lt;p&gt;《维特根斯坦传》&lt;/p&gt;
-&lt;p&gt;《图解HTTP》&lt;/p&gt;
-
+          &lt;h3 id=&quot;《CS：APP》&quot;&gt;&lt;a href=&quot;#《CS：APP》&quot; class=&quot;headerlink&quot; title=&quot;《CS：APP》&quot;&gt;&lt;/a&gt;《CS：APP》&lt;/h3&gt;&lt;p&gt;看了一下网络编程&lt;/p&gt;
+&lt;h3 id=&quot;《傲慢与偏见》&quot;&gt;&lt;a
         
       
     
@@ -159,7 +183,7 @@
     <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
     <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-03-28T13:52:41.310Z</updated>
+    <updated>2021-04-04T14:29:48.216Z</updated>
     
     <summary type="html">
     
@@ -208,8 +232,8 @@
   
   <entry>
     <title>2021一月复盘</title>
-    <link href="https://henryavery.cn/2021/01/30/yi-yue/"/>
-    <id>https://henryavery.cn/2021/01/30/yi-yue/</id>
+    <link href="https://henryavery.cn/2021/01/30/2021-1/"/>
+    <id>https://henryavery.cn/2021/01/30/2021-1/</id>
     <published>2021-01-30T12:12:25.000Z</published>
     <updated>2021-02-01T13:42:23.992Z</updated>
     
@@ -277,7 +301,7 @@
     <link href="https://henryavery.cn/2021/01/22/flutter/"/>
     <id>https://henryavery.cn/2021/01/22/flutter/</id>
     <published>2021-01-22T11:41:06.000Z</published>
-    <updated>2021-02-25T12:39:20.983Z</updated>
+    <updated>2021-04-02T00:36:21.413Z</updated>
     
     <summary type="html">
     
@@ -511,37 +535,6 @@
       <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
     
       <category term="音乐" scheme="https://henryavery.cn/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何阅读一篇科研论文</title>
-    <link href="https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/"/>
-    <id>https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/</id>
-    <published>2020-10-09T03:22:44.000Z</published>
-    <updated>2021-01-22T11:43:47.946Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;检索论文&quot;&gt;&lt;a href=&quot;#检索论文&quot; class=&quot;headerlink&quot; title=&quot;检索论文&quot;&gt;&lt;/a&gt;检索论文&lt;/h2&gt;&lt;p&gt;知网（学校资源库）、知乎、各大顶会……&lt;/p&gt;
-&lt;h2 id=&quot;下载论文&quot;&gt;&lt;a href=&quot;#下载论文&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="论文阅读" scheme="https://henryavery.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-      <category term="论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
-    
-      <category term="信号处理" scheme="https://henryavery.cn/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
