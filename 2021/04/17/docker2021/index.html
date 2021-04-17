@@ -617,16 +617,15 @@ RUN set -x; buildDeps=&#39;gcc libc6-dev make wget&#39; \
 <p><strong>构建镜像</strong></p>
 <p>好了，让我们再回到之前定制的 nginx 镜像的 Dockerfile 来。现在我们明白了这个 Dockerfile 的内容，那么让我们来构建这个镜像吧。</p>
 <p>在 <code>Dockerfile</code> 文件所在目录执行：</p>
-<pre class="line-numbers language-cmd"><code class="language-cmd">$ docker build -t nginx:v3 .
+<pre><code>$ docker build -t nginx:v3 .
 Sending build context to Docker daemon 2.048 kB
 Step 1 : FROM nginx
- ---> e43d811ce2f4
-Step 2 : RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
- ---> Running in 9cdc27646c7b
- ---> 44aa4490ce2c
+ ---&gt; e43d811ce2f4
+Step 2 : RUN echo &#39;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html
+ ---&gt; Running in 9cdc27646c7b
+ ---&gt; 44aa4490ce2c
 Removing intermediate container 9cdc27646c7b
-Successfully built 44aa4490ce2c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
+Successfully built 44aa4490ce2c</code></pre><blockquote>
 <p>我在这遇到个小问题，ERROR [internal] load metadata for docker.io/library/nginx:latest，怀疑是挂了梯子的原因，关了代理之后就正常了。</p>
 </blockquote>
 <p>从命令的输出结果中，我们可以清晰的看到镜像的构建过程。在 <code>Step 2</code> 中，如同我们之前所说的那样，<code>RUN</code> 指令启动了一个容器 <code>9cdc27646c7b</code>，执行了所要求的命令，并最后提交了这一层 <code>44aa4490ce2c</code>，随后删除了所用到的这个容器 <code>9cdc27646c7b</code>。</p>
@@ -718,7 +717,6 @@ $ sudo systemctl start docker</code></pre><ul>
 <blockquote>
 <p>因为docker pull 太慢所以待到图书馆关门，保安叔叔来赶人</p>
 </blockquote>
-<hr>
 <h4 id="Docker容器-1"><a href="#Docker容器-1" class="headerlink" title="Docker容器"></a>Docker容器</h4><p>容器是 Docker 又一核心概念。简单的说，容器是独立运行的一个或一组应用，以及它们的运行态环境。</p>
 <p>本节将具体介绍如何来管理一个容器，包括创建、启动和停止等。</p>
 <p>启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（<code>exited</code>）的容器重新启动。</p>
