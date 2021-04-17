@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-04-11T14:10:29.597Z</updated>
+  <updated>2021-04-17T04:04:04.023Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker2021</title>
+    <link href="https://henryavery.cn/2021/04/17/docker2021/"/>
+    <id>https://henryavery.cn/2021/04/17/docker2021/</id>
+    <published>2021-04-17T04:02:53.000Z</published>
+    <updated>2021-04-17T04:04:04.023Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么要学习Docker&quot;&gt;&lt;a href=&quot;#为什么要学习Docker&quot; class=&quot;headerlink&quot; title=&quot;为什么要学习Docker?&quot;&gt;&lt;/a&gt;为什么要学习Docker?&lt;/h2&gt;&lt;p&gt;为了解决环境配置问题&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Docker" scheme="https://henryavery.cn/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>英语学习</title>
@@ -503,34 +530,6 @@
       <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
     
       <category term="数据结构" scheme="https://henryavery.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>外国经典音乐</title>
-    <link href="https://henryavery.cn/2020/11/17/wai-guo-jing-dian-yin-le/"/>
-    <id>https://henryavery.cn/2020/11/17/wai-guo-jing-dian-yin-le/</id>
-    <published>2020-11-17T02:01:53.000Z</published>
-    <updated>2020-11-28T11:26:04.487Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;音乐的巴洛克——巴洛克艺术的整体风格&quot;&gt;&lt;a href=&quot;#音乐的巴洛克——巴洛克艺术的整体风格&quot; class=&quot;headerlink&quot; title=&quot;音乐的巴洛克——巴洛克艺术的整体风格&quot;&gt;&lt;/a&gt;音乐的巴洛克——巴洛克艺术的整体风格&lt;/h2&gt;&lt;h3
-        
-      
-    
-    </summary>
-    
-      <category term="课程笔记" scheme="https://henryavery.cn/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-      <category term="音乐" scheme="https://henryavery.cn/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   

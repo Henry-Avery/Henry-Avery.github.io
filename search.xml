@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>docker2021</title>
+      <link href="/2021/04/17/docker2021/"/>
+      <url>/2021/04/17/docker2021/</url>
+      
+        <content type="html"><![CDATA[<h2 id="为什么要学习Docker"><a href="#为什么要学习Docker" class="headerlink" title="为什么要学习Docker?"></a>为什么要学习Docker?</h2><p>为了解决环境配置问题</p><h2 id="怎样学习使用Docker"><a href="#怎样学习使用Docker" class="headerlink" title="怎样学习使用Docker?"></a>怎样学习使用Docker?</h2><h3 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h3><p><a href="https://www.docker.com/" target="_blank" rel="noopener">Docker官网安装</a></p><p>Docker CE 的安装请参考官方文档。<a href="https://docs.docker.com/docker-for-windows/install/" target="_blank" rel="noopener">Windows版本</a></p><h2 id="什么是Docker？"><a href="#什么是Docker？" class="headerlink" title="什么是Docker？"></a>什么是Docker？</h2><blockquote><p><strong>Docker 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。</strong>它是目前最流行的 Linux 容器解决方案。</p><p>Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 Docker，就不用担心环境问题。</p><p>总体来说，Docker 的接口相当简单，用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。</p><p>——阮一峰</p></blockquote><p>就跟git一样，是为了方便我们程序员的powerful tools 之一。</p><hr><h2 id="Datawhale的组队学Docker"><a href="#Datawhale的组队学Docker" class="headerlink" title="Datawhale的组队学Docker"></a>Datawhale的组队学Docker</h2><h3 id="启航"><a href="#启航" class="headerlink" title="启航"></a>启航</h3><blockquote><p>通过本次docker的组队学习，我们希望你能学到以下几个方面的能力：</p></blockquote><ul><li>了解什么是docker</li><li>docker镜像是怎么构建的</li><li>如何运行一个docker容器</li><li>docker之间的网络通信是怎么样的</li><li>docker中的数据如何做持久化存储</li><li>如何通过docker compose管理自己的项目</li><li>如何将自己的个人项目打造成容器化部署的形式</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>英语学习</title>
       <link href="/2021/04/11/ying-yu-xue-xi/"/>
       <url>/2021/04/11/ying-yu-xue-xi/</url>
@@ -560,9 +585,9 @@
       
         <tags>
             
-            <tag> Git </tag>
-            
             <tag> 在更 </tag>
+            
+            <tag> Git </tag>
             
         </tags>
       
@@ -666,9 +691,9 @@
       
         <tags>
             
-            <tag> MATLAB </tag>
-            
             <tag> SHU </tag>
+            
+            <tag> MATLAB </tag>
             
             <tag> Signal Processing </tag>
             
