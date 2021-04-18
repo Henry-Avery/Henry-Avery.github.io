@@ -285,7 +285,7 @@ Docker 属于 Linux 容器的一种封">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -440,14 +440,14 @@ Docker 属于 Linux 容器的一种封">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.4k
+                    17.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    58 分
+                    65 分
                 </div>
                 
                 
@@ -1168,6 +1168,184 @@ $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B<span aria-hidden="true"
 <blockquote>
 <p>后面完全是因为基本功没到位看不懂了</p>
 </blockquote>
+<h3 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h3><p>先手资料</p>
+<hr>
+<p><a href="https://vuepress.mirror.docker-practice.com/compose/install/" target="_blank" rel="noopener">docker compose安装与卸载</a></p>
+<p><strong><a href="https://github.com/docker/awesome-compose" target="_blank" rel="noopener">awesome-compose</a></strong>这个项目也非常推荐。</p>
+<blockquote>
+<p>推荐大家多看看一些项目的docker-compose.yml文件是怎么写的，慢慢模仿着去写很多就越来越熟练清晰了。</p>
+</blockquote>
+<p><strong>什么是</strong>docker compose</p>
+<p>它允许用户通过一个单独的 <code>docker-compose.yml</code> 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）</p>
+<p><strong>如何使用</strong>docker compose</p>
+<p>在<code>Compose</code> 中有两个重要的概念：</p>
+<ul>
+<li>服务 (<code>service</code>)：一个<strong>应用的容器</strong>，实际上可以包括若干运行相同镜像的容器实例。</li>
+<li>项目 (<code>project</code>)：由一组关联的应用容器组成的一个<strong>完整业务单元</strong>，在 <code>docker-compose.yml</code> 文件中定义。</li>
+</ul>
+<p><strong>web应用</strong></p>
+<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p><strong>启动服务</strong></p>
+<pre><code>docker-compose up</code></pre><p>命令后会自动接一个默认值<code>-f docker-compose.yml</code>，也就是默认是使用docker-compose.yml文件的。我们也可以给文件起名为<code>docke-test.yml</code>，这样在使用时指定文件名，但是为了符合规范，还是统一为<code>docker-compose.yml</code>。</p>
+<pre><code>docker-compose up -f docer-test.yml</code></pre><p>-d参数让启动时的输出不会打印到终端</p>
+<p><strong>查看服务状态</strong></p>
+<pre><code>docker-compose ps</code></pre><p>要是想要查看所有service的状态可以使用-a参数</p>
+<p><strong>停止或删除服务</strong></p>
+<pre><code>docker-compose stop
+docker-compose down</code></pre><p>其中stop是直接停止services，而down则会停止并删除创建的service，volume和network。</p>
+<p><strong>进入服务</strong></p>
+<pre><code>docker-compose exec mysql bash</code></pre><p><strong>查看服务输出日志</strong></p>
+<pre><code>docker-compose logs</code></pre><hr>
+<p>Compose<strong>模板文件</strong></p>
+<p><em><a href="https://vuepress.mirror.docker-practice.com/compose/compose_file/#cap-add-cap-drop" target="_blank" rel="noopener">Compose模板文件</a></em></p>
+<p>文件格式为 YAML 格式。</p>
+<pre class="line-numbers language-yml"><code class="language-yml">version: "3"
+
+services:
+  webapp:
+    image: examples/web
+    ports:
+      - "80:80"
+    volumes:
+      - "/data"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>每个服务都必须通过 <code>image</code> 指令指定镜像或 <code>build</code> 指令（需要 Dockerfile）等来自动构建生成镜像。</p>
+<p><strong>build</strong></p>
+<p>指定 <code>Dockerfile</code> 所在文件夹的路径（可以是绝对路径，或者相对 docker-compose.yml 文件的路径）。 <code>Compose</code> 将会利用它自动构建这个镜像，然后使用这个镜像。</p>
+<p><code>context</code> 指令指定 <code>Dockerfile</code> 所在文件夹的路径</p>
+<p>使用 <code>dockerfile</code> 指令指定 <code>Dockerfile</code> 文件名。</p>
+<p>使用 <code>arg</code> 指令指定构建镜像时的变量。</p>
+<p>使用 <code>cache_from</code> 指定构建镜像的缓存。</p>
+<p><strong>depends_on</strong></p>
+<p>解决容器的依赖、启动先后的问题。</p>
+<p><strong>environment</strong></p>
+<p>设置环境变量。你可以使用数组或字典两种格式。</p>
+<p>只给定名称的变量会自动获取运行 Compose 主机上对应变量的值，可以用来防止泄露不必要的数据。</p>
+<p>如果变量名称或者值中用到 <code>true|false，yes|no</code> 等表达 <a href="https://yaml.org/type/bool.html" target="_blank" rel="noopener">布尔 (opens new window)</a>含义的词汇，最好放到引号里，避免 YAML 自动解析某些内容为对应的布尔语义。这些特定词汇，包括</p>
+<pre><code>y|Y|yes|Yes|YES|n|N|no|No|NO|true|True|TRUE|false|False|FALSE|on|On|ON|off|Off|OFF</code></pre><p><strong>expose</strong></p>
+<p>暴露端口，但不映射到宿主机，只被连接的服务访问。仅可以指定内部端口为参数</p>
+<p><strong>ports</strong></p>
+<p>暴露端口信息。使用宿主端口：容器端口 <code>(HOST:CONTAINER)</code> 格式，或者仅仅指定容器的端口（宿主将会随机选择端口）都可以。</p>
+<p><strong>secrets</strong>存储敏感数据，例如 <code>mysql</code> 服务密码。</p>
+<p><strong>image</strong>指定为镜像名称或镜像 ID。</p>
+<p><strong>labels</strong>为容器添加 Docker 元数据（metadata）信息。例如可以为容器添加辅助说明信息。</p>
+<p><strong>network_mode</strong>设置网络模式。使用和 <code>docker run</code> 的 <code>--network</code> 参数一样的值。</p>
+<p><strong>networks</strong>配置容器连接的网络。</p>
+<p><strong>volumes</strong></p>
+<p>数据卷所挂载路径设置。可以设置为宿主机路径(<code>HOST:CONTAINER</code>)或者数据卷名称(<code>VOLUME:CONTAINER</code>)，并且可以设置访问模式 （<code>HOST:CONTAINER:ro</code>）。该指令中路径支持相对路径。</p>
+<p>如果路径为数据卷名称，必须在文件中配置数据卷。</p>
+<hr>
+<p>Compose<strong>命令</strong></p>
+<p><code>docker-compose</code> 命令的基本的使用格式是</p>
+<pre><code>docker-compose [-f=&lt;arg&gt;...] [options] [COMMAND] [ARGS...]</code></pre><ul>
+<li><code>f, --file FILE</code> 指定使用的 Compose 模板文件，默认为 <code>docker-compose.yml</code>，可以多次指定。</li>
+<li><code>-p, --project-name NAME</code> 指定项目名称，默认将使用所在目录名称作为项目名。</li>
+<li><code>--verbose</code> 输出更多调试信息。</li>
+<li><code>-v, --version</code> 打印版本并退出。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>build</td>
+<td align="center">格式为 <code>docker-compose build [options] [SERVICE...]</code>。构建（重新构建）项目中的服务容器。</td>
+</tr>
+<tr>
+<td>config</td>
+<td align="center">验证 Compose 文件格式是否正确</td>
+</tr>
+<tr>
+<td>down</td>
+<td align="center">此命令将会停止 <code>up</code> 命令所启动的容器，并移除网络</td>
+</tr>
+<tr>
+<td>exec</td>
+<td align="center">进入指定的容器。</td>
+</tr>
+<tr>
+<td>help</td>
+<td align="center">帮助</td>
+</tr>
+<tr>
+<td>image</td>
+<td align="center">列出 Compose 文件中包含的镜像</td>
+</tr>
+<tr>
+<td>kill</td>
+<td align="center">格式为 <code>docker-compose kill [options] [SERVICE...]</code>。通过发送 <code>SIGKILL</code> 信号来强制停止服务容器。支持通过 <code>-s</code> 参数来指定发送的信号</td>
+</tr>
+<tr>
+<td>logs</td>
+<td align="center">查看服务容器的输出。默认情况下，docker-compose 将对不同的服务输出使用不同的颜色来区分。可以通过 <code>--no-color</code> 来关闭颜色。该命令在调试问题的时候十分有用。</td>
+</tr>
+<tr>
+<td>pause</td>
+<td align="center">暂停一个服务容器。</td>
+</tr>
+<tr>
+<td>port</td>
+<td align="center">打印某个容器端口所映射的公共端口。</td>
+</tr>
+<tr>
+<td>ps</td>
+<td align="center">列出项目中目前的所有容器。</td>
+</tr>
+<tr>
+<td>pull</td>
+<td align="center">拉取服务依赖的镜像。–ignore-pull-failures忽略拉取镜像过程中的错误。</td>
+</tr>
+<tr>
+<td>push</td>
+<td align="center">推送服务</td>
+</tr>
+<tr>
+<td>restart</td>
+<td align="center">重启项目中的服务。</td>
+</tr>
+<tr>
+<td>rm</td>
+<td align="center">删除所有（停止状态的）服务容器。推荐先执行 <code>docker-compose stop</code> 命令来停止容器。<code>-f, --force</code> 强制直接删除 -v删除容器所挂载的数据卷</td>
+</tr>
+<tr>
+<td>start</td>
+<td align="center">启动</td>
+</tr>
+<tr>
+<td>stop</td>
+<td align="center">停止已经处于运行状态的容器，但不删除它</td>
+</tr>
+<tr>
+<td>top</td>
+<td align="center">查看各个服务容器内运行的进程</td>
+</tr>
+<tr>
+<td>unpause</td>
+<td align="center">恢复处于暂停状态中的服务</td>
+</tr>
+<tr>
+<td>up</td>
+<td align="center">尝试自动完成包括构建镜像，（重新）创建服务，启动服务，并关联服务相关容器的一系列操作。<code>-d</code>，将会在后台启动并运行所有的容器</td>
+</tr>
+</tbody></table>
+<p>up选项：</p>
+<ul>
+<li><code>-d</code> 在后台运行服务容器。</li>
+<li><code>--no-color</code> 不使用颜色来区分不同的服务的控制台输出。</li>
+<li><code>--no-deps</code> 不启动服务所链接的容器。</li>
+<li><code>--force-recreate</code> 强制重新创建容器，不能与 <code>--no-recreate</code> 同时使用。</li>
+<li><code>--no-recreate</code> 如果容器已经存在了，则不重新创建，不能与 <code>--force-recreate</code> 同时使用。</li>
+<li><code>--no-build</code> 不自动构建缺失的服务镜像。</li>
+<li><code>-t, --timeout TIMEOUT</code> 停止容器时候的超时（默认为 10 秒）。</li>
+</ul>
+<hr>
+<p><strong>扩缩容</strong></p>
+<pre><code>docker-compose up --scale web=3 -d</code></pre><blockquote>
+<p>理想情况下这三个web会同时对外提供服务，以减轻访问单个容器的压力。但是我们在上面也看到了因为大家都是绑定的5000端口，这样端口就冲突了，导致新创建的两个web服务都是Exit的状态，对于这个问题我们可以通过HAProxy来解决。</p>
+</blockquote>
+<p>HAProxy？等我学完网络再来看能不能PR好了</p>
+<h3 id="综合实践"><a href="#综合实践" class="headerlink" title="综合实践"></a>综合实践</h3><p>待补充</p>
 <h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">阮一峰的docker教程</a></p>
 <p><a href="https://vuepress.mirror.docker-practice.com/" target="_blank" rel="noopener">Docker 从入门到实践</a></p>
 <p><a href="https://github.com/datawhalechina/team-learning-program/tree/master/Docker" target="_blank" rel="noopener">github组队学习</a></p>
@@ -1274,30 +1452,29 @@ $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B<span aria-hidden="true"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/17/docker2021/">
+                <a href="/2021/04/17/deeplearning/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="docker2021">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="关于神经网络与深度学习">
                         
-                        <span class="card-title">docker2021</span>
+                        <span class="card-title">关于神经网络与深度学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker小白第一次学习Docker，也是第一次参加Datawhale的组队学习活动
+                            先开好坑，估摸着暑假前整完
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1310,12 +1487,11 @@ $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B<span aria-hidden="true"
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Docker/" target="_blank">
-                        <span class="chip bg-color">Docker</span>
+                    <a href="/tags/DL/" target="_blank">
+                        <span class="chip bg-color">DL</span>
                     </a>
                     
                 </div>
@@ -1333,7 +1509,7 @@ $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B<span aria-hidden="true"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="英语学习">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="英语学习">
                         
                         <span class="card-title">英语学习</span>
                     </div>
@@ -1511,7 +1687,7 @@ $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B<span aria-hidden="true"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.8k</span>
+            <span class="white-color">99.9k</span>
             
 
             <br>

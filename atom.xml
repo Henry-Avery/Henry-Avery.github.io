@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-04-17T04:58:26.729Z</updated>
+  <updated>2021-04-17T07:33:21.484Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于神经网络与深度学习</title>
+    <link href="https://henryavery.cn/2021/04/17/deeplearning/"/>
+    <id>https://henryavery.cn/2021/04/17/deeplearning/</id>
+    <published>2021-04-17T07:31:22.000Z</published>
+    <updated>2021-04-17T07:33:21.484Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://nndl.github.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="DL" scheme="https://henryavery.cn/tags/DL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>docker2021</title>
     <link href="https://henryavery.cn/2021/04/17/docker2021/"/>
     <id>https://henryavery.cn/2021/04/17/docker2021/</id>
     <published>2021-04-17T04:02:53.000Z</published>
-    <updated>2021-04-17T04:58:26.729Z</updated>
+    <updated>2021-04-18T03:29:53.991Z</updated>
     
     <summary type="html">
     
@@ -233,7 +259,7 @@
     <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
     <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-04-04T14:29:48.216Z</updated>
+    <updated>2021-04-17T07:43:07.745Z</updated>
     
     <summary type="html">
     
@@ -502,34 +528,6 @@
       <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
     
       <category term="计算机组成原理" scheme="https://henryavery.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SHU数据结构</title>
-    <link href="https://henryavery.cn/2020/11/28/shu-shu-ju-jie-gou/"/>
-    <id>https://henryavery.cn/2020/11/28/shu-shu-ju-jie-gou/</id>
-    <published>2020-11-28T11:22:43.000Z</published>
-    <updated>2020-11-28T11:38:05.611Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-      <category term="数据结构" scheme="https://henryavery.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
