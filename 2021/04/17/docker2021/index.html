@@ -285,7 +285,7 @@ Docker 属于 Linux 容器的一种封">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -440,14 +440,14 @@ Docker 属于 Linux 容器的一种封">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    17.1k
+                    17.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    65 分
+                    68 分
                 </div>
                 
                 
@@ -1345,7 +1345,77 @@ services:
 <p>理想情况下这三个web会同时对外提供服务，以减轻访问单个容器的压力。但是我们在上面也看到了因为大家都是绑定的5000端口，这样端口就冲突了，导致新创建的两个web服务都是Exit的状态，对于这个问题我们可以通过HAProxy来解决。</p>
 </blockquote>
 <p>HAProxy？等我学完网络再来看能不能PR好了</p>
-<h3 id="综合实践"><a href="#综合实践" class="headerlink" title="综合实践"></a>综合实践</h3><p>待补充</p>
+<h3 id="综合实践"><a href="#综合实践" class="headerlink" title="综合实践"></a>综合实践</h3><h4 id="WordPress"><a href="#WordPress" class="headerlink" title="WordPress"></a>WordPress</h4><p>看github上的教程没搞懂这次打卡具体要做什么，如果自己写dockfile估计时间不够了，所以参照阮一峰的docker实战尝试在服务器上做点东西出来好了。</p>
+<p>在服务器上装docker，见参考资料</p>
+<p>首先还要更新一下yum，遇到点小问题，csdn解决。</p>
+<p><a href="https://blog.csdn.net/haohaoxuexiyai/article/details/111027692" target="_blank" rel="noopener">yum更新失败：rpmdb: BDB0113 Thread/process 2673/140126198814528 failed: BDB1507 Thread died…</a></p>
+<p>服务器一边还在进行一些其他任务，所以在本地同时开工。</p>
+<p>由于时间关系这次就不自建WordPress容器了，直接采取最简单的方法，使用官方提供的容器。</p>
+<p>首先，新建并启动 MySQL 容器。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ docker container run \
+  -d \
+  --rm \
+  --name wordpressdb \
+  --env MYSQL_ROOT_PASSWORD<span class="token operator">=</span>123456 \
+  --env MYSQL_DATABASE<span class="token operator">=</span>wordpress \
+  mysql:5.7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<p>然后，基于官方的 WordPress image，新建并启动 WordPress 容器。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ docker container run \
+  -d \
+  --rm \
+  --name wordpress \
+  --env WORDPRESS_DB_PASSWORD<span class="token operator">=</span>123456 \
+  --link wordpressdb:mysql \
+  wordpress<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<p>上面命令中，各个参数的含义前面都解释过了，其中环境变量<code>WORDPRESS_DB_PASSWORD</code>是 MySQL 容器的根密码。</p>
+<p>上面命令指定<code>wordpress</code>容器在后台运行，导致前台看不见输出，使用下面的命令查出<code>wordpress</code>容器的 IP 地址。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ docker container inspect wordpress<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<p>上面命令运行以后，会输出很多内容，找到<code>IPAddress</code>字段即可。我的机器返回的 IP 地址是<code>172.17.0.3</code>。</p>
+<p>浏览器访问<code>172.17.0.3</code>，就会看到 WordPress 的安装提示。</p>
+<p>然而我打不开<code>172.17.0.3</code>，不知道是不是打开方式不对。</p>
+<p>到了上一步，官方 WordPress 容器的安装就已经成功了。但是，这种方法有两个很不方便的地方。</p>
+<blockquote>
+<ul>
+<li>每次新建容器，返回的 IP 地址不能保证相同，导致要更换 IP 地址访问 WordPress。</li>
+<li>WordPress 安装在容器里面，本地无法修改文件。</li>
+</ul>
+</blockquote>
+<p>解决这两个问题很容易，只要新建容器的时候，加两个命令行参数就可以了。</p>
+<p>先把刚才启动的 WordPress 容器终止（容器文件会自动删除）。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ docker container stop wordpress<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<p>然后，使用下面的命令新建并启动 WordPress 容器。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash"> $ docker container run \
+  -d \
+  -p 127.0.0.2:8080:80 \
+  --rm \
+  --name wordpress \
+  --env WORDPRESS_DB_PASSWORD<span class="token operator">=</span>123456 \
+  --link wordpressdb:mysql \
+  --volume <span class="token string">"<span class="token variable">$PWD</span>/wordpress"</span>:/var/www/html \
+  wordpress<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<p>上面的命令跟前面相比，命令行参数只多出了两个。</p>
+<blockquote>
+<ul>
+<li><code>-p 127.0.0.2:8080:80</code>：将容器的 80 端口映射到<code>127.0.0.2</code>的<code>8080</code>端口。</li>
+<li><code>--volume &quot;$PWD/wordpress&quot;:/var/www/html</code>：将容器的<code>/var/www/html</code>目录映射到当前目录的<code>wordpress</code>子目录。</li>
+</ul>
+</blockquote>
+<p>浏览器访问<code>127.0.0.2:8080:80</code>就能看到 WordPress 的安装提示了。而且，你在<code>wordpress</code>子目录下的每次修改，都会反映到容器里面。</p>
+<p>最后，终止这两个容器（容器文件会自动删除）。</p>
+<blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ docker container stop wordpress wordpressdb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<h4 id="第一次实际实用docker"><a href="#第一次实际实用docker" class="headerlink" title="第一次实际实用docker"></a><strong>第一次实际实用docker</strong></h4><p><a href="https://aistudio.baidu.com/aistudio/projectdetail/1836012?qq-pf-to=pcqq.group" target="_blank" rel="noopener">教你用AI Studio+wechaty+阿里云白嫖一个智能微信机器人</a></p>
 <h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">阮一峰的docker教程</a></p>
 <p><a href="https://vuepress.mirror.docker-practice.com/" target="_blank" rel="noopener">Docker 从入门到实践</a></p>
 <p><a href="https://github.com/datawhalechina/team-learning-program/tree/master/Docker" target="_blank" rel="noopener">github组队学习</a></p>
@@ -1354,6 +1424,8 @@ services:
 <p>关于安装问题</p>
 <p><a href="https://blog.csdn.net/LFxiaosu/article/details/112214780" target="_blank" rel="noopener">docker的安装及卸载不干净造成的问题</a></p>
 <p><a href="https://blog.csdn.net/lazy_ting/article/details/106375737" target="_blank" rel="noopener">乌班图配网</a></p>
+<p>关于服务器装docker</p>
+<p><a href="https://cloud.tencent.com/document/product/213/46000#.E5.AE.89.E8.A3.85-docker" target="_blank" rel="noopener">我用的腾讯云centos7</a></p>
 
             </div>
             <hr />
@@ -1460,7 +1532,7 @@ services:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="关于神经网络与深度学习">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="关于神经网络与深度学习">
                         
                         <span class="card-title">关于神经网络与深度学习</span>
                     </div>
@@ -1509,7 +1581,7 @@ services:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="英语学习">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="英语学习">
                         
                         <span class="card-title">英语学习</span>
                     </div>
@@ -1695,7 +1767,7 @@ services:
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100k</span>
+            <span class="white-color">101.2k</span>
             
 
             <br>
