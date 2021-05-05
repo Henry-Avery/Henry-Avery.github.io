@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://henryavery.cn/2021/04/17/docker2021/</loc>
+    <loc>https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/</loc>
     
-    <lastmod>2021-04-23T14:01:08.053Z</lastmod>
+    <lastmod>2021-05-05T03:02:46.385Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/04/30/2021-4/</loc>
+    
+    <lastmod>2021-05-04T07:51:35.910Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/04/11/ying-yu-xue-xi/</loc>
+    
+    <lastmod>2021-04-30T13:21:56.454Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://henryavery.cn/2020/09/11/matlab-xue-xi/</loc>
     
-    <lastmod>2021-04-23T01:21:42.455Z</lastmod>
+    <lastmod>2021-04-30T01:16:00.278Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/01/25/ml/</loc>
+    
+    <lastmod>2021-04-27T12:37:34.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/04/17/docker2021/</loc>
+    
+    <lastmod>2021-04-25T10:32:00.102Z</lastmod>
     
   </url>
   
@@ -30,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://henryavery.cn/2021/04/11/ying-yu-xue-xi/</loc>
-    
-    <lastmod>2021-04-18T12:54:25.690Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://henryavery.cn/2021/04/17/deeplearning/</loc>
     
     <lastmod>2021-04-17T07:33:21.484Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2020/10/09/ru-he-yue-du-ke-yan-lun-wen/</loc>
-    
-    <lastmod>2021-04-16T01:38:53.334Z</lastmod>
     
   </url>
   
@@ -138,13 +152,6 @@
     <loc>https://henryavery.cn/2021/01/30/2021-1/</loc>
     
     <lastmod>2021-02-01T13:42:23.992Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2021/01/25/ml/</loc>
-    
-    <lastmod>2021-01-29T13:49:02.483Z</lastmod>
     
   </url>
   

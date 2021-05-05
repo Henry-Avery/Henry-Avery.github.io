@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-04-17T07:33:21.484Z</updated>
+  <updated>2021-05-04T07:51:35.910Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>4月复盘</title>
+    <link href="https://henryavery.cn/2021/04/30/2021-4/"/>
+    <id>https://henryavery.cn/2021/04/30/2021-4/</id>
+    <published>2021-04-30T09:41:25.000Z</published>
+    <updated>2021-05-04T07:51:35.910Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;四月复盘（4-30）&quot;&gt;&lt;a href=&quot;#四月复盘（4-30）&quot; class=&quot;headerlink&quot; title=&quot;四月复盘（4.30）&quot;&gt;&lt;/a&gt;四月复盘（4.30）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：时间赛跑&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
   
   <entry>
     <title>关于神经网络与深度学习</title>
@@ -47,7 +73,7 @@
     <link href="https://henryavery.cn/2021/04/17/docker2021/"/>
     <id>https://henryavery.cn/2021/04/17/docker2021/</id>
     <published>2021-04-17T04:02:53.000Z</published>
-    <updated>2021-04-23T14:01:08.053Z</updated>
+    <updated>2021-04-25T10:32:00.102Z</updated>
     
     <summary type="html">
     
@@ -74,7 +100,7 @@
     <link href="https://henryavery.cn/2021/04/11/ying-yu-xue-xi/"/>
     <id>https://henryavery.cn/2021/04/11/ying-yu-xue-xi/</id>
     <published>2021-04-11T12:48:18.000Z</published>
-    <updated>2021-04-18T12:54:25.690Z</updated>
+    <updated>2021-04-30T13:21:56.454Z</updated>
     
     <summary type="html">
     
@@ -341,7 +367,7 @@
     <link href="https://henryavery.cn/2021/01/25/ml/"/>
     <id>https://henryavery.cn/2021/01/25/ml/</id>
     <published>2021-01-25T07:30:42.000Z</published>
-    <updated>2021-01-29T13:49:02.483Z</updated>
+    <updated>2021-04-27T12:37:34.014Z</updated>
     
     <summary type="html">
     
@@ -504,34 +530,6 @@
     
     
       <category term="-论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SHU机组</title>
-    <link href="https://henryavery.cn/2020/11/28/shu-ji-zu/"/>
-    <id>https://henryavery.cn/2020/11/28/shu-ji-zu/</id>
-    <published>2020-11-28T11:23:05.000Z</published>
-    <updated>2021-03-25T01:56:47.375Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;计算机组成原理与结构体系&quot;&gt;&lt;a href=&quot;#计算机组成原理与结构体系&quot; class=&quot;headerlink&quot; title=&quot;计算机组成原理与结构体系&quot;&gt;&lt;/a&gt;计算机组成原理与结构体系&lt;/h1&gt;&lt;h2 id=&quot;理论学习&quot;&gt;&lt;a href=&quot;#理论学习&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-      <category term="计算机组成原理" scheme="https://henryavery.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
