@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-05-04T07:51:35.910Z</updated>
+  <updated>2021-05-30T12:52:24.949Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,89 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>5月复盘</title>
+    <link href="https://henryavery.cn/2021/05/28/2021-5/"/>
+    <id>https://henryavery.cn/2021/05/28/2021-5/</id>
+    <published>2021-05-28T11:07:19.000Z</published>
+    <updated>2021-05-30T12:52:24.949Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;五月复盘（5-29）&quot;&gt;&lt;a href=&quot;#五月复盘（5-29）&quot; class=&quot;headerlink&quot; title=&quot;五月复盘（5.29）&quot;&gt;&lt;/a&gt;五月复盘（5.29）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：书生&quot;&gt;&lt;a href=&quot;#本月关键词：书生&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《禅与摩托车维修艺术》</title>
+    <link href="https://henryavery.cn/2021/05/14/shan-yu-mo-tuo-che/"/>
+    <id>https://henryavery.cn/2021/05/14/shan-yu-mo-tuo-che/</id>
+    <published>2021-05-14T00:36:30.000Z</published>
+    <updated>2021-05-30T12:41:33.862Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;《Zen-and-the-Art-of-Motorcycle-Maintenance》&quot;&gt;&lt;a href=&quot;#《Zen-and-the-Art-of-Motorcycle-Maintenance》&quot; class=&quot;headerlink&quot; title=&quot;《Zen
+        
+      
+    
+    </summary>
+    
+      <category term="阅读笔记" scheme="https://henryavery.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="哲学" scheme="https://henryavery.cn/tags/%E5%93%B2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《穷查理宝典》</title>
+    <link href="https://henryavery.cn/2021/05/05/poorchalie/"/>
+    <id>https://henryavery.cn/2021/05/05/poorchalie/</id>
+    <published>2021-05-05T14:03:22.000Z</published>
+    <updated>2021-05-06T01:15:50.796Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;《Poor-Charlie’s-Almanack》&quot;&gt;&lt;a href=&quot;#《Poor-Charlie’s-Almanack》&quot; class=&quot;headerlink&quot; title=&quot;《Poor Charlie’s Almanack》&quot;&gt;&lt;/a&gt;《Poor
+        
+      
+    
+    </summary>
+    
+      <category term="阅读笔记" scheme="https://henryavery.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="人生哲学" scheme="https://henryavery.cn/tags/%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>4月复盘</title>
     <link href="https://henryavery.cn/2021/04/30/2021-4/"/>
     <id>https://henryavery.cn/2021/04/30/2021-4/</id>
     <published>2021-04-30T09:41:25.000Z</published>
-    <updated>2021-05-04T07:51:35.910Z</updated>
+    <updated>2021-05-09T11:37:36.623Z</updated>
     
     <summary type="html">
     
@@ -289,7 +367,7 @@
     <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
     <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-04-21T13:55:49.428Z</updated>
+    <updated>2021-05-29T12:04:41.042Z</updated>
     
     <summary type="html">
     
@@ -451,85 +529,6 @@
     
     
       <category term="学习" scheme="https://henryavery.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记</title>
-    <link href="https://henryavery.cn/2021/01/22/java/"/>
-    <id>https://henryavery.cn/2021/01/22/java/</id>
-    <published>2021-01-22T11:40:21.000Z</published>
-    <updated>2021-01-23T11:11:23.695Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;我的Java学习之路&quot;&gt;&lt;a href=&quot;#我的Java学习之路&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Java" scheme="https://henryavery.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于如何卖出一瓶水</title>
-    <link href="https://henryavery.cn/2021/01/15/guan-yu-yi-ping-shui/"/>
-    <id>https://henryavery.cn/2021/01/15/guan-yu-yi-ping-shui/</id>
-    <published>2021-01-15T13:03:31.000Z</published>
-    <updated>2021-01-18T23:20:31.810Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://gitee.com/henry-avery/my_pic_bed/raw/master/v2-569c7994e7598714d44790fbacbf065a_b.jpg&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://henryavery.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="商务" scheme="https://henryavery.cn/tags/%E5%95%86%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《人机共生》</title>
-    <link href="https://henryavery.cn/2021/01/01/ren-ji-gong-sheng/"/>
-    <id>https://henryavery.cn/2021/01/01/ren-ji-gong-sheng/</id>
-    <published>2021-01-01T10:54:04.000Z</published>
-    <updated>2021-01-01T11:03:15.284Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;Man-Computer Symbiosis&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;J. C. R. Licklider&lt;/strong&gt;&lt;br&gt;IRE Transactions on Human Factors in
-        
-      
-    
-    </summary>
-    
-      <category term="-未来" scheme="https://henryavery.cn/categories/%E6%9C%AA%E6%9D%A5/"/>
-    
-    
-      <category term="-论文" scheme="https://henryavery.cn/tags/%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
