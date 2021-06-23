@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://henryavery.cn/2021/06/23/shugame/</loc>
+    
+    <lastmod>2021-06-23T11:29:47.237Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</loc>
     
     <lastmod>2021-06-22T11:14:12.535Z</lastmod>
@@ -310,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://henryavery.cn/archives/index.html</loc>
+    <loc>https://henryavery.cn/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://henryavery.cn/categories/index.html</loc>
+    <loc>https://henryavery.cn/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
