@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="关于神经网络与深度学习, SHU19级小天爷( •̀ ω •́ )y">
+    <meta name="baidu-site-verification" content="fmlEuI34ir">
+    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
+    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
+    <meta name="description" content="
+小时候，每个人都会鼓励不断成长
+变成一个心智成熟，不在耍小孩子脾气的人
+但是，很少有人鼓励继续成长
+变成一个怀疑和抵制社会错误潮流的人
+——保罗•格雷厄姆《黑客与画家》
+
+参考资料课程
+b站[中英字幕]吴恩达机器学习系列课程
+Course">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>关于神经网络与深度学习 | 小天爷的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46e79e71af0709a5b9106bf20cecc493";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">小天爷的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">小天爷的博客</div>
+        <div class="logo-desc">
+            
+            商才士魂
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        关于神经网络与深度学习
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/DL/" target="_blank">
+                            <span class="chip bg-color">DL</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/学习笔记/" class="post-category" target="_blank">
+                            学习笔记
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-06-25
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    Henry-Avery
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    12.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    43 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>小时候，每个人都会鼓励不断成长</p>
+<p>变成一个心智成熟，不在耍小孩子脾气的人</p>
+<p>但是，<strong>很少有人鼓励继续成长</strong></p>
+<p><strong>变成一个怀疑和抵制社会错误潮流的人</strong></p>
+<p>——保罗•格雷厄姆《黑客与画家》</p>
+</blockquote>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><strong>课程</strong></p>
+<p><a href="https://www.bilibili.com/video/BV164411b7dx?p=1" target="_blank" rel="noopener">b站[中英字幕]吴恩达机器学习系列课程</a></p>
+<p><a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener">Coursera机器学习</a></p>
+<p><a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="noopener">Coursera深度学习</a></p>
+<blockquote>
+<p>主成分数据选择那里有一节课没有字幕，建议移步Coursera</p>
+</blockquote>
+<p><strong>黄海广笔记</strong></p>
+<p><a href="https://github.com/fengdu78/deeplearning_ai_books" target="_blank" rel="noopener"><strong>Coursera深度学习教程中文笔记</strong></a></p>
+<p><a href="https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes" target="_blank" rel="noopener"><strong>斯坦福大学2014（吴恩达）机器学习教程中文笔记</strong></a></p>
+<p><strong>其他</strong></p>
+<p><a href="https://henryavery.cn/2021/01/25/ml/">我的机器学习笔记</a></p>
+<p><a href="https://nndl.github.io/" target="_blank" rel="noopener">神经网络与深度学习邱席鹏</a></p>
+<blockquote>
+<p>27个小时，集中时间的话三天左右看完。估计分散在一周时间内吧。</p>
+</blockquote>
+<h1 id="第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning"><a href="#第一门课-神经网络和深度学习-Neural-Networks-and-Deep-Learning" class="headerlink" title="第一门课 神经网络和深度学习(Neural Networks and Deep Learning)"></a>第一门课 神经网络和深度学习(Neural Networks and Deep Learning)</h1><h2 id="第一周：深度学习引言-Introduction-to-Deep-Learning"><a href="#第一周：深度学习引言-Introduction-to-Deep-Learning" class="headerlink" title="第一周：深度学习引言(Introduction to Deep Learning)"></a><strong>第一周：深度学习引言(Introduction to Deep Learning)</strong></h2><h2 id="第二周：神经网络的编程基础-Basics-of-Neural-Network-programming"><a href="#第二周：神经网络的编程基础-Basics-of-Neural-Network-programming" class="headerlink" title="第二周：神经网络的编程基础(Basics of Neural Network programming)"></a>第二周：神经网络的编程基础(Basics of Neural Network programming)</h2><h3 id="2-1-二分类-Binary-Classification"><a href="#2-1-二分类-Binary-Classification" class="headerlink" title="2.1 二分类(Binary Classification)"></a><strong>2.1 二分类(Binary Classification)</strong></h3><h3 id="2-2-逻辑回归-Logistic-Regression"><a href="#2-2-逻辑回归-Logistic-Regression" class="headerlink" title="2.2 逻辑回归(Logistic Regression)"></a><strong>2.2 逻辑回归(Logistic Regression)</strong></h3><h3 id="2-3-逻辑回归的代价函数（Logistic-Regress）"><a href="#2-3-逻辑回归的代价函数（Logistic-Regress）" class="headerlink" title="2.3 逻辑回归的代价函数（Logistic Regress）"></a><strong>2.3 逻辑回归的代价函数（Logistic Regress）</strong></h3><p>损失函数又叫做误差函数，用来衡量算法的运行情况，Loss function</p>
+<p>练样本中表现如何，为了衡量算法在全部训练样本上的表现如何，我们需要定义一个算法的代价函数cost function</p>
+<h3 id="2-4-梯度下降法（Gradient-Descent）"><a href="#2-4-梯度下降法（Gradient-Descent）" class="headerlink" title="2.4 梯度下降法（Gradient Descent）"></a><strong>2.4 梯度下降法（Gradient Descent）</strong></h3><h3 id="2-9-逻辑回归中的梯度下降（Logistic-Regression-Gradient-Descent）"><a href="#2-9-逻辑回归中的梯度下降（Logistic-Regression-Gradient-Descent）" class="headerlink" title="2.9 逻辑回归中的梯度下降（Logistic Regression Gradient Descent）"></a><strong>2.9 逻辑回归中的梯度下降（Logistic Regression Gradient Descent）</strong></h3><h3 id="2-10-m-个样本的梯度下降-Gradient-Descent-on-m-Examples"><a href="#2-10-m-个样本的梯度下降-Gradient-Descent-on-m-Examples" class="headerlink" title="2.10  m 个样本的梯度下降(Gradient Descent on m Examples)"></a><strong>2.10  m 个样本的梯度下降(Gradient Descent on m Examples)</strong></h3><h3 id="2-11-向量化-Vectorization"><a href="#2-11-向量化-Vectorization" class="headerlink" title="2.11 向量化(Vectorization)"></a><strong>2.11 向量化(Vectorization)</strong></h3><h3 id="2-13-向量化逻辑回归-Vectorizing-Logistic-Regression"><a href="#2-13-向量化逻辑回归-Vectorizing-Logistic-Regression" class="headerlink" title="2.13 向量化逻辑回归(Vectorizing Logistic Regression)"></a><strong>2.13 向量化逻辑回归(Vectorizing Logistic Regression)</strong></h3><h3 id="2-14-向量化-logistic-回归的梯度输出（Vectorizing-Logistic-Regression’s-Gradient）"><a href="#2-14-向量化-logistic-回归的梯度输出（Vectorizing-Logistic-Regression’s-Gradient）" class="headerlink" title="2.14 向量化 logistic 回归的梯度输出（Vectorizing Logistic Regression’s Gradient）"></a><strong>2.14 向量化 logistic 回归的梯度输出（Vectorizing Logistic Regression’s Gradient）</strong></h3><h2 id="第三周：浅层神经网络-Shallow-neural-networks"><a href="#第三周：浅层神经网络-Shallow-neural-networks" class="headerlink" title="第三周：浅层神经网络(Shallow neural networks)"></a>第三周：浅层神经网络(Shallow neural networks)</h2><h3 id="3-1-神经网络概述（Neural-Network-Overview）"><a href="#3-1-神经网络概述（Neural-Network-Overview）" class="headerlink" title="3.1 神经网络概述（Neural Network Overview）"></a><strong>3.1 神经网络概述（Neural Network Overview）</strong></h3><h3 id="3-2-神经网络的表示（Neural-Network-Representation）"><a href="#3-2-神经网络的表示（Neural-Network-Representation）" class="headerlink" title="3.2 神经网络的表示（Neural Network Representation）"></a><strong>3.2 神经网络的表示（Neural Network Representation）</strong></h3><h3 id="3-3-计算一个神经网络的输出（Computing-a-Neural-Network’s-output）"><a href="#3-3-计算一个神经网络的输出（Computing-a-Neural-Network’s-output）" class="headerlink" title="3.3 计算一个神经网络的输出（Computing a Neural Network’s output）"></a><strong>3.3 计算一个神经网络的输出（Computing a Neural Network’s output）</strong></h3><h3 id="3-4-多样本向量化（Vectorizing-across-multiple-examples）"><a href="#3-4-多样本向量化（Vectorizing-across-multiple-examples）" class="headerlink" title="3.4 多样本向量化（Vectorizing across multiple examples）"></a><strong>3.4 多样本向量化（Vectorizing across multiple examples）</strong></h3><h3 id="3-5-向量化实现的解释（Justification-for-vectorized-implementation）"><a href="#3-5-向量化实现的解释（Justification-for-vectorized-implementation）" class="headerlink" title="3.5 向量化实现的解释（Justification for vectorized implementation）"></a><strong>3.5 向量化实现的解释（Justification for vectorized implementation）</strong></h3><h3 id="3-6-激活函数（Activation-functions）"><a href="#3-6-激活函数（Activation-functions）" class="headerlink" title="3.6 激活函数（Activation functions）"></a><strong>3.6 激活函数（Activation functions）</strong></h3><p><strong>tanh</strong>函数或者双曲正切函数是总体上都优于<strong>sigmoid</strong>函数的激活函数。</p>
+<p><strong>sigmoid</strong>函数和<strong>tanh</strong>函数两者共同的缺点是，在$z$特别大或者特别小的情况下，导数的梯度或者函数的斜率会变得特别小，最后就会接近于0，导致降低梯度下降的速度。</p>
+<p>在机器学习另一个很流行的函数是：修正线性单元的函数（<strong>ReLu</strong>）</p>
+<p>如果输出是0、1值（二分类问题），则输出层选择<strong>sigmoid</strong>函数，然后其它的所有单元都选择<strong>Relu</strong>函数。</p>
+<p>这是很多激活函数的默认选择，如果在隐藏层上不确定使用哪个激活函数，那么通常会使用<strong>Relu</strong>激活函数。有时，也会使用<strong>tanh</strong>激活函数，但<strong>Relu</strong>的一个优点是：当$z$是负值的时候，导数等于0。</p>
+<p>这里也有另一个版本的<strong>Relu</strong>被称为<strong>Leaky Relu</strong>。</p>
+<p>当$z$是负值时，这个函数的值不是等于0，而是轻微的倾斜。</p>
+<p>如图。（图在心中）</p>
+<p>两者的优点是：</p>
+<p>第一，在$z$的区间变动很大的情况下，激活函数的导数或者激活函数的斜率都会远大于0，在程序实现就是一个<strong>if-else</strong>语句，而<strong>sigmoid</strong>函数需要进行浮点四则运算，在实践中，使用<strong>ReLu</strong>激活函数神经网络通常会比使用<strong>sigmoid</strong>或者<strong>tanh</strong>激活函数学习的更快。</p>
+<p>第二，<strong>sigmoid</strong>和<strong>tanh</strong>函数的导数在正负饱和区的梯度都会接近于0，这会造成梯度弥散，而<strong>Relu</strong>和<strong>Leaky ReLu</strong>函数大于0部分都为常数，不会产生梯度弥散现象。(同时应该注意到的是，<strong>Relu</strong>进入负半区的时候，梯度为0，神经元此时不会训练，产生所谓的稀疏性，而<strong>Leaky ReLu</strong>不会有这问题)</p>
+<p>$z$在<strong>ReLu</strong>的梯度一半都是0，但是，有足够的隐藏层使得z值大于0，所以对大多数的训练数据来说学习过程仍然可以很快。</p>
+<p>快速概括一下不同激活函数的过程和结论。</p>
+<p><strong>sigmoid</strong>激活函数：除了输出层是一个二分类问题基本不会用它。</p>
+<p><strong>tanh</strong>激活函数：<strong>tanh</strong>是非常优秀的，几乎适合所有场合。</p>
+<p><strong>ReLu</strong>激活函数：最常用的默认函数，，如果不确定用哪个激活函数，就使用<strong>ReLu</strong>或者<strong>Leaky ReLu</strong>。</p>
+<h3 id="3-7-为什么需要非线性激活函数？（why-need-a-nonlinear-activation-function-）"><a href="#3-7-为什么需要非线性激活函数？（why-need-a-nonlinear-activation-function-）" class="headerlink" title="3.7 为什么需要非线性激活函数？（why need a nonlinear activation function?）"></a><strong>3.7 为什么需要非线性激活函数？（why need a nonlinear activation function?）</strong></h3><h3 id="3-8-激活函数的导数（Derivatives-of-activation-functions）"><a href="#3-8-激活函数的导数（Derivatives-of-activation-functions）" class="headerlink" title="3.8 激活函数的导数（Derivatives of activation functions）"></a><strong>3.8 激活函数的导数（Derivatives of activation functions）</strong></h3><h3 id="3-9-神经网络的梯度下降（Gradient-descent-for-neural-networks）"><a href="#3-9-神经网络的梯度下降（Gradient-descent-for-neural-networks）" class="headerlink" title="3.9 神经网络的梯度下降（Gradient descent for neural networks）"></a><strong>3.9 神经网络的梯度下降（Gradient descent for neural networks）</strong></h3><h3 id="3-10（选修）直观理解反向传播（Backpropagation-intuition）"><a href="#3-10（选修）直观理解反向传播（Backpropagation-intuition）" class="headerlink" title="3.10（选修）直观理解反向传播（Backpropagation intuition）"></a><strong>3.10（选修）直观理解反向传播（Backpropagation intuition）</strong></h3><p>看懂逻辑回归就清楚了，主要是梯度下降用到loss function对某参数的导数来更新，求导就是链式法则，神经网络就是矩阵求导。</p>
+<h3 id="3-11-随机初始化（Random-Initialization）"><a href="#3-11-随机初始化（Random-Initialization）" class="headerlink" title="3.11 随机初始化（Random+Initialization）"></a><strong>3.11 随机初始化（Random+Initialization）</strong></h3><p>如果$W$很大，$z$就会很大或者很小，因此这种情况下你很可能停在<strong>tanh</strong>/<strong>sigmoid</strong>函数的平坦的地方(见图3.8.2)，这些地方梯度很小也就意味着梯度下降会很慢，因此学习也就很慢。</p>
+<p>事实上有时有比0.01更好的常数，当你训练一个只有一层隐藏层的网络时（这是相对浅的神经网络，没有太多的隐藏层），设为0.01可能也可以。但当你训练一个非常非常深的神经网络，你可能要试试0.01以外的常数。下一节课我们会讨论怎么并且何时去选择一个不同于0.01的常数，但是无论如何它通常都会是个相对小的数。</p>
+<h2 id="第四周：深层神经网络-Deep-Neural-Networks"><a href="#第四周：深层神经网络-Deep-Neural-Networks" class="headerlink" title="第四周：深层神经网络(Deep Neural Networks)"></a>第四周：深层神经网络(Deep Neural Networks)</h2><h3 id="4-1-深层神经网络（Deep-L-layer-neural-network）"><a href="#4-1-深层神经网络（Deep-L-layer-neural-network）" class="headerlink" title="4.1 深层神经网络（Deep L-layer neural network）"></a>4.1 深层神经网络（Deep L-layer neural network）</h3><h3 id="4-2-前向传播和反向传播（Forward-and-backward-propagation）"><a href="#4-2-前向传播和反向传播（Forward-and-backward-propagation）" class="headerlink" title="4.2 前向传播和反向传播（Forward and backward propagation）"></a>4.2 前向传播和反向传播（Forward and backward propagation）</h3><h3 id="4-3-深层网络中的前向传播（Forward-propagation-in-a-Deep-Network）"><a href="#4-3-深层网络中的前向传播（Forward-propagation-in-a-Deep-Network）" class="headerlink" title="4.3 深层网络中的前向传播（Forward propagation in a Deep Network）"></a>4.3 深层网络中的前向传播（Forward propagation in a Deep Network）</h3><h3 id="4-4-核对矩阵的维数（Getting-your-matrix-dimensions-right）"><a href="#4-4-核对矩阵的维数（Getting-your-matrix-dimensions-right）" class="headerlink" title="4.4 核对矩阵的维数（Getting your matrix dimensions right）"></a>4.4 核对矩阵的维数（Getting your matrix dimensions right）</h3><h3 id="4-5-为什么使用深层表示？（Why-deep-representations-）"><a href="#4-5-为什么使用深层表示？（Why-deep-representations-）" class="headerlink" title="4.5 为什么使用深层表示？（Why deep representations?）"></a>4.5 为什么使用深层表示？（Why deep representations?）</h3><h3 id="4-6-搭建神经网络块（Building-blocks-of-deep-neural-networks）"><a href="#4-6-搭建神经网络块（Building-blocks-of-deep-neural-networks）" class="headerlink" title="4.6 搭建神经网络块（Building blocks of deep neural networks）"></a>4.6 搭建神经网络块（Building blocks of deep neural networks）</h3><h3 id="4-7-参数VS超参数（Parameters-vs-Hyperparameters）"><a href="#4-7-参数VS超参数（Parameters-vs-Hyperparameters）" class="headerlink" title="4.7 参数VS超参数（Parameters vs Hyperparameters）"></a>4.7 参数VS超参数（Parameters vs Hyperparameters）</h3><h3 id="4-8-深度学习和大脑的关联性（What-does-this-have-to-do-with-the-brain-）"><a href="#4-8-深度学习和大脑的关联性（What-does-this-have-to-do-with-the-brain-）" class="headerlink" title="4.8 深度学习和大脑的关联性（What does this have to do with the brain?）"></a>4.8 深度学习和大脑的关联性（What does this have to do with the brain?）</h3><h1 id="第二门课-改善深层神经网络：超参数调试、正则化以及优化-Improving-Deep-Neural-Networks-Hyperparameter-tuning-Regularization-and-Optimization"><a href="#第二门课-改善深层神经网络：超参数调试、正则化以及优化-Improving-Deep-Neural-Networks-Hyperparameter-tuning-Regularization-and-Optimization" class="headerlink" title="第二门课 改善深层神经网络：超参数调试、正则化以及优化(Improving Deep Neural Networks:Hyperparameter tuning, Regularization and Optimization)"></a>第二门课 改善深层神经网络：超参数调试、正则化以及优化(Improving Deep Neural Networks:Hyperparameter tuning, Regularization and Optimization)</h1><h2 id="第一周：深度学习的实践层面-Practical-aspects-of-Deep-Learning"><a href="#第一周：深度学习的实践层面-Practical-aspects-of-Deep-Learning" class="headerlink" title="第一周：深度学习的实践层面(Practical aspects of Deep Learning)"></a>第一周：深度学习的实践层面(Practical aspects of Deep Learning)</h2><h3 id="1-1-训练，验证，测试集（Train-Dev-Test-sets）"><a href="#1-1-训练，验证，测试集（Train-Dev-Test-sets）" class="headerlink" title="1.1 训练，验证，测试集（Train / Dev / Test sets）"></a>1.1 训练，验证，测试集（Train / Dev / Test sets）</h3><p>比如我们有100万条数据，那么取1万条数据便足以进行评估，找出其中表现最好的1-2种算法。同样地，根据最终选择的分类器，测试集的主要目的是正确评估分类器的性能，所以，如果拥有百万数据，我们只需要1000条数据，便足以评估单个分类器，并且准确评估该分类器的性能。假设我们有100万条数据，其中1万条作为验证集，1万条作为测试集，100万里取1万，比例是1%，即：训练集占98%，验证集和测试集各占1%。对于数据量过百万的应用，训练集可以占到99.5%，验证和测试集各占0.25%，或者验证集占0.4%，测试集占0.1%。</p>
+<p>根据经验，我建议大家要确保验证集和测试集的数据来自<strong>同一分布</strong>，关于这个问题我也会多讲一些。因为你们要用验证集来评估不同的模型，尽可能地优化性能。如果验证集和测试集来自同一个分布就会很好。</p>
+<h3 id="1-2-偏差，方差（Bias-Variance）"><a href="#1-2-偏差，方差（Bias-Variance）" class="headerlink" title="1.2 偏差，方差（Bias /Variance）"></a>1.2 偏差，方差（Bias /Variance）</h3><p>高偏差（<strong>high bias</strong>）的情况，我们称为“欠拟合”（<strong>underfitting</strong>）。</p>
+<p>方差较高（<strong>high variance</strong>），数据过度拟合（<strong>overfitting</strong>）。</p>
+<p>理解偏差和方差的两个关键数据是训练集误差（<strong>Train set error</strong>）和验证集误差（<strong>Dev set error</strong>）</p>
+<p>假定训练集误差是1%，为了方便论证，假定验证集误差是11%，可以看出训练集设置得非常好，而验证集设置相对较差，我们可能过度拟合了训练集，在某种程度上，验证集并没有充分利用交叉验证集的作用，像这种情况，我们称之为“高方差”。</p>
+<p>通过查看训练集误差和验证集误差，我们便可以诊断算法是否具有高方差。也就是说衡量训练集和验证集误差就可以得出不同结论。</p>
+<p>假设训练集误差是15%，我们把训练集误差写在首行，验证集误差是16%，假设该案例中人的错误率几乎为0%，人们浏览这些图片，分辨出是不是猫。算法并没有在训练集中得到很好训练，如果训练数据的拟合度不高，就是数据欠拟合，就可以说这种算法偏差比较高。相反，它对于验证集产生的结果却是合理的，验证集中的错误率只比训练集的多了1%，所以这种算法偏差高，因为它甚至不能拟合训练集</p>
+<p>再举一个例子，训练集误差是15%，偏差相当高，但是，验证集的评估结果更糟糕，错误率达到30%，在这种情况下，我会认为这种算法偏差高，因为它在训练集上结果不理想，而且方差也很高，这是方差偏差都很糟糕的情况。</p>
+<h3 id="1-3-机器学习基础（Basic-Recipe-for-Machine-Learning）"><a href="#1-3-机器学习基础（Basic-Recipe-for-Machine-Learning）" class="headerlink" title="1.3 机器学习基础（Basic Recipe for Machine Learning）"></a>1.3 机器学习基础（Basic Recipe for Machine Learning）</h3><h3 id="1-4-正则化（Regularization）"><a href="#1-4-正则化（Regularization）" class="headerlink" title="1.4 正则化（Regularization）"></a>1.4 正则化（Regularization）</h3><p>深度学习可能存在过拟合问题——高方差，有两个解决方法，<strong>一个是正则化，另一个是准备更多的数据</strong>，这是非常可靠的方法，但你可能无法时时刻刻准备足够多的训练数据或者获取更多数据的成本很高，但正则化通常有助于避免过拟合或减少你的网络误差。</p>
+<blockquote>
+<p>今天上午起晚了，进度拖慢了，然后又改了一手cnn模型的代码。明天上午再看。今天晚上休息一会。</p>
+</blockquote>
+<h3 id="1-5-为什么正则化有利于预防过拟合呢？（Why-regularization-reduces-overfitting-）"><a href="#1-5-为什么正则化有利于预防过拟合呢？（Why-regularization-reduces-overfitting-）" class="headerlink" title="1.5 为什么正则化有利于预防过拟合呢？（Why regularization reduces overfitting?）"></a>1.5 为什么正则化有利于预防过拟合呢？（Why regularization reduces overfitting?）</h3><h3 id="1-6-dropout-正则化（Dropout-Regularization）"><a href="#1-6-dropout-正则化（Dropout-Regularization）" class="headerlink" title="1.6 dropout 正则化（Dropout Regularization）"></a>1.6 dropout 正则化（Dropout Regularization）</h3><p>除了$L2$正则化，还有一个非常实用的正则化方法——“<strong>Dropout</strong>（随机失活）”</p>
+<h3 id="1-7-理解-dropout（Understanding-Dropout）"><a href="#1-7-理解-dropout（Understanding-Dropout）" class="headerlink" title="1.7 理解 dropout（Understanding Dropout）"></a>1.7 理解 dropout（Understanding Dropout）</h3><p><strong>Dropout</strong>可以随机删除网络中的神经单元，他为什么可以通过正则化发挥如此大的作用呢？</p>
+<p>直观上理解：不要依赖于任何一个特征，因为该单元的输入可能随时被清除，因此该单元通过这种方式传播下去，并为单元的四个输入增加一点权重，通过传播所有权重，<strong>dropout</strong>将产生收缩权重的平方范数的效果，和之前讲的$L2$正则化类似；实施<strong>dropout</strong>的结果实它会压缩权重，并完成一些预防过拟合的外层正则化；$L2$对不同权重的衰减是不同的，它取决于激活函数倍增的大小。</p>
+<h3 id="1-8-其他正则化方法（Other-regularization-methods）"><a href="#1-8-其他正则化方法（Other-regularization-methods）" class="headerlink" title="1.8 其他正则化方法（Other regularization methods）"></a>1.8 其他正则化方法（Other regularization methods）</h3><h3 id="1-9-归一化输入（Normalizing-inputs）"><a href="#1-9-归一化输入（Normalizing-inputs）" class="headerlink" title="1.9 归一化输入（Normalizing inputs）"></a>1.9 归一化输入（Normalizing inputs）</h3><h3 id="1-10-梯度消失-梯度爆炸（Vanishing-Exploding-gradients）"><a href="#1-10-梯度消失-梯度爆炸（Vanishing-Exploding-gradients）" class="headerlink" title="1.10 梯度消失/梯度爆炸（Vanishing / Exploding gradients）"></a>1.10 梯度消失/梯度爆炸（Vanishing / Exploding gradients）</h3><h3 id="1-11-神经网络的权重初始化（Weight-Initialization-for-Deep-NetworksVanishing-Exploding-gradients）"><a href="#1-11-神经网络的权重初始化（Weight-Initialization-for-Deep-NetworksVanishing-Exploding-gradients）" class="headerlink" title="1.11 神经网络的权重初始化（Weight Initialization for Deep NetworksVanishing / Exploding gradients）"></a>1.11 神经网络的权重初始化（Weight Initialization for Deep NetworksVanishing / Exploding gradients）</h3><h3 id="1-12-梯度的数值逼近（Numerical-approximation-of-gradients）"><a href="#1-12-梯度的数值逼近（Numerical-approximation-of-gradients）" class="headerlink" title="1.12 梯度的数值逼近（Numerical approximation of gradients）"></a>1.12 梯度的数值逼近（Numerical approximation of gradients）</h3><h3 id="1-13-梯度检验（Gradient-checking）"><a href="#1-13-梯度检验（Gradient-checking）" class="headerlink" title="1.13 梯度检验（Gradient checking）"></a>1.13 梯度检验（Gradient checking）</h3><h3 id="1-14-梯度检验应用的注意事项（Gradient-Checking-Implementation-Notes）"><a href="#1-14-梯度检验应用的注意事项（Gradient-Checking-Implementation-Notes）" class="headerlink" title="1.14 梯度检验应用的注意事项（Gradient Checking Implementation Notes）"></a>1.14 梯度检验应用的注意事项（Gradient Checking Implementation Notes）</h3><h2 id="第二周：优化算法-Optimization-algorithms"><a href="#第二周：优化算法-Optimization-algorithms" class="headerlink" title="第二周：优化算法 (Optimization algorithms)"></a>第二周：优化算法 (Optimization algorithms)</h2><h3 id="2-1-Mini-batch-梯度下降（Mini-batch-gradient-descent）"><a href="#2-1-Mini-batch-梯度下降（Mini-batch-gradient-descent）" class="headerlink" title="2.1 Mini-batch 梯度下降（Mini-batch gradient descent）"></a>2.1 Mini-batch 梯度下降（Mini-batch gradient descent）</h3><p>首先，如果训练集较小，直接使用<strong>batch</strong>梯度下降法，样本集较小就没必要使用<strong>mini-batch</strong>梯度下降法，你可以快速处理整个训练集，所以使用<strong>batch</strong>梯度下降法也很好，这里的少是说小于2000个样本，这样比较适合使用<strong>batch</strong>梯度下降法。不然，样本数目较大的话，一般的<strong>mini-batch</strong>大小为64到512，考虑到电脑内存设置和使用的方式，如果<strong>mini-batch</strong>大小是2的$n$次方，代码会运行地快一些，64就是2的6次方，以此类推，128是2的7次方，256是2的8次方，512是2的9次方。所以我经常把<strong>mini-batch</strong>大小设成2的次方。</p>
+<p><strong>mini-batch</strong>梯度下降法比<strong>batch</strong>梯度下降法运行地更快。</p>
+<h3 id="2-2-理解mini-batch梯度下降法（Understanding-mini-batch-gradient-descent）"><a href="#2-2-理解mini-batch梯度下降法（Understanding-mini-batch-gradient-descent）" class="headerlink" title="2.2 理解mini-batch梯度下降法（Understanding mini-batch gradient descent）"></a>2.2 理解mini-batch梯度下降法（Understanding mini-batch gradient descent）</h3><p>使用<strong>batch</strong>梯度下降法时，每次迭代你都需要历遍整个训练集，可以预期每次迭代成本都会下降，所以如果成本函数$J$是迭代次数的一个函数，它应该会随着每次迭代而减少，如果$J$在某次迭代中增加了，那肯定出了问题，也许你的学习率太大。</p>
+<p>使用<strong>mini-batch</strong>梯度下降法，如果你作出成本函数在整个过程中的图，则并不是每次迭代都是下降的</p>
+<p>另一个极端情况，假设<strong>mini-batch</strong>大小为1，就有了新的算法，叫做随机梯度下降法，每个样本都是独立的<strong>mini-batch</strong></p>
+<h3 id="2-3-指数加权平均数（Exponentially-weighted-averages）"><a href="#2-3-指数加权平均数（Exponentially-weighted-averages）" class="headerlink" title="2.3 指数加权平均数（Exponentially weighted averages）"></a>2.3 指数加权平均数（Exponentially weighted averages）</h3><p>指数加权平均数经常被使用，再说一次，它在统计学中被称为指数加权移动平均值，我们就简称为指数加权平均数。通过调整这个参数（$\beta$），或者说后面的算法学习，你会发现这是一个很重要的参数，可以取得稍微不同的效果，往往中间有某个值效果最好</p>
+<h3 id="2-4-理解指数加权平均数（Understanding-exponentially-weighted-averages）"><a href="#2-4-理解指数加权平均数（Understanding-exponentially-weighted-averages）" class="headerlink" title="2.4 理解指数加权平均数（Understanding exponentially weighted averages）"></a>2.4 理解指数加权平均数（Understanding exponentially weighted averages）</h3><p>指数加权平均数公式的好处之一在于，它占用极少内存，电脑内存中只占用一行数字而已，然后把最新数据代入公式，不断覆盖就可以了，正因为这个原因，其效率，它基本上只占用一行代码，计算指数加权平均数也只占用单行数字的存储和内存，当然它并不是最好的，也不是最精准的计算平均数的方法。如果你要计算移动窗，你直接算出过去10天的总和，过去50天的总和，除以10和50就好，如此往往会得到更好的估测。但缺点是，如果保存所有最近的温度数据，和过去10天的总和，必须占用更多的内存，执行更加复杂，计算成本也更加高昂。</p>
+<h3 id="2-5-指数加权平均的偏差修正（Bias-correction-in-exponentially-weighted-averages）"><a href="#2-5-指数加权平均的偏差修正（Bias-correction-in-exponentially-weighted-averages）" class="headerlink" title="2.5 指数加权平均的偏差修正（Bias correction in exponentially weighted averages）"></a>2.5 指数加权平均的偏差修正（Bias correction in exponentially weighted averages）</h3><p>有个办法可以修改这一估测，让估测变得更好，更准确，特别是在估测初期，也就是不用$v_{t}$，而是用$\frac{v_{t}}{1- \beta^{t}}$，t就是现在的天数。</p>
+<p>在机器学习中，在计算指数加权平均数的大部分时候，大家不在乎执行偏差修正，因为大部分人宁愿熬过初始时期，拿到具有偏差的估测，然后继续计算下去。如果你关心初始时期的偏差，在刚开始计算指数加权移动平均数的时候，偏差修正能帮助你在早期获取更好的估测。</p>
+<h3 id="2-6-动量梯度下降法（Gradient-descent-with-Momentum）"><a href="#2-6-动量梯度下降法（Gradient-descent-with-Momentum）" class="headerlink" title="2.6 动量梯度下降法（Gradient descent with Momentum）"></a>2.6 动量梯度下降法（Gradient descent with Momentum）</h3><p>还有一种算法叫做<strong>Momentum</strong>，或者叫做动量梯度下降法，运行速度几乎总是快于标准的梯度下降算法，简而言之，基本的想法就是计算梯度的指数加权平均数，并利用该梯度更新你的权重</p>
+<p>另一个看待问题的角度是，在纵轴上，你希望学习慢一点，因为你不想要这些摆动，但是在横轴上，你希望加快学习，你希望快速从左向右移，移向最小值，移向红点。</p>
+<p>想象你有一个碗，你拿一个球，微分项给了这个球一个加速度，此时球正向山下滚，球因为加速度越滚越快，而因为$\beta$ 稍小于1，表现出一些摩擦力，所以球不会无限加速下去，所以不像梯度下降法，每一步都独立于之前的步骤，你的球可以向下滚，获得动量，可以从碗向下加速获得动量。我发现这个球从碗滚下的比喻，物理能力强的人接受得比较好，但不是所有人都能接受，如果球从碗中滚下这个比喻，你理解不了，别担心。</p>
+<p>最后我们来看具体如何计算，算法在此。</p>
+<p>你有两个超参数，学习率$a$以及参数$\beta$，$\beta$控制着指数加权平均数。$\beta$最常用的值是0.9，我们之前平均了过去十天的温度，所以现在平均了前十次迭代的梯度。实际上$\beta$为0.9时，效果不错，你可以尝试不同的值，可以做一些超参数的研究，不过0.9是很棒的鲁棒数。</p>
+<h3 id="2-7-RMSprop"><a href="#2-7-RMSprop" class="headerlink" title="2.7 RMSprop"></a>2.7 RMSprop</h3><p>你们知道了动量（<strong>Momentum</strong>）可以加快梯度下降，还有一个叫做<strong>RMSprop</strong>的算法，全称是<strong>root mean square prop</strong>算法，它也可以加速梯度下降，我们来看看它是如何运作的。</p>
+<p>该算法会照常计算当下<strong>mini-batch</strong>的微分$dW$，$db$，所以我会保留这个指数加权平均数，我们用到新符号$S_{dW}$，而不是$v_{dW}$，因此$S_{dW}= \beta S_{dW} + (1 -\beta) {dW}^{2}$，澄清一下，这个平方的操作是针对这一整个符号的，这样做能够保留微分平方的加权平均数，同样$S_{db}= \beta S_{db} + (1 - \beta){db}^{2}$，再说一次，平方是针对整个符号的操作。</p>
+<p>接着<strong>RMSprop</strong>会这样更新参数值，$W:= W -a\frac{dW}{\sqrt{S_{dW}}}$，$b:=b -\alpha\frac{db}{\sqrt{S_{db}}}$，我们来理解一下其原理。记得在横轴方向或者在例子中的$W$方向，我们希望学习速度快，而在垂直方向，也就是例子中的$b$方向，我们希望减缓纵轴上的摆动，所以有了$S_{dW}$和$S_{db}$，我们希望$S_{dW}$会相对较小，所以我们要除以一个较小的数，而希望$S_{db}$又较大，所以这里我们要除以较大的数字，这样就可以减缓纵轴上的变化。你看这些微分，垂直方向的要比水平方向的大得多，所以斜率在$b$方向特别大，所以这些微分中，$db$较大，$dW$较小，因为函数的倾斜程度，在纵轴上，也就是b方向上要大于在横轴上，也就是$W$方向上。$db$的平方较大，所以$S_{db}$也会较大，而相比之下，$dW$会小一些，亦或$dW$平方会小一些，因此$S_{dW}$会小一些，结果就是纵轴上的更新要被一个较大的数相除，就能消除摆动，而水平方向的更新则被较小的数相除。</p>
+<p>所以<strong>RMSprop</strong>跟<strong>Momentum</strong>有很相似的一点，可以消除梯度下降中的摆动，包括<strong>mini-batch</strong>梯度下降，并允许你使用一个更大的学习率$a$，从而加快你的算法学习速度。</p>
+<h3 id="2-8-Adam-优化算法-Adam-optimization-algorithm"><a href="#2-8-Adam-优化算法-Adam-optimization-algorithm" class="headerlink" title="2.8 Adam 优化算法(Adam optimization algorithm)"></a>2.8 Adam 优化算法(Adam optimization algorithm)</h3><p>在深度学习的历史上，包括许多知名研究者在内，提出了优化算法，并很好地解决了一些问题，但随后这些优化算法被指出并不能一般化，并不适用于多种神经网络，时间久了，深度学习圈子里的人开始多少有些质疑全新的优化算法，很多人都觉得动量（<strong>Momentum</strong>）梯度下降法很好用，很难再想出更好的优化算法。所以<strong>RMSprop</strong>以及<strong>Adam</strong>优化算法（<strong>Adam</strong>优化算法也是本视频的内容），就是少有的经受住人们考验的两种算法，已被证明适用于不同的深度学习结构，这个算法我会毫不犹豫地推荐给你，因为很多人都试过，并且用它很好地解决了许多问题。</p>
+<h3 id="2-9-学习率衰减-Learning-rate-decay"><a href="#2-9-学习率衰减-Learning-rate-decay" class="headerlink" title="2.9 学习率衰减(Learning rate decay)"></a>2.9 学习率衰减(Learning rate decay)</h3><h3 id="2-10-局部最优的问题-The-problem-of-local-optima"><a href="#2-10-局部最优的问题-The-problem-of-local-optima" class="headerlink" title="2.10 局部最优的问题(The problem of local optima)"></a>2.10 局部最优的问题(The problem of local optima)</h3><p>首先，你不太可能困在极差的局部最优中，条件是你在训练较大的神经网络，存在大量参数，并且成本函数$J$被定义在较高的维度空间。</p>
+<p>第二点，平稳段是一个问题，这样使得学习十分缓慢，这也是像<strong>Momentum</strong>或是<strong>RMSprop</strong>，<strong>Adam</strong>这样的算法，能够加速学习算法的地方。在这些情况下，更成熟的优化算法，如<strong>Adam</strong>算法，能够加快速度，让你尽早往下走出平稳段。</p>
+<h2 id="第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）"><a href="#第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）" class="headerlink" title="第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）"></a>第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）</h2><h3 id="3-1-调试处理（Tuning-process）"><a href="#3-1-调试处理（Tuning-process）" class="headerlink" title="3.1 调试处理（Tuning process）"></a>3.1 调试处理（Tuning process）</h3><h3 id="3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）"><a href="#3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）" class="headerlink" title="3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）"></a>3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）</h3><h3 id="3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）"><a href="#3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）" class="headerlink" title="3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）"></a>3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）</h3><h3 id="3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）"><a href="#3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）" class="headerlink" title="3.4 归一化网络的激活函数（Normalizing activations in a network）"></a>3.4 归一化网络的激活函数（Normalizing activations in a network）</h3><h3 id="3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）"><a href="#3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）" class="headerlink" title="3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）"></a>3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）</h3><h2 id="3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）"><a href="#3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）" class="headerlink" title="3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）"></a>3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）</h2><h3 id="3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）"><a href="#3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）" class="headerlink" title="3.7 测试时的 Batch Norm（Batch Norm at test time）"></a>3.7 测试时的 Batch Norm（Batch Norm at test time）</h3><h3 id="3-8-Softmax-回归（Softmax-regression）"><a href="#3-8-Softmax-回归（Softmax-regression）" class="headerlink" title="3.8 Softmax 回归（Softmax regression）"></a>3.8 Softmax 回归（Softmax regression）</h3><h3 id="3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）"><a href="#3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）" class="headerlink" title="3.9 训练一个 Softmax 分类器（Training a Softmax classifier）"></a>3.9 训练一个 Softmax 分类器（Training a Softmax classifier）</h3><h3 id="3-10-深度学习框架（Deep-Learning-frameworks）"><a href="#3-10-深度学习框架（Deep-Learning-frameworks）" class="headerlink" title="3.10 深度学习框架（Deep Learning frameworks）"></a>3.10 深度学习框架（Deep Learning frameworks）</h3><h3 id="3-11-TensorFlow"><a href="#3-11-TensorFlow" class="headerlink" title="3.11 TensorFlow"></a>3.11 TensorFlow</h3><blockquote>
+<p>今天晚上多花了点时间，把进度提前推一点，BN是重点，明天回过头来再看看。明天再刷一天就进入cv了。</p>
+</blockquote>
+<h1 id="第三门课-结构化机器学习项目（Structuring-Machine-Learning-Projects）"><a href="#第三门课-结构化机器学习项目（Structuring-Machine-Learning-Projects）" class="headerlink" title="第三门课 结构化机器学习项目（Structuring Machine Learning Projects）"></a>第三门课 结构化机器学习项目（Structuring Machine Learning Projects）</h1><h2 id="第一周-机器学习（ML）策略（1）（ML-strategy（1））"><a href="#第一周-机器学习（ML）策略（1）（ML-strategy（1））" class="headerlink" title="第一周 机器学习（ML）策略（1）（ML strategy（1））"></a>第一周 机器学习（ML）策略（1）（ML strategy（1））</h2><h3 id="1-1-为什么是ML策略？（Why-ML-Strategy-）"><a href="#1-1-为什么是ML策略？（Why-ML-Strategy-）" class="headerlink" title="1.1 为什么是ML策略？（Why ML Strategy?）"></a>1.1 为什么是ML策略？（Why ML Strategy?）</h3><h3 id="1-2-正交化（Orthogonalization）"><a href="#1-2-正交化（Orthogonalization）" class="headerlink" title="1.2 正交化（Orthogonalization）"></a>1.2 正交化（Orthogonalization）</h3><p>所以正交化的概念是指，你可以想出一个维度，这个维度你想做的是控制转向角，还有另一个维度来控制你的速度，那么你就需要一个旋钮尽量只控制转向角，另一个旋钮，在这个开车的例子里其实是油门和刹车控制了你的速度。但如果你有一个控制旋钮将两者混在一起，比如说这样一个控制装置同时影响你的转向角和速度，同时改变了两个性质，那么就很难令你的车子以想要的速度和角度前进。然而正交化之后，正交意味着互成90度。设计出正交化的控制装置，最理想的情况是和你实际想控制的性质一致，这样你调整参数时就容易得多。可以单独调整转向角，还有你的油门和刹车，令车子以你想要的方式运动。</p>
+<h3 id="1-3-单一数字评估指标（Single-number-evaluation-metric）"><a href="#1-3-单一数字评估指标（Single-number-evaluation-metric）" class="headerlink" title="1.3 单一数字评估指标（Single number evaluation metric）"></a>1.3 单一数字评估指标（Single number evaluation metric）</h3><h3 id="1-4-满足和优化指标（Satisficing-and-optimizing-metrics）"><a href="#1-4-满足和优化指标（Satisficing-and-optimizing-metrics）" class="headerlink" title="1.4 满足和优化指标（Satisficing and optimizing metrics）"></a>1.4 满足和优化指标（Satisficing and optimizing metrics）</h3><p>总结一下，如果你需要顾及多个指标，比如说，有一个优化指标，你想尽可能优化的，然后还有一个或多个满足指标，需要满足的，需要达到一定的门槛。现在你就有一个全自动的方法，在观察多个成本大小时，选出”最好的”那个。现在这些评估指标必须是在训练集或开发集或测试集上计算或求出来的。所以你还需要做一件事，就是设立训练集、开发集，还有测试集。</p>
+<h3 id="1-5-训练-开发-测试集划分（Train-dev-test-distributions）"><a href="#1-5-训练-开发-测试集划分（Train-dev-test-distributions）" class="headerlink" title="1.5 训练/开发/测试集划分（Train/dev/test distributions）"></a>1.5 训练/开发/测试集划分（Train/dev/test distributions）</h3><h3 id="1-6-开发集和测试集的大小（Size-of-dev-and-test-sets）"><a href="#1-6-开发集和测试集的大小（Size-of-dev-and-test-sets）" class="headerlink" title="1.6 开发集和测试集的大小（Size of dev and test sets）"></a>1.6 开发集和测试集的大小（Size of dev and test sets）</h3><h3 id="1-7-什么时候该改变开发-测试集和指标？（When-to-change-dev-test-sets-and-metrics）"><a href="#1-7-什么时候该改变开发-测试集和指标？（When-to-change-dev-test-sets-and-metrics）" class="headerlink" title="1.7 什么时候该改变开发/测试集和指标？（When to change dev/test sets and metrics）"></a>1.7 什么时候该改变开发/测试集和指标？（When to change dev/test sets and metrics）</h3><p>所以方针是，如果你在指标上表现很好，在当前开发集或者开发集和测试集分布中表现很好，但你的实际应用程序，你真正关注的地方表现不好，那么就需要修改指标或者你的开发测试集。换句话说，如果你发现你的开发测试集都是这些高质量图像，但在开发测试集上做的评估无法预测你的应用实际的表现。因为你的应用处理的是低质量图像，那么就应该改变你的开发测试集，让你的数据更能反映你实际需要处理好的数据。</p>
+<p>但总体方针就是，如果你当前的指标和当前用来评估的数据和你真正关心必须做好的事情关系不大，那就应该更改你的指标或者你的开发测试集，让它们能更够好地反映你的算法需要处理好的数据。</p>
+<h3 id="1-8-为什么是人的表现？（Why-human-level-performance-）"><a href="#1-8-为什么是人的表现？（Why-human-level-performance-）" class="headerlink" title="1.8 为什么是人的表现？（Why human-level performance?）"></a>1.8 为什么是人的表现？（Why human-level performance?）</h3><h3 id="1-9-可避免偏差（Avoidable-bias）"><a href="#1-9-可避免偏差（Avoidable-bias）" class="headerlink" title="1.9 可避免偏差（Avoidable bias）"></a>1.9 可避免偏差（Avoidable bias）</h3><p>这个差值，贝叶斯错误率或者对贝叶斯错误率的估计和训练错误率之间的差值称为可避免偏差，你可能希望一直提高训练集表现，直到你接近贝叶斯错误率，但实际上你也不希望做到比贝叶斯错误率更好，这理论上是不可能超过贝叶斯错误率的，除非过拟合。而这个训练错误率和开发错误率之前的差值，就大概说明你的算法在方差问题上还有多少改善空间。</p>
+<h3 id="1-10-理解人的表现（Understanding-human-level-performance）"><a href="#1-10-理解人的表现（Understanding-human-level-performance）" class="headerlink" title="1.10 理解人的表现（Understanding human-level performance）"></a>1.10 理解人的表现（Understanding human-level performance）</h3><h3 id="1-11-超过人的表现（Surpassing-human-level-performance）"><a href="#1-11-超过人的表现（Surpassing-human-level-performance）" class="headerlink" title="1.11 超过人的表现（Surpassing human- level performance）"></a>1.11 超过人的表现（Surpassing human- level performance）</h3><h3 id="1-12-改善你的模型的表现（Improving-your-model-performance）"><a href="#1-12-改善你的模型的表现（Improving-your-model-performance）" class="headerlink" title="1.12 改善你的模型的表现（Improving your model performance）"></a>1.12 改善你的模型的表现（Improving your model performance）</h3><p>所以我想要让一个监督学习算法达到实用，基本上希望或者假设你可以完成两件事情。首先，你的算法对训练集的拟合很好，这可以看成是你能做到可避免偏差很低。还有第二件事你可以做好的是，在训练集中做得很好，然后推广到开发集和测试集也很好，这就是说方差不是太大。</p>
+<p>可以修正可避免偏差问题，比如训练更大的网络或者训练更久。还有一套独立的技巧可以用来处理方差问题，比如正则化或者收集更多训练数据。</p>
+<p>总结一下前几段视频我们见到的步骤，如果你想提升机器学习系统的性能，我建议你们看看训练错误率和贝叶斯错误率估计值之间的距离，让你知道可避免偏差有多大。换句话说，就是你觉得还能做多好，你对训练集的优化还有多少空间。然后看看你的开发错误率和训练错误率之间的距离，就知道你的方差问题有多大。换句话说，你应该做多少努力让你的算法表现能够从训练集推广到开发集，算法是没有在开发集上训练的。</p>
+<p>如果你想用尽一切办法减少可避免偏差，我建议试试这样的策略：比如使用规模更大的模型，这样算法在训练集上的表现会更好，或者训练更久。使用更好的优化算法，比如说加入<strong>momentum</strong>或者<strong>RMSprop</strong>，或者使用更好的算法，比如<strong>Adam</strong>。你还可以试试寻找更好的新神经网络架构，或者说更好的超参数。这些手段包罗万有，你可以改变激活函数，改变层数或者隐藏单位数，虽然你这么做可能会让模型规模变大。或者试用其他模型，其他架构，如循环神经网络和卷积神经网络。在之后的课程里我们会详细介绍的，新的神经网络架构能否更好地拟合你的训练集，有时也很难预先判断，但有时换架构可能会得到好得多的结果。</p>
+<p>另外当你发现方差是个问题时，你可以试用很多技巧，包括以下这些：你可以收集更多数据，因为收集更多数据去训练可以帮你更好地推广到系统看不到的开发集数据。你可以尝试正则化，包括$L2$正则化，<strong>dropout</strong>正则化或者我们在之前课程中提到的数据增强。同时你也可以试用不同的神经网络架构，超参数搜索，看看能不能帮助你，找到一个更适合你的问题的神经网络架构。</p>
+<h2 id="第二周：机器学习策略（2）-ML-Strategy-2"><a href="#第二周：机器学习策略（2）-ML-Strategy-2" class="headerlink" title="第二周：机器学习策略（2）(ML Strategy (2))"></a>第二周：机器学习策略（2）(ML Strategy (2))</h2><h3 id="2-1-进行误差分析（Carrying-out-error-analysis）"><a href="#2-1-进行误差分析（Carrying-out-error-analysis）" class="headerlink" title="2.1 进行误差分析（Carrying out error analysis）"></a>2.1 进行误差分析（Carrying out error analysis）</h3><p>总结一下，进行错误分析，你应该找一组错误样本，可能在你的开发集里或者测试集里，观察错误标记的样本，看看假阳性（<strong>false positives</strong>）和假阴性（<strong>false negatives</strong>），统计属于不同错误类型的错误数量。在这个过程中，你可能会得到启发，归纳出新的错误类型，就像我们看到的那样。如果你过了一遍错误样本，然后说，天，有这么多<strong>Instagram</strong>滤镜或<strong>Snapchat</strong>滤镜，这些滤镜干扰了我的分类器，你就可以在途中新建一个错误类型。总之，通过统计不同错误标记类型占总数的百分比，可以帮你发现哪些问题需要优先解决，或者给你构思新优化方向的灵感。在做错误分析的时候，有时你会注意到开发集里有些样本被错误标记了，这时应该怎么做呢？</p>
+<h3 id="2-2-清除标注错误的数据（Cleaning-up-Incorrectly-labeled-data）"><a href="#2-2-清除标注错误的数据（Cleaning-up-Incorrectly-labeled-data）" class="headerlink" title="2.2 清除标注错误的数据（Cleaning up Incorrectly labeled data）"></a>2.2 清除标注错误的数据（Cleaning up Incorrectly labeled data）</h3><p>如果你还记得设立开发集的目标的话，开发集的主要目的是，你希望用它来从两个分类器$A$和$B$中选择一个。所以当你测试两个分类器$A$和$B$时，在开发集上一个有2.1%错误率，另一个有1.9%错误率，但是你不能再信任开发集了，因为它无法告诉你这个分类器是否比这个好，因为0.6%的错误率是标记出错导致的。那么现在你就有很好的理由去修正开发集里的错误标签，因为在右边这个样本中，标记出错对算法错误的整体评估标准有严重的影响。而左边的样本中，标记出错对你算法影响的百分比还是相对较小的。</p>
+<p>现在如果你决定要去修正开发集数据，手动重新检查标签，并尝试修正一些标签，这里还有一些额外的方针和原则需要考虑。首先，我鼓励你不管用什么修正手段，都要同时作用到开发集和测试集上，我们之前讨论过为什么，开发和测试集必须来自相同的分布。开发集确定了你的目标，当你击中目标后，你希望算法能够推广到测试集上，这样你的团队能够更高效的在来自同一分布的开发集和测试集上迭代。如果你打算修正开发集上的部分数据，那么最好也对测试集做同样的修正以确保它们继续来自相同的分布。所以我们雇佣了一个人来仔细检查这些标签，但必须同时检查开发集和测试集。</p>
+<h3 id="2-3-快速搭建你的第一个系统，并进行迭代（Build-your-first-system-quickly-then-iterate）"><a href="#2-3-快速搭建你的第一个系统，并进行迭代（Build-your-first-system-quickly-then-iterate）" class="headerlink" title="2.3 快速搭建你的第一个系统，并进行迭代（Build your first system quickly, then iterate）"></a>2.3 快速搭建你的第一个系统，并进行迭代（Build your first system quickly, then iterate）</h3><p>如果你想搭建全新的机器学习程序，就是快速搭好你的第一个系统，然后开始迭代。我的意思是我建议你快速设立开发集和测试集还有指标，这样就决定了你的目标所在，如果你的目标定错了，之后改也是可以的。但一定要设立某个目标，然后我建议你马上搭好一个机器学习系统原型，然后找到训练集，训练一下，看看效果，开始理解你的算法表现如何，在开发集测试集，你的评估指标上表现如何。当你建立第一个系统后，你就可以马上用到之前说的偏差方差分析</p>
+<p>建立这个初始系统的所有意义在于，它可以是一个快速和粗糙的实现（<strong>quick and dirty implementation</strong>），你知道的，别想太多。初始系统的全部意义在于，有一个学习过的系统，有一个训练过的系统，让你确定偏差方差的范围，就可以知道下一步应该优先做什么，让你能够进行错误分析，可以观察一些错误，然后想出所有能走的方向，哪些是实际上最有希望的方向。</p>
+<p>你的主要目标是弄出能用的系统，你的主要目标并不是发明全新的机器学习算法，这是完全不同的目标，那时你的目标应该是想出某种效果非常好的算法。</p>
+<h3 id="2-4-使用来自不同分布的数据，进行训练和测试（Training-and-testing-on-different-distributions）"><a href="#2-4-使用来自不同分布的数据，进行训练和测试（Training-and-testing-on-different-distributions）" class="headerlink" title="2.4 使用来自不同分布的数据，进行训练和测试（Training and testing on different distributions）"></a>2.4 使用来自不同分布的数据，进行训练和测试（Training and testing on different distributions）</h3><p>将两组数据合并在一起，这样你就有21万张照片，你可以把这21万张照片随机分配到训练、开发和测试集中。</p>
+<h3 id="2-5-数据分布不匹配时，偏差与方差的分析（Bias-and-Variance-with-mismatched-data-distributions）"><a href="#2-5-数据分布不匹配时，偏差与方差的分析（Bias-and-Variance-with-mismatched-data-distributions）" class="headerlink" title="2.5 数据分布不匹配时，偏差与方差的分析（Bias and Variance with mismatched data distributions）"></a>2.5 数据分布不匹配时，偏差与方差的分析（Bias and Variance with mismatched data distributions）</h3><p>我们继续用猫分类器为例，我们说人类在这个任务上能做到几乎完美，所以贝叶斯错误率或者说贝叶斯最优错误率，我们知道这个问题里几乎是0%。所以要进行错误率分析，你通常需要看训练误差，也要看看开发集的误差。比如说，在这个样本中，你的训练集误差是1%，你的开发集误差是10%，如果你的开发集来自和训练集一样的分布，你可能会说，这里存在很大的方差问题，你的算法不能很好的从训练集出发泛化，它处理训练集很好，但处理开发集就突然间效果很差了。</p>
+<p>但如果你的训练数据和开发数据来自不同的分布，你就不能再放心下这个结论了。特别是，也许算法在开发集上做得不错，可能因为训练集很容易识别，因为训练集都是高分辨率图片，很清晰的图像，但开发集要难以识别得多。所以也许软件没有方差问题，这只不过反映了开发集包含更难准确分类的图片。所以这个分析的问题在于，当你看训练误差，再看开发误差，有两件事变了。首先算法只见过训练集数据，没见过开发集数据。第二，开发集数据来自不同的分布。而且因为你同时改变了两件事情，很难确认这增加的9%误差率有多少是因为算法没看到开发集中的数据导致的，这是问题方差的部分，有多少是因为开发集数据就是不一样。</p>
+<p>为了弄清楚哪个因素影响更大，如果你完全不懂这两种影响到底是什么，别担心我们马上会再讲一遍。但为了分辨清楚两个因素的影响，定义一组新的数据是有意义的，我们称之为训练-开发集，所以这是一个新的数据子集。我们应该从训练集的分布里挖出来，但你不会用来训练你的网络。</p>
+<p>我们说人类水平错误率是4%的话，你的训练错误率是7%，而你的训练-开发错误率是10%，而开发错误率是12%，这样你就大概知道可避免偏差有多大。因为你知道，你希望你的算法至少要在训练集上的表现接近人类。而这大概表明了方差大小，所以你从训练集泛化推广到训练-开发集时效果如何？而这告诉你数据不匹配的问题大概有多大。技术上你还可以再加入一个数字，就是测试集表现，我们写成测试集错误率，你不应该在测试集上开发，因为你不希望对测试集过拟合。但如果你看看这个，那么这里的差距就说明你对开发集过拟合的程度。所以如果开发集表现和测试集表现有很大差距，那么你可能对开发集过拟合了，所以也许你需要一个更大的开发集，对吧？要记住，你的开发集和测试集来自同一分布，所以这里存在很大差距的话。如果算法在开发集上做的很好，比测试集好得多，那么你就可能对开发集过拟合了。如果是这种情况，那么你可能要往回退一步，然后收集更多开发集数据。</p>
+<h3 id="2-6-处理数据不匹配问题（Addressing-data-mismatch）"><a href="#2-6-处理数据不匹配问题（Addressing-data-mismatch）" class="headerlink" title="2.6 处理数据不匹配问题（Addressing data mismatch）"></a>2.6 处理数据不匹配问题（Addressing data mismatch）</h3><p>如果您的训练集来自和开发测试集不同的分布，如果错误分析显示你有一个数据不匹配的问题该怎么办？这个问题没有完全系统的解决方案，但我们可以看看一些可以尝试的事情。如果我发现有严重的数据不匹配问题，我通常会亲自做错误分析，尝试了解训练集和开发测试集的具体差异。技术上，为了避免对测试集过拟合，要做错误分析，你应该人工去看开发集而不是测试集。</p>
+<p>通过人工数据合成，你可以快速制造更多的训练数据，就像真的在车里录的那样，那就不需要花时间实际出去收集数据，比如说在实际行驶中的车子，录下上万小时的音频。所以，如果错误分析显示你应该尝试让你的数据听起来更像在车里录的，那么人工合成那种音频，然后喂给你的机器学习算法，这样做是合理的。</p>
+<p>我们谈到其中一种办法是人工数据合成，人工数据合成确实有效。在语音识别中。我已经看到人工数据合成显著提升了已经非常好的语音识别系统的表现，所以这是可行的。但当你使用人工数据合成时，一定要谨慎，要记住你有可能从所有可能性的空间只选了很小一部分去模拟数据。</p>
+<h3 id="2-7-迁移学习（Transfer-learning）"><a href="#2-7-迁移学习（Transfer-learning）" class="headerlink" title="2.7 迁移学习（Transfer learning）"></a>2.7 迁移学习（Transfer learning）</h3><p>深度学习中，最强大的理念之一就是，有的时候神经网络可以从一个任务中习得知识，并将这些知识应用到另一个独立的任务中。所以例如，也许你已经训练好一个神经网络，能够识别像猫这样的对象，然后使用那些知识，或者部分习得的知识去帮助您更好地阅读x射线扫描图，这就是所谓的迁移学习。</p>
+<p>那么迁移学习什么时候是有意义的呢？迁移学习起作用的场合是，在迁移来源问题中你有很多数据，但迁移目标问题你没有那么多数据。例如，假设图像识别任务中你有1百万个样本，所以这里数据相当多。可以学习低层次特征，可以在神经网络的前面几层学到如何识别很多有用的特征。但是对于放射科任务，也许你只有一百个样本，所以你的放射学诊断问题数据很少，也许只有100次$X$射线扫描，所以你从图像识别训练中学到的很多知识可以迁移，并且真正帮你加强放射科识别任务的性能，即使你的放射科数据很少。</p>
+<h3 id="2-8-多任务学习（Multi-task-learning）"><a href="#2-8-多任务学习（Multi-task-learning）" class="headerlink" title="2.8 多任务学习（Multi-task learning）"></a>2.8 多任务学习（Multi-task learning）</h3><p>最后多任务学习往往在以下场合更有意义，当你可以训练一个足够大的神经网络，同时做好所有的工作，所以多任务学习的替代方法是为每个任务训练一个单独的神经网络。所以不是训练单个神经网络同时处理行人、汽车、停车标志和交通灯检测。你可以训练一个用于行人检测的神经网络，一个用于汽车检测的神经网络，一个用于停车标志检测的神经网络和一个用于交通信号灯检测的神经网络。那么研究员<strong>Rich Carona</strong>几年前发现的是什么呢？多任务学习会降低性能的唯一情况，和训练单个神经网络相比性能更低的情况就是你的神经网络还不够大。但如果你可以训练一个足够大的神经网络，那么多任务学习肯定不会或者很少会降低性能，我们都希望它可以提升性能，比单独训练神经网络来单独完成各个任务性能要更好。</p>
+<h3 id="2-9-什么是端到端的深度学习-（What-is-end-to-end-deep-learning-）"><a href="#2-9-什么是端到端的深度学习-（What-is-end-to-end-deep-learning-）" class="headerlink" title="2.9 什么是端到端的深度学习?（What is end-to-end deep learning?）"></a>2.9 什么是端到端的深度学习?（What is end-to-end deep learning?）</h3><p>研究人员发现，比起一步到位，一步学习，把这个问题分解成两个更简单的步骤。首先，是弄清楚脸在哪里。第二步是看着脸，弄清楚这是谁。这第二种方法让学习算法，或者说两个学习算法分别解决两个更简单的任务，并在整体上得到更好的表现。</p>
+<p>为什么两步法更好呢？实际上有两个原因。一是，你解决的两个问题，每个问题实际上要简单得多。但第二，两个子任务的训练数据都很多。具体来说，有很多数据可以用于人脸识别训练，对于这里的任务1来说，任务就是观察一张图，找出人脸所在的位置，把人脸图像框出来，所以有很多数据，有很多标签数据$(x,y)$，其中$x$是图片，$y$是表示人脸的位置，你可以建立一个神经网络，可以很好地处理任务1。然后任务2，也有很多数据可用，今天，业界领先的公司拥有，比如说数百万张人脸照片，所以输入一张裁剪得很紧凑的照片，比如这张红色照片，下面这个，今天业界领先的人脸识别团队有至少数亿的图像，他们可以用来观察两张图片，并试图判断照片里人的身份，确定是否同一个人，所以任务2还有很多数据。相比之下，如果你想一步到位，这样$(x,y)$的数据对就少得多，其中$x$是门禁系统拍摄的图像，$y$是那人的身份，因为你没有足够多的数据去解决这个端到端学习问题，但你却有足够多的数据来解决子问题1和子问题2。</p>
+<p>实际上，把这个分成两个子问题，比纯粹的端到端深度学习方法，达到更好的表现。不过如果你有足够多的数据来做端到端学习，也许端到端方法效果更好。但在今天的实践中，并不是最好的方法。</p>
+<h3 id="2-10-是否要使用端到端的深度学习-（Whether-to-use-end-to-end-learning-）"><a href="#2-10-是否要使用端到端的深度学习-（Whether-to-use-end-to-end-learning-）" class="headerlink" title="2.10 是否要使用端到端的深度学习?（Whether to use end-to-end learning?）"></a>2.10 是否要使用端到端的深度学习?（Whether to use end-to-end learning?）</h3><p>这里是应用端到端学习的一些好处，首先端到端学习真的只是让数据说话。所以如果你有足够多的$(x,y)$数据，那么不管从$x$到$y$最适合的函数映射是什么，如果你训练一个足够大的神经网络，希望这个神经网络能自己搞清楚，而使用纯机器学习方法，直接从$x$到$y$输入去训练的神经网络，可能更能够捕获数据中的任何统计信息，而不是被迫引入人类的成见。</p>
+<p>端到端深度学习的第二个好处就是这样，所需手工设计的组件更少，所以这也许能够简化你的设计工作流程，你不需要花太多时间去手工设计功能，手工设计这些中间表示方式。</p>
+<p>那么缺点呢？这里有一些缺点，首先，它可能需要大量的数据。要直接学到这个$x$到$y$的映射，你可能需要大量$(x,y)$数据。我们在以前的视频里看过一个例子，其中你可以收集大量子任务数据，比如人脸识别，我们可以收集很多数据用来分辨图像中的人脸，当你找到一张脸后，也可以找得到很多人脸识别数据。但是对于整个端到端任务，可能只有更少的数据可用。所以$x$这是端到端学习的输入端，$y$是输出端，所以你需要很多这样的$(x,y)$数据，在输入端和输出端都有数据，这样可以训练这些系统。这就是为什么我们称之为端到端学习，因为你直接学习出从系统的一端到系统的另一端。</p>
+<p>另一个缺点是，它排除了可能有用的手工设计组件。机器学习研究人员一般都很鄙视手工设计的东西，但如果你没有很多数据，你的学习算法就没办法从很小的训练集数据中获得洞察力。所以手工设计组件在这种情况，可能是把人类知识直接注入算法的途径，这总不是一件坏事。我觉得学习算法有两个主要的知识来源，一个是数据，另一个是你手工设计的任何东西，可能是组件，功能，或者其他东西。所以当你有大量数据时，手工设计的东西就不太重要了，但是当你没有太多的数据时，构造一个精心设计的系统，实际上可以将人类对这个问题的很多认识直接注入到问题里，进入算法里应该挺有帮助的。</p>
+<p>如果你在构建一个新的机器学习系统，而你在尝试决定是否使用端到端深度学习，我认为关键的问题是，你有足够的数据能够直接学到从$x$映射到$y$足够复杂的函数吗？我还没有正式定义过这个词“必要复杂度（<strong>complexity needed</strong>）”。但直觉上，如果你想从$x$到$y$的数据学习出一个函数，就是看着这样的图像识别出图像中所有骨头的位置，那么也许这像是识别图中骨头这样相对简单的问题，也许系统不需要那么多数据来学会处理这个任务。或给出一张人物照片，也许在图中把人脸找出来不是什么难事，所以你也许不需要太多数据去找到人脸，或者至少你可以找到足够数据去解决这个问题。相对来说，把手的X射线照片直接映射到孩子的年龄，直接去找这种函数，直觉上似乎是更为复杂的问题。如果你用纯端到端方法，需要很多数据去学习。</p>
+<p>所以这个例子就表明了，如果你想使用机器学习或者深度学习来学习某些单独的组件，那么当你应用监督学习时，你应该仔细选择要学习的$x$到$y$映射类型，<strong>这取决于那些任务你可以收集数据。</strong></p>
+<blockquote>
+<p>6.25 刚好到周五结束前三门课程，周末可以再把后续的cv的CNN模型和nlp序列模型看完，然后就可以马上自己动手实践了。其实这样看一遍只相当于是简单预习，完全谈不上学完，只有自己一边实践一边学才能真正学会。后两门才是重头，前面都是机器学习课程里曾经涉及过的或者相关的基础内容，这样复习一边前面知识一边继续前进，这个进度很舒服。</p>
+</blockquote>
+
+            </div>
+            <hr />
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《关于神经网络与深度学习》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/06/25/deeplearning/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                Henry-Avery
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'bcac118c07efd37bb7c3',
+        clientSecret: '59ace8a6f5bc3daffc7aa090f2f8e93c971668e8',
+        repo: 'Blogtalk',
+        owner: 'henry-avery',
+        admin: "henry-avery",
+        id: '2021/06/25/deeplearning/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/06/25/deeplearning/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="关于神经网络与深度学习">
+                        
+                        <span class="card-title">关于神经网络与深度学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            先开好坑，估摸着暑假前整完
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/学习笔记/" class="post-category" target="_blank">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DL/" target="_blank">
+                        <span class="chip bg-color">DL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/23/shugame/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SHU智科大二夏季学期游戏开发">
+                        
+                        <span class="card-title">SHU智科大二夏季学期游戏开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            如题，关于游戏和学习游戏开发，相关书目《游戏改变世界》
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/学习笔记/" class="post-category" target="_blank">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SHU/" target="_blank">
+                        <span class="chip bg-color">SHU</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 小天爷的博客<br />'
+            + '作者: Henry-Avery<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2019-2020 Henry-Avery. 版权所有
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">132.8k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/henry-avery" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=849095098&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 1;
+        var uvcountOffset = 1;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2020, 07, 30, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        /*document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +  diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+</body>
+
+</html>
