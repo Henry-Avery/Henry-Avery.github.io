@@ -287,7 +287,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -442,14 +442,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.2k
+                    7.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    29 分
                 </div>
                 
                 
@@ -812,7 +812,7 @@ table<span class="token punctuation">.</span><span class="token function">unpack
 <p>world.OnRenderStepped:Connect(Update)，按帧数检测，fps=60，16.67ms。</p>
 <h5 id="游戏系统和框架"><a href="#游戏系统和框架" class="headerlink" title="游戏系统和框架"></a>游戏系统和框架</h5><p>脚本间通信，require(“MyAsset/ModuleAsset”)：foo()</p>
 <p>Global:相当于library，全局</p>
-<h5 id="作业：炸弹人2-0"><a href="#作业：炸弹人2-0" class="headerlink" title="作业：炸弹人2.0"></a><strong>作业</strong>：炸弹人2.0</h5><p><strong>镜头抖动</strong>（还有昨天那个）</p>
+<h4 id="第一周作业：炸弹人2-0"><a href="#第一周作业：炸弹人2-0" class="headerlink" title="第一周作业：炸弹人2.0"></a>第一周作业：炸弹人2.0</h4><h5 id="镜头抖动"><a href="#镜头抖动" class="headerlink" title="镜头抖动"></a><strong>镜头抖动</strong></h5><p>之前那个小作业别忘了。</p>
 <p>直接在world下的script里写。</p>
 <pre class="line-numbers language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
 <span class="token function">wait</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">--服务器脚本，等它几秒构建好world之后加入角色（这时才加入相机，否则会print出nil，后面函数报错，不信可以试试）</span>
@@ -827,7 +827,7 @@ table<span class="token punctuation">.</span><span class="token function">unpack
 ObjTweener<span class="token punctuation">:</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">--播放这个动画</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>– Tween：ShakeProperty()<br>– local MainCamera = world.CurrentCamera 官网了解</p>
-<p>看了也不会系列。。。。还是得问。。。。Distance效果很鬼畜，可以改别的</p>
+<p>看了也不会系列。。。。还是得问。。。。</p>
 </blockquote>
 <hr>
 <p>Davinci编辑器为开发者提供了6种摄像机类型，不同的摄像机会以不同的视角观察游戏场景。</p>
@@ -889,21 +889,107 @@ ObjTweener<span class="token punctuation">:</span><span class="token function">P
 <td>摄像机盒子的碰撞组</td>
 </tr>
 </tbody></table>
-<p><strong>完成玩家生命与淘汰系统</strong></p>
-<p>待完成</p>
-<blockquote>
-<p>其实完成了，就是懒得搬了。</p>
-</blockquote>
-<p><strong>解决玩家重复扔炸弹的问题</strong></p>
-<p>待完成</p>
-<p><strong>实现炸弹攻击距离</strong>，每个箱子增加可能掉落道具物品。</p>
-<p>待完成</p>
+<h5 id="完成玩家生命与淘汰系统"><a href="#完成玩家生命与淘汰系统" class="headerlink" title="完成玩家生命与淘汰系统"></a><strong>完成玩家生命与淘汰系统</strong></h5><p>Player加一个lifeRemain的intvalue，初始值设为3。</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/QQ%E5%9B%BE%E7%89%8720210627205820.png" alt></p>
+<p>world下建立一个LifeBoard的文件夹，放一个screenUI，先命名为P4,在P4下再加一张底图，底图下加两个Text，一个叫name1放名字，一个叫life接收生命值lifeRemain。最后改Player的script。</p>
+<pre class="line-numbers language-lua"><code class="language-lua"><span class="token comment" spellcheck="true">--Player的script下，只能改变自己的lifeboard，别人的还要多人测试，这个P4就有点难办，不懂玩家加入的原理，没想法，先留着</span>
+<span class="token keyword">local</span> lifeRemain <span class="token operator">=</span> script<span class="token punctuation">.</span>Parent<span class="token punctuation">.</span>lifeRemain
+
+<span class="token keyword">local</span> curLife <span class="token operator">=</span> lifeRemain<span class="token punctuation">.</span>Value
+
+
+world<span class="token punctuation">.</span>LifeBoard<span class="token punctuation">.</span>P4<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>name1<span class="token punctuation">.</span>Text<span class="token operator">=</span>localPlayer<span class="token punctuation">.</span>Name
+world<span class="token punctuation">.</span>LifeBoard<span class="token punctuation">.</span>P4<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>life<span class="token punctuation">.</span>Text<span class="token operator">=</span>curLife
+
+
+<span class="token keyword">function</span> <span class="token function">ValueChangeEvent</span><span class="token punctuation">(</span>old<span class="token punctuation">,</span>new<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> new <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token keyword">or</span> new <span class="token operator">></span> <span class="token number">3</span> <span class="token keyword">then</span>
+        <span class="token comment" spellcheck="true">--localPlayer.bombRemain.Value=-1</span>
+        <span class="token comment" spellcheck="true">--不知道怎么设计淘汰，设定炸弹数为负，三条命死完，进入观战模式，不能放炸弹</span>
+        <span class="token keyword">return</span>
+    <span class="token keyword">end</span>
+    world<span class="token punctuation">.</span>LifeBoard<span class="token punctuation">.</span>P4<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>life<span class="token punctuation">.</span>Text<span class="token operator">=</span>new
+<span class="token keyword">end</span>    
+
+<span class="token function">print</span><span class="token punctuation">(</span>lifeRemain<span class="token punctuation">.</span>Value<span class="token punctuation">)</span>
+
+lifeRemain<span class="token punctuation">.</span>OnValueChanged<span class="token punctuation">:</span><span class="token function">Connect</span><span class="token punctuation">(</span>ValueChangeEvent<span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">onHit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   lifeRemain<span class="token punctuation">.</span>Value<span class="token operator">=</span>lifeRemain<span class="token punctuation">.</span>Value<span class="token operator">-</span><span class="token number">1</span>
+<span class="token keyword">end</span>
+
+localPlayer<span class="token punctuation">.</span>OnDead<span class="token punctuation">:</span><span class="token function">Connect</span><span class="token punctuation">(</span>onHit<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="解决玩家重复扔炸弹的问题"><a href="#解决玩家重复扔炸弹的问题" class="headerlink" title="解决玩家重复扔炸弹的问题"></a><strong>解决玩家重复扔炸弹的问题</strong></h5><pre class="line-numbers language-lua"><code class="language-lua"><span class="token comment" spellcheck="true">--LocalScript</span>
+<span class="token keyword">function</span> <span class="token function">PressFire</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">--设置一个叫bombRemain的value值限制player放炸弹数目</span>
+    <span class="token keyword">local</span> Bomb_num<span class="token operator">=</span>script<span class="token punctuation">.</span>Parent<span class="token punctuation">.</span>Parent<span class="token punctuation">.</span>Parent<span class="token punctuation">.</span>Parent<span class="token punctuation">.</span>bombRemain
+
+    <span class="token comment" spellcheck="true">--print (Bomb_num)</span>
+    <span class="token keyword">if</span> Bomb_num<span class="token punctuation">.</span>Value <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">then</span>
+        <span class="token function">DropBomb</span><span class="token punctuation">(</span>localPlayer<span class="token punctuation">.</span>Position<span class="token punctuation">)</span>
+        Bomb_num<span class="token punctuation">.</span>Value<span class="token operator">=</span>Bomb_num<span class="token punctuation">.</span>Value<span class="token operator">-</span><span class="token number">1</span>
+        <span class="token comment" spellcheck="true">--print (Bomb_num.Value)</span>
+        <span class="token keyword">if</span> Bomb_num<span class="token punctuation">.</span>Value <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">then</span>
+            <span class="token function">wait</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+            Bomb_num<span class="token punctuation">.</span>Value<span class="token operator">=</span>Bomb_num<span class="token punctuation">.</span>Value<span class="token operator">+</span><span class="token number">1</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+    <span class="token comment" spellcheck="true">--强行等3s后恢复</span>
+<span class="token keyword">end</span>
+<span class="token comment" spellcheck="true">--4:玩家不能无限放炸弹,所以要限制一下DropBomb函数的调用</span>
+<span class="token comment" spellcheck="true">--放炸弹还要检测是否那个位置已经有炸弹了，但是不知道根据位置检测对象的函数是什么？</span>
+<span class="token comment" spellcheck="true">--也许可以先往一个方向偏移一下，再往反方向Raycast检测</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a href="https://api.projectdavinci.com/Davinci_0.12.0.58352/Physics.md#luacastresult-raycast(vector3-startpos%2Cvector3-targetpos%2Cbool-debugdraw)" target="_blank" rel="noopener">Raycast API</a></p>
+<h5 id="实现炸弹攻击距离"><a href="#实现炸弹攻击距离" class="headerlink" title="实现炸弹攻击距离"></a><strong>实现炸弹攻击距离</strong></h5><p>每个箱子增加可能掉落道具物品。</p>
+<p>1、在Architect的Box下新建一个NodeObject，叫BoxBuff，再加一个model（cube或者胶囊体，随便什么都行），model下加一个CollisionEvent。</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/QQ%E5%9B%BE%E7%89%8720210627205859.png" alt></p>
+<pre class="line-numbers language-lua"><code class="language-lua"><span class="token comment" spellcheck="true">---------------------------------------------------------------</span>
+<span class="token comment" spellcheck="true">-- Collisionevent is triggered when script.Parent interact with a collision(enter, continue, leave)</span>
+<span class="token comment" spellcheck="true">-- CollisionType : collision type</span>
+<span class="token comment" spellcheck="true">--   Enum.CollisionEventType.Enter</span>
+<span class="token comment" spellcheck="true">--   Enum.CollisionEventType.Leave</span>
+<span class="token comment" spellcheck="true">-- HitObject : the other object that contact with script.Parent</span>
+<span class="token comment" spellcheck="true">-- HitPoint : collision point </span>
+<span class="token comment" spellcheck="true">-- HitNormal : collision normal</span>
+<span class="token comment" spellcheck="true">---------------------------------------------------------------</span>
+<span class="token keyword">if</span> CollisionType <span class="token operator">==</span> Enum<span class="token punctuation">.</span>CollisionEventType<span class="token punctuation">.</span>Enter <span class="token keyword">and</span> HitObject<span class="token punctuation">:</span><span class="token function">IsA</span><span class="token punctuation">(</span><span class="token string">"PlayerInstance"</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+    script<span class="token punctuation">.</span>Parent<span class="token punctuation">:</span><span class="token function">Destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> localPlayer<span class="token punctuation">.</span>AttackDistance<span class="token punctuation">.</span>Value <span class="token operator">&lt;</span> <span class="token number">8</span> <span class="token keyword">then</span>
+        <span class="token comment" spellcheck="true">-- 炸弹攻击距离有上限</span>
+        localPlayer<span class="token punctuation">.</span>AttackDistance<span class="token punctuation">.</span>Value<span class="token operator">=</span>localPlayer<span class="token punctuation">.</span>AttackDistance<span class="token punctuation">.</span>Value<span class="token operator">+</span><span class="token number">1</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、在世界中创建folder: BoxBuff，存放待会加入的道具</p>
+<p>3、修改木箱爆炸程序：Box-Box-Collider-BomHit</p>
+<pre class="line-numbers language-lua"><code class="language-lua"><span class="token comment" spellcheck="true">--[BombHit]</span>
+<span class="token comment" spellcheck="true">--加一句在同一位置创建一个buff</span>
+<span class="token keyword">local</span> number<span class="token operator">=</span>math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">250</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">-- 通过随机数设置是否爆道具</span>
+<span class="token keyword">if</span> number <span class="token operator">&lt;</span><span class="token number">150</span> <span class="token keyword">then</span> 
+    <span class="token function">wait</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span>
+    <span class="token keyword">local</span> BB <span class="token operator">=</span> world<span class="token punctuation">:</span><span class="token function">CreateInstance</span><span class="token punctuation">(</span><span class="token string">"BoxBuff"</span><span class="token punctuation">,</span><span class="token string">"BoxBuff"</span><span class="token punctuation">,</span> world<span class="token punctuation">.</span>BoxBuff<span class="token punctuation">,</span> Root<span class="token punctuation">.</span>Position<span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+<span class="token comment" spellcheck="true">--删除木箱</span>
+Root<span class="token punctuation">:</span><span class="token function">Destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4、Player下新建数值AttackDistance，初始值设成1，修改炸弹的一生，让它从人物身上获取攻击值。</p>
+<p>在Player-Local-BomberGameGUI-DropBomb-Localscript中修改对应部分为以下：</p>
+<pre class="line-numbers language-lua"><code class="language-lua"><span class="token comment" spellcheck="true">--是谁放的炸弹</span>
+<span class="token keyword">local</span> Owner <span class="token operator">=</span> BombRoot<span class="token punctuation">.</span>Owner<span class="token punctuation">.</span>Value
+<span class="token comment" spellcheck="true">--炸弹的攻击距离</span>
+<span class="token comment" spellcheck="true">--local AttackDistance = BombRoot.AttackDistance.Value</span>
+<span class="token keyword">local</span> AttackDistance <span class="token operator">=</span> localPlayer<span class="token punctuation">.</span>AttackDistance<span class="token punctuation">.</span>Value
+<span class="token comment" spellcheck="true">--延迟时间</span>
+<span class="token keyword">local</span> SafetyTime <span class="token operator">=</span> BombRoot<span class="token punctuation">.</span>SafetyTime<span class="token punctuation">.</span>Value
+<span class="token comment" spellcheck="true">--这样炸弹攻击值就只能从人物身上获取</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>报错：原因是world.staticspace这个节点下对象是静态的，运行时不能移动或调用函数，一般放场景用，不知道我写在box里关checkboard什么事了。反正不影响功能实现，但是还有个小问题，就是人物在吃边缘道具的时候容易跳出地图，然后就跳不回来了。。。。懒得设计属性值了，就这样吧。</p>
+<p><img src="https://gitee.com/henry-avery/my_pic_bed/raw/master/Snipaste_2021-06-27_19-55-10.png" alt></p>
 <hr>
 <p>限制玩家扔炸弹数量，实现道具：炸弹仓扩容，炸弹和特效使用对象池优化，设计自己的技能系统（可选）</p>
 <blockquote>
 <p>”今天的作业哦！！！！周日前同学们发到邮箱：<a href="mailto:irislan@lilith.com" target="_blank" rel="noopener">irislan@lilith.com</a>“——莉莉丝·喵莉丝</p>
 <p>“建议大家全部做完”——莉莉丝·雪花</p>
-<p>烦，没时间做了，哪个好心人能拉我一把？</p>
+<p>烦，没时间做啊，哪个好心人能拉我一把？</p>
 <p>哦，原来还是我自己拉自己，那没事了。</p>
 </blockquote>
 <h3 id="课程资料"><a href="#课程资料" class="headerlink" title="课程资料"></a>课程资料</h3><p><a href="https://www.projectdavinci.com/dev/1/Script" target="_blank" rel="noopener">Davici编辑器教程</a></p>
@@ -1157,7 +1243,7 @@ ObjTweener<span class="token punctuation">:</span><span class="token function">P
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="关于神经网络与深度学习">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="关于神经网络与深度学习">
                         
                         <span class="card-title">关于神经网络与深度学习</span>
                     </div>
@@ -1206,7 +1292,7 @@ ObjTweener<span class="token punctuation">:</span><span class="token function">P
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="code01装机记">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="code01装机记">
                         
                         <span class="card-title">code01装机记</span>
                     </div>
@@ -1411,7 +1497,7 @@ ObjTweener<span class="token punctuation">:</span><span class="token function">P
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">132.8k</span>
+            <span class="white-color">133.6k</span>
             
 
             <br>
