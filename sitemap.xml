@@ -2,16 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://henryavery.cn/2021/06/25/deeplearning/</loc>
+    <loc>https://henryavery.cn/2021/07/31/2021-7-1/</loc>
     
-    <lastmod>2021-06-28T03:34:01.774Z</lastmod>
+    <lastmod>2021-08-01T13:07:06.569Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://henryavery.cn/2021/06/23/shugame/</loc>
     
-    <lastmod>2021-06-27T13:05:11.520Z</lastmod>
+    <lastmod>2021-08-01T07:15:57.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</loc>
+    
+    <lastmod>2021-07-11T13:04:35.707Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/06/29/acwing/</loc>
+    
+    <lastmod>2021-07-10T11:52:44.847Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/06/17/asc2022/</loc>
+    
+    <lastmod>2021-07-06T10:44:46.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/07/02/2021-7/</loc>
+    
+    <lastmod>2021-07-04T13:20:06.780Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/06/25/deeplearning/</loc>
+    
+    <lastmod>2021-06-28T03:39:13.603Z</lastmod>
     
   </url>
   
@@ -19,20 +54,6 @@
     <loc>https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/</loc>
     
     <lastmod>2021-06-25T12:51:25.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</loc>
-    
-    <lastmod>2021-06-22T11:14:12.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2021/06/17/asc2022/</loc>
-    
-    <lastmod>2021-06-20T13:14:55.557Z</lastmod>
     
   </url>
   
@@ -317,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://henryavery.cn/categories/index.html</loc>
+    <loc>https://henryavery.cn/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://henryavery.cn/archives/index.html</loc>
+    <loc>https://henryavery.cn/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

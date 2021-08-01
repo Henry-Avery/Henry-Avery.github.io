@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-06-28T03:34:01.774Z</updated>
+  <updated>2021-08-01T13:07:06.569Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,89 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>7月复盘</title>
+    <link href="https://henryavery.cn/2021/07/31/2021-7-1/"/>
+    <id>https://henryavery.cn/2021/07/31/2021-7-1/</id>
+    <published>2021-07-31T11:56:21.000Z</published>
+    <updated>2021-08-01T13:07:06.569Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;7月复盘（7-31）&quot;&gt;&lt;a href=&quot;#7月复盘（7-31）&quot; class=&quot;headerlink&quot; title=&quot;7月复盘（7.31）&quot;&gt;&lt;/a&gt;7月复盘（7.31）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：及冠&quot;&gt;&lt;a href=&quot;#本月关键词：及冠&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6月复盘</title>
+    <link href="https://henryavery.cn/2021/07/02/2021-7/"/>
+    <id>https://henryavery.cn/2021/07/02/2021-7/</id>
+    <published>2021-07-02T12:03:24.000Z</published>
+    <updated>2021-07-04T13:20:06.780Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;6月复盘（7-2）&quot;&gt;&lt;a href=&quot;#6月复盘（7-2）&quot; class=&quot;headerlink&quot; title=&quot;6月复盘（7.2）&quot;&gt;&lt;/a&gt;6月复盘（7.2）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：&quot;&gt;&lt;a href=&quot;#本月关键词：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AcWing算法基础学习</title>
+    <link href="https://henryavery.cn/2021/06/29/acwing/"/>
+    <id>https://henryavery.cn/2021/06/29/acwing/</id>
+    <published>2021-06-29T12:43:21.000Z</published>
+    <updated>2021-07-10T11:52:44.847Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2021暑假ACwing算法基础课&quot;&gt;&lt;a href=&quot;#2021暑假ACwing算法基础课&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="算法" scheme="https://henryavery.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于神经网络与深度学习</title>
     <link href="https://henryavery.cn/2021/06/25/deeplearning/"/>
     <id>https://henryavery.cn/2021/06/25/deeplearning/</id>
     <published>2021-06-25T07:31:22.000Z</published>
-    <updated>2021-06-28T03:34:01.774Z</updated>
+    <updated>2021-06-28T03:39:13.603Z</updated>
     
     <summary type="html">
     
@@ -51,7 +129,7 @@
     <link href="https://henryavery.cn/2021/06/23/shugame/"/>
     <id>https://henryavery.cn/2021/06/23/shugame/</id>
     <published>2021-06-23T11:14:59.000Z</published>
-    <updated>2021-06-27T13:05:11.520Z</updated>
+    <updated>2021-08-01T07:15:57.157Z</updated>
     
     <summary type="html">
     
@@ -103,7 +181,7 @@
     <link href="https://henryavery.cn/2021/06/17/asc2022/"/>
     <id>https://henryavery.cn/2021/06/17/asc2022/</id>
     <published>2021-06-17T08:42:55.000Z</published>
-    <updated>2021-06-20T13:14:55.557Z</updated>
+    <updated>2021-07-06T10:44:46.294Z</updated>
     
     <summary type="html">
     
@@ -111,7 +189,7 @@
       
         
         
-          &lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;&lt;strong&gt;资料&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a
+          &lt;h1 id=&quot;ASC2022备战&quot;&gt;&lt;a href=&quot;#ASC2022备战&quot; class=&quot;headerlink&quot; title=&quot;ASC2022备战&quot;&gt;&lt;/a&gt;ASC2022备战&lt;/h1&gt;&lt;h2 id=&quot;关于ASC&quot;&gt;&lt;a href=&quot;#关于ASC&quot;
         
       
     
@@ -449,7 +527,7 @@
     <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
     <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
     <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-06-22T11:14:12.535Z</updated>
+    <updated>2021-07-11T13:04:35.707Z</updated>
     
     <summary type="html">
     
@@ -467,84 +545,6 @@
     
     
       <category term="年度计划" scheme="https://henryavery.cn/tags/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020年终总结</title>
-    <link href="https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/"/>
-    <id>https://henryavery.cn/2021/02/10/2020-nian-zhong-zong-jie/</id>
-    <published>2021-02-10T12:14:30.000Z</published>
-    <updated>2021-06-25T12:51:25.386Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;2020年终总结（2-15）&quot;&gt;&lt;a href=&quot;#2020年终总结（2-15）&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
-    
-    
-      <category term="年终总结" scheme="https://henryavery.cn/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021一月复盘</title>
-    <link href="https://henryavery.cn/2021/01/30/2021-1/"/>
-    <id>https://henryavery.cn/2021/01/30/2021-1/</id>
-    <published>2021-01-30T12:12:25.000Z</published>
-    <updated>2021-02-01T13:42:23.992Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一月复盘（1-30）&quot;&gt;&lt;a href=&quot;#一月复盘（1-30）&quot; class=&quot;headerlink&quot; title=&quot;一月复盘（1.30）&quot;&gt;&lt;/a&gt;一月复盘（1.30）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：原点&quot;&gt;&lt;a href=&quot;#本月关键词：原点&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
-    
-    
-      <category term="2021" scheme="https://henryavery.cn/tags/2021/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>吴恩达的机器学习课程笔记</title>
-    <link href="https://henryavery.cn/2021/01/25/ml/"/>
-    <id>https://henryavery.cn/2021/01/25/ml/</id>
-    <published>2021-01-25T07:30:42.000Z</published>
-    <updated>2021-04-27T12:37:34.014Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;吴恩达机器学习&quot;&gt;&lt;a href=&quot;#吴恩达机器学习&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="机器学习" scheme="https://henryavery.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

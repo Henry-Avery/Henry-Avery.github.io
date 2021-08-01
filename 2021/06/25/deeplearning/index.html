@@ -290,7 +290,7 @@ b站[中英字幕]吴恩达机器学习系列课">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -552,7 +552,7 @@ b站[中英字幕]吴恩达机器学习系列课">
 <h3 id="2-8-Adam-优化算法-Adam-optimization-algorithm"><a href="#2-8-Adam-优化算法-Adam-optimization-algorithm" class="headerlink" title="2.8 Adam 优化算法(Adam optimization algorithm)"></a>2.8 Adam 优化算法(Adam optimization algorithm)</h3><p>在深度学习的历史上，包括许多知名研究者在内，提出了优化算法，并很好地解决了一些问题，但随后这些优化算法被指出并不能一般化，并不适用于多种神经网络，时间久了，深度学习圈子里的人开始多少有些质疑全新的优化算法，很多人都觉得动量（<strong>Momentum</strong>）梯度下降法很好用，很难再想出更好的优化算法。所以<strong>RMSprop</strong>以及<strong>Adam</strong>优化算法（<strong>Adam</strong>优化算法也是本视频的内容），就是少有的经受住人们考验的两种算法，已被证明适用于不同的深度学习结构，这个算法我会毫不犹豫地推荐给你，因为很多人都试过，并且用它很好地解决了许多问题。</p>
 <h3 id="2-9-学习率衰减-Learning-rate-decay"><a href="#2-9-学习率衰减-Learning-rate-decay" class="headerlink" title="2.9 学习率衰减(Learning rate decay)"></a>2.9 学习率衰减(Learning rate decay)</h3><h3 id="2-10-局部最优的问题-The-problem-of-local-optima"><a href="#2-10-局部最优的问题-The-problem-of-local-optima" class="headerlink" title="2.10 局部最优的问题(The problem of local optima)"></a>2.10 局部最优的问题(The problem of local optima)</h3><p>首先，你不太可能困在极差的局部最优中，条件是你在训练较大的神经网络，存在大量参数，并且成本函数$J$被定义在较高的维度空间。</p>
 <p>第二点，平稳段是一个问题，这样使得学习十分缓慢，这也是像<strong>Momentum</strong>或是<strong>RMSprop</strong>，<strong>Adam</strong>这样的算法，能够加速学习算法的地方。在这些情况下，更成熟的优化算法，如<strong>Adam</strong>算法，能够加快速度，让你尽早往下走出平稳段。</p>
-<h2 id="第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）"><a href="#第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）" class="headerlink" title="第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）"></a>第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）</h2><h3 id="3-1-调试处理（Tuning-process）"><a href="#3-1-调试处理（Tuning-process）" class="headerlink" title="3.1 调试处理（Tuning process）"></a>3.1 调试处理（Tuning process）</h3><h3 id="3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）"><a href="#3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）" class="headerlink" title="3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）"></a>3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）</h3><h3 id="3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）"><a href="#3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）" class="headerlink" title="3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）"></a>3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）</h3><h3 id="3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）"><a href="#3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）" class="headerlink" title="3.4 归一化网络的激活函数（Normalizing activations in a network）"></a>3.4 归一化网络的激活函数（Normalizing activations in a network）</h3><h3 id="3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）"><a href="#3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）" class="headerlink" title="3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）"></a>3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）</h3><h2 id="3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）"><a href="#3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）" class="headerlink" title="3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）"></a>3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）</h2><h3 id="3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）"><a href="#3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）" class="headerlink" title="3.7 测试时的 Batch Norm（Batch Norm at test time）"></a>3.7 测试时的 Batch Norm（Batch Norm at test time）</h3><h3 id="3-8-Softmax-回归（Softmax-regression）"><a href="#3-8-Softmax-回归（Softmax-regression）" class="headerlink" title="3.8 Softmax 回归（Softmax regression）"></a>3.8 Softmax 回归（Softmax regression）</h3><h3 id="3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）"><a href="#3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）" class="headerlink" title="3.9 训练一个 Softmax 分类器（Training a Softmax classifier）"></a>3.9 训练一个 Softmax 分类器（Training a Softmax classifier）</h3><h3 id="3-10-深度学习框架（Deep-Learning-frameworks）"><a href="#3-10-深度学习框架（Deep-Learning-frameworks）" class="headerlink" title="3.10 深度学习框架（Deep Learning frameworks）"></a>3.10 深度学习框架（Deep Learning frameworks）</h3><h3 id="3-11-TensorFlow"><a href="#3-11-TensorFlow" class="headerlink" title="3.11 TensorFlow"></a>3.11 TensorFlow</h3><blockquote>
+<h2 id="第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）"><a href="#第三周-超参数调试、Batch正则化和程序框架（Hyperparameter-tuning）" class="headerlink" title="第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）"></a>第三周 超参数调试、Batch正则化和程序框架（Hyperparameter tuning）</h2><h3 id="3-1-调试处理（Tuning-process）"><a href="#3-1-调试处理（Tuning-process）" class="headerlink" title="3.1 调试处理（Tuning process）"></a>3.1 调试处理（Tuning process）</h3><h3 id="3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）"><a href="#3-2-为超参数选择合适的范围（Using-an-appropriate-scale-to-pick-hyperparameters）" class="headerlink" title="3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）"></a>3.2 为超参数选择合适的范围（Using an appropriate scale to pick hyperparameters）</h3><h3 id="3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）"><a href="#3-3-超参数调试的实践：Pandas-VS-Caviar（Hyperparameters-tuning-in-practice-Pandas-vs-Caviar）" class="headerlink" title="3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）"></a>3.3 超参数调试的实践：Pandas VS Caviar（Hyperparameters tuning in practice: Pandas vs. Caviar）</h3><h3 id="3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）"><a href="#3-4-归一化网络的激活函数（Normalizing-activations-in-a-network）" class="headerlink" title="3.4 归一化网络的激活函数（Normalizing activations in a network）"></a>3.4 归一化网络的激活函数（Normalizing activations in a network）</h3><h3 id="3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）"><a href="#3-5-将-Batch-Norm-拟合进神经网络（Fitting-Batch-Norm-into-a-neural-network）" class="headerlink" title="3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）"></a>3.5 将 Batch Norm 拟合进神经网络（Fitting Batch Norm into a neural network）</h3><h3 id="3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）"><a href="#3-6-Batch-Norm-为什么奏效（Why-does-Batch-Norm-work-）" class="headerlink" title="3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）"></a>3.6 Batch Norm 为什么奏效（Why does Batch Norm work?）</h3><h3 id="3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）"><a href="#3-7-测试时的-Batch-Norm（Batch-Norm-at-test-time）" class="headerlink" title="3.7 测试时的 Batch Norm（Batch Norm at test time）"></a>3.7 测试时的 Batch Norm（Batch Norm at test time）</h3><h3 id="3-8-Softmax-回归（Softmax-regression）"><a href="#3-8-Softmax-回归（Softmax-regression）" class="headerlink" title="3.8 Softmax 回归（Softmax regression）"></a>3.8 Softmax 回归（Softmax regression）</h3><h3 id="3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）"><a href="#3-9-训练一个-Softmax-分类器（Training-a-Softmax-classifier）" class="headerlink" title="3.9 训练一个 Softmax 分类器（Training a Softmax classifier）"></a>3.9 训练一个 Softmax 分类器（Training a Softmax classifier）</h3><h3 id="3-10-深度学习框架（Deep-Learning-frameworks）"><a href="#3-10-深度学习框架（Deep-Learning-frameworks）" class="headerlink" title="3.10 深度学习框架（Deep Learning frameworks）"></a>3.10 深度学习框架（Deep Learning frameworks）</h3><h3 id="3-11-TensorFlow"><a href="#3-11-TensorFlow" class="headerlink" title="3.11 TensorFlow"></a>3.11 TensorFlow</h3><blockquote>
 <p>今天晚上多花了点时间，把进度提前推一点，BN是重点，明天回过头来再看看。明天再刷一天就进入cv了。</p>
 </blockquote>
 <h1 id="第三门课-结构化机器学习项目（Structuring-Machine-Learning-Projects）"><a href="#第三门课-结构化机器学习项目（Structuring-Machine-Learning-Projects）" class="headerlink" title="第三门课 结构化机器学习项目（Structuring Machine Learning Projects）"></a>第三门课 结构化机器学习项目（Structuring Machine Learning Projects）</h1><h2 id="第一周-机器学习（ML）策略（1）（ML-strategy（1））"><a href="#第一周-机器学习（ML）策略（1）（ML-strategy（1））" class="headerlink" title="第一周 机器学习（ML）策略（1）（ML strategy（1））"></a>第一周 机器学习（ML）策略（1）（ML strategy（1））</h2><h3 id="1-1-为什么是ML策略？（Why-ML-Strategy-）"><a href="#1-1-为什么是ML策略？（Why-ML-Strategy-）" class="headerlink" title="1.1 为什么是ML策略？（Why ML Strategy?）"></a>1.1 为什么是ML策略？（Why ML Strategy?）</h3><h3 id="1-2-正交化（Orthogonalization）"><a href="#1-2-正交化（Orthogonalization）" class="headerlink" title="1.2 正交化（Orthogonalization）"></a>1.2 正交化（Orthogonalization）</h3><p>所以正交化的概念是指，你可以想出一个维度，这个维度你想做的是控制转向角，还有另一个维度来控制你的速度，那么你就需要一个旋钮尽量只控制转向角，另一个旋钮，在这个开车的例子里其实是油门和刹车控制了你的速度。但如果你有一个控制旋钮将两者混在一起，比如说这样一个控制装置同时影响你的转向角和速度，同时改变了两个性质，那么就很难令你的车子以想要的速度和角度前进。然而正交化之后，正交意味着互成90度。设计出正交化的控制装置，最理想的情况是和你实际想控制的性质一致，这样你调整参数时就容易得多。可以单独调整转向角，还有你的油门和刹车，令车子以你想要的方式运动。</p>
@@ -1004,30 +1004,29 @@ b站[中英字幕]吴恩达机器学习系列课">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/25/deeplearning/">
+                <a href="/2021/06/29/acwing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="关于神经网络与深度学习">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="AcWing算法基础学习">
                         
-                        <span class="card-title">关于神经网络与深度学习</span>
+                        <span class="card-title">AcWing算法基础学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            先开好坑，估摸着暑假前整完
+                            开始认真学算法
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1040,12 +1039,11 @@ b站[中英字幕]吴恩达机器学习系列课">
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DL/" target="_blank">
-                        <span class="chip bg-color">DL</span>
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
@@ -1063,7 +1061,7 @@ b站[中英字幕]吴恩达机器学习系列课">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SHU智科大二夏季学期游戏开发">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SHU智科大二夏季学期游戏开发">
                         
                         <span class="card-title">SHU智科大二夏季学期游戏开发</span>
                     </div>
@@ -1268,7 +1266,7 @@ b站[中英字幕]吴恩达机器学习系列课">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">172.2k</span>
+            <span class="white-color">179.5k</span>
             
 
             <br>
