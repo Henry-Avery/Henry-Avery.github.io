@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-08-01T13:07:06.569Z</updated>
+  <updated>2021-09-12T01:45:05.649Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -17,11 +17,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Openmp并行计算学习</title>
+    <link href="https://henryavery.cn/2021/09/12/openmp/"/>
+    <id>https://henryavery.cn/2021/09/12/openmp/</id>
+    <published>2021-09-12T01:37:08.000Z</published>
+    <updated>2021-09-12T01:45:05.649Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Openmp和MPI&quot;&gt;&lt;a href=&quot;#Openmp和MPI&quot; class=&quot;headerlink&quot; title=&quot;Openmp和MPI&quot;&gt;&lt;/a&gt;Openmp和MPI&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.OpenMP
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="并行" scheme="https://henryavery.cn/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8月复盘</title>
+    <link href="https://henryavery.cn/2021/08/31/2021-8/"/>
+    <id>https://henryavery.cn/2021/08/31/2021-8/</id>
+    <published>2021-08-31T01:14:16.000Z</published>
+    <updated>2021-09-12T01:39:16.719Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;八月复盘（8-31）&quot;&gt;&lt;a href=&quot;#八月复盘（8-31）&quot; class=&quot;headerlink&quot; title=&quot;八月复盘（8.31）&quot;&gt;&lt;/a&gt;八月复盘（8.31）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：暑假&quot;&gt;&lt;a href=&quot;#本月关键词：暑假&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
+    
+    
+      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>7月复盘</title>
     <link href="https://henryavery.cn/2021/07/31/2021-7-1/"/>
     <id>https://henryavery.cn/2021/07/31/2021-7-1/</id>
     <published>2021-07-31T11:56:21.000Z</published>
-    <updated>2021-08-01T13:07:06.569Z</updated>
+    <updated>2021-08-31T01:38:14.163Z</updated>
     
     <summary type="html">
     
@@ -129,7 +182,7 @@
     <link href="https://henryavery.cn/2021/06/23/shugame/"/>
     <id>https://henryavery.cn/2021/06/23/shugame/</id>
     <published>2021-06-23T11:14:59.000Z</published>
-    <updated>2021-08-01T07:15:57.157Z</updated>
+    <updated>2021-09-12T01:46:24.718Z</updated>
     
     <summary type="html">
     
@@ -181,7 +234,7 @@
     <link href="https://henryavery.cn/2021/06/17/asc2022/"/>
     <id>https://henryavery.cn/2021/06/17/asc2022/</id>
     <published>2021-06-17T08:42:55.000Z</published>
-    <updated>2021-07-06T10:44:46.294Z</updated>
+    <updated>2021-09-12T01:36:04.036Z</updated>
     
     <summary type="html">
     
@@ -311,7 +364,7 @@
     <link href="https://henryavery.cn/2021/04/17/docker2021/"/>
     <id>https://henryavery.cn/2021/04/17/docker2021/</id>
     <published>2021-04-17T04:02:53.000Z</published>
-    <updated>2021-04-25T10:32:00.102Z</updated>
+    <updated>2021-09-12T01:48:04.879Z</updated>
     
     <summary type="html">
     
@@ -365,7 +418,7 @@
     <link href="https://henryavery.cn/2021/04/01/tensorflow/"/>
     <id>https://henryavery.cn/2021/04/01/tensorflow/</id>
     <published>2021-04-01T06:02:20.000Z</published>
-    <updated>2021-04-01T23:54:13.038Z</updated>
+    <updated>2021-09-12T01:43:19.804Z</updated>
     
     <summary type="html">
     
@@ -373,8 +426,7 @@
       
         
         
-          &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;TensorFlow 是一个开源的、基于 Python 的机器学习框架，它由 Google
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h3 id=&quot;关于TensorFlow&quot;&gt;&lt;a href=&quot;#关于TensorFlow&quot; class=&quot;headerlink&quot;
         
       
     
@@ -492,59 +544,6 @@
       <category term="flutter" scheme="https://henryavery.cn/tags/flutter/"/>
     
       <category term="app" scheme="https://henryavery.cn/tags/app/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021的百日阅读计划1.0</title>
-    <link href="https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/"/>
-    <id>https://henryavery.cn/2021/02/10/2-4-yue-yue-du-ji-hua/</id>
-    <published>2021-02-10T12:33:29.000Z</published>
-    <updated>2021-06-20T06:57:35.700Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;《CS：APP》&quot;&gt;&lt;a href=&quot;#《CS：APP》&quot; class=&quot;headerlink&quot; title=&quot;《CS：APP》&quot;&gt;&lt;/a&gt;《CS：APP》&lt;/h3&gt;&lt;p&gt;看了一下网络编程&lt;/p&gt;
-&lt;h3 id=&quot;《傲慢与偏见》&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="https://henryavery.cn/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="阅读计划" scheme="https://henryavery.cn/tags/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021年度计划</title>
-    <link href="https://henryavery.cn/2021/02/10/2021-nian-ji-hua/"/>
-    <id>https://henryavery.cn/2021/02/10/2021-nian-ji-hua/</id>
-    <published>2021-02-10T12:18:03.000Z</published>
-    <updated>2021-07-11T13:04:35.707Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;2021年度计划&quot;&gt;&lt;a href=&quot;#2021年度计划&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="计划" scheme="https://henryavery.cn/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="年度计划" scheme="https://henryavery.cn/tags/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
