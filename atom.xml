@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-09-12T01:45:05.649Z</updated>
+  <updated>2021-09-12T02:11:02.607Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在上海大学(SHU)就读是什么体验？</title>
+    <link href="https://henryavery.cn/2021/09/12/shulife/"/>
+    <id>https://henryavery.cn/2021/09/12/shulife/</id>
+    <published>2021-09-12T01:49:54.000Z</published>
+    <updated>2021-09-12T02:11:02.607Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在上海大学就读是什么体验？ - 夏小天的回答 - 知乎 &lt;a href=&quot;https://www.zhihu.com/question/401645789/answer/1354461326&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="大学" scheme="https://henryavery.cn/categories/%E5%A4%A7%E5%AD%A6/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+  </entry>
   
   <entry>
     <title>Openmp并行计算学习</title>
@@ -234,7 +260,7 @@
     <link href="https://henryavery.cn/2021/06/17/asc2022/"/>
     <id>https://henryavery.cn/2021/06/17/asc2022/</id>
     <published>2021-06-17T08:42:55.000Z</published>
-    <updated>2021-09-12T01:36:04.036Z</updated>
+    <updated>2021-09-12T02:07:18.692Z</updated>
     
     <summary type="html">
     
@@ -515,35 +541,6 @@
     
     
       <category term="2021" scheme="https://henryavery.cn/tags/2021/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>视时app</title>
-    <link href="https://henryavery.cn/2021/02/16/shi-shi-app/"/>
-    <id>https://henryavery.cn/2021/02/16/shi-shi-app/</id>
-    <published>2021-02-16T11:47:36.000Z</published>
-    <updated>2021-02-25T12:39:23.957Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;项目介绍&quot;&gt;&lt;a href=&quot;#项目介绍&quot; class=&quot;headerlink&quot; title=&quot;项目介绍&quot;&gt;&lt;/a&gt;项目介绍&lt;/h2&gt;&lt;p&gt;一款用于记录命运的APP。&lt;/p&gt;
-&lt;h2 id=&quot;项目准备&quot;&gt;&lt;a href=&quot;#项目准备&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发项目" scheme="https://henryavery.cn/categories/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="flutter" scheme="https://henryavery.cn/tags/flutter/"/>
-    
-      <category term="app" scheme="https://henryavery.cn/tags/app/"/>
     
   </entry>
   
