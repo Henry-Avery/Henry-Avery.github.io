@@ -294,7 +294,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -453,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    11 分
                 </div>
                 
                 
@@ -606,7 +606,132 @@ sys_c<span class="token operator">=</span><span class="token operator">-</span>s
 <li><p>逸珺的回答 - 知乎 <a href="https://www.zhihu.com/question/22085329/answer/1664661894" target="_blank" rel="noopener">https://www.zhihu.com/question/22085329/answer/1664661894</a></p>
 </li>
 </ul>
+<hr>
+<h2 id="实验二：-PID控制和专家PID控制对比"><a href="#实验二：-PID控制和专家PID控制对比" class="headerlink" title="实验二： PID控制和专家PID控制对比"></a>实验二： PID控制和专家PID控制对比</h2><pre class="line-numbers language-matlab"><code class="language-matlab">clear all<span class="token punctuation">;</span>
+close all<span class="token punctuation">;</span>
+ts <span class="token operator">=</span> <span class="token number">0.001</span><span class="token punctuation">;</span>
+sys <span class="token operator">=</span> <span class="token function">tf</span><span class="token punctuation">(</span><span class="token number">5.235e005</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">87.35</span><span class="token punctuation">,</span><span class="token number">1.047e004</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dsys<span class="token operator">=</span><span class="token function">c2d</span><span class="token punctuation">(</span>sys<span class="token punctuation">,</span>ts<span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>num<span class="token punctuation">,</span>den<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">tfdata</span><span class="token punctuation">(</span>dsys<span class="token punctuation">,</span><span class="token string">'v'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+u_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>u_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>u_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>u_4<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+y_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>y_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>y_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+ei<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+kp<span class="token operator">=</span><span class="token number">0.96</span><span class="token punctuation">;</span>ki<span class="token operator">=</span><span class="token number">0.03</span><span class="token punctuation">;</span>kd<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">;</span>
+error_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> k <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">500</span>
+    <span class="token function">time</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>k<span class="token operator">*</span>ts<span class="token punctuation">;</span>
+    <span class="token function">yd</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">;</span>
+    <span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>y_1<span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">*</span>y_2<span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">*</span>y_3<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>u_1<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>u_2<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">*</span>u_3<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">*</span>u_4<span class="token punctuation">;</span>
+    <span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">yd</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">derror</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">-</span>error_1<span class="token punctuation">;</span>
+    ei<span class="token operator">=</span>ei<span class="token operator">+</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">*</span>ts<span class="token punctuation">;</span>
+    <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>kp<span class="token operator">*</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">+</span>kd<span class="token operator">*</span><span class="token function">derror</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">/</span>ts<span class="token operator">+</span>ki<span class="token operator">*</span>ei<span class="token punctuation">;</span>
+    u_4<span class="token operator">=</span>u_3<span class="token punctuation">;</span>u_3<span class="token operator">=</span>u_2<span class="token punctuation">;</span>u_2<span class="token operator">=</span>u_1<span class="token punctuation">;</span>u_1<span class="token operator">=</span><span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    y_3<span class="token operator">=</span>y_2<span class="token punctuation">;</span>y_2<span class="token operator">=</span>y_1<span class="token punctuation">;</span>y_1<span class="token operator">=</span><span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    error_1<span class="token operator">=</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span>yd<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>time<span class="token punctuation">,</span>y<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time(s)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'r,y'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">saveas</span><span class="token punctuation">(</span>gcf<span class="token punctuation">,</span> <span class="token string">'save1.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span>yd<span class="token operator">-</span>y<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time(s)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">saveas</span><span class="token punctuation">(</span>gcf<span class="token punctuation">,</span> <span class="token string">'save2.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">%Expert PID Conr=troller</span>
+clear all<span class="token punctuation">;</span>
+clc<span class="token punctuation">;</span>
+close all<span class="token punctuation">;</span>
+ts<span class="token operator">=</span><span class="token number">0.001</span><span class="token punctuation">;</span>
+
+sys <span class="token operator">=</span> <span class="token function">tf</span><span class="token punctuation">(</span><span class="token number">5.235e005</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">87.35</span><span class="token punctuation">,</span><span class="token number">1.047e004</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dsys<span class="token operator">=</span><span class="token function">c2d</span><span class="token punctuation">(</span>sys<span class="token punctuation">,</span>ts<span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>num<span class="token punctuation">,</span>den<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">tfdata</span><span class="token punctuation">(</span>dsys<span class="token punctuation">,</span><span class="token string">'v'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+u_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>u_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>u_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+y_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>y_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>y_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+
+x<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">'</span><span class="token punctuation">;</span>
+x2_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+
+kp<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">;</span>
+ki<span class="token operator">=</span><span class="token number">0.03</span><span class="token punctuation">;</span>
+kd<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">;</span>
+
+error_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> k <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">500</span>
+    <span class="token function">time</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>k<span class="token operator">*</span>ts<span class="token punctuation">;</span>
+
+    <span class="token function">r</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">;</span>
+
+    <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>kp<span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span>kd<span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span>ki<span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">%Expert Control Rules</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0.8</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">%Rule1:误差特别大时开环控制</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.45</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> <span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0.40</span><span class="token punctuation">)</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.40</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> <span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0.20</span><span class="token punctuation">)</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.12</span><span class="token punctuation">;</span>
+    <span class="token keyword">elseif</span> <span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0.01</span><span class="token punctuation">)</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.10</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+
+    <span class="token keyword">if</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token operator">|</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">0.05</span>
+            <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>u_1<span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>kp<span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>u_1<span class="token operator">+</span><span class="token number">0.4</span><span class="token operator">*</span>kp<span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">0</span><span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>x2_1<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">|</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">0</span><span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>x2_1<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">0.05</span>
+            <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>u_1<span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>kp<span class="token operator">*</span>error_1<span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span>u_1<span class="token operator">+</span><span class="token number">0.6</span><span class="token operator">*</span>kp<span class="token operator">*</span>error_1<span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+    <span class="token keyword">end</span>
+
+    <span class="token keyword">if</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">0.001</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.5</span><span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">0.010</span><span class="token operator">*</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+
+    <span class="token keyword">if</span> <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">10</span>
+        <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+    <span class="token keyword">if</span> <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token operator">-</span><span class="token number">10</span>
+       <span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span> 
+    <span class="token keyword">end</span>
+
+
+    <span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>y_1<span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">*</span>y_2<span class="token operator">-</span><span class="token function">den</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">*</span>y_3<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">*</span>u_1<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">*</span>u_2<span class="token operator">+</span><span class="token function">num</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">*</span>u_3<span class="token punctuation">;</span>
+    <span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">r</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    u_3<span class="token operator">=</span>u_2<span class="token punctuation">;</span>u_2<span class="token operator">=</span>u_1<span class="token punctuation">;</span>u_1<span class="token operator">=</span><span class="token function">u</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    y_3<span class="token operator">=</span>y_2<span class="token punctuation">;</span>y_2<span class="token operator">=</span>y_1<span class="token punctuation">;</span>y_1<span class="token operator">=</span><span class="token function">y</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">x</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    x2_1<span class="token operator">=</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">x</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">-</span>error_1<span class="token punctuation">)</span><span class="token operator">/</span>ts<span class="token punctuation">;</span>
+    <span class="token function">x</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">x</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token operator">*</span>ts<span class="token punctuation">;</span>
+
+    error_1<span class="token operator">=</span><span class="token function">error</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span>r<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>time<span class="token punctuation">,</span>y<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time(s)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'r,y'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">saveas</span><span class="token punctuation">(</span>gcf<span class="token punctuation">,</span> <span class="token string">'save3.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>time<span class="token punctuation">,</span>r<span class="token operator">-</span>y<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time(s)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">saveas</span><span class="token punctuation">(</span>gcf<span class="token punctuation">,</span> <span class="token string">'save4.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2>
             </div>
             <hr />
 
@@ -704,30 +829,29 @@ sys_c<span class="token operator">=</span><span class="token operator">-</span>s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/04/shuic/">
+                <a href="/2021/12/09/guan-yu-cuda/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SHU智能系统控制">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="关于CUDA">
                         
-                        <span class="card-title">SHU智能系统控制</span>
+                        <span class="card-title">关于CUDA</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            智能系统控制专业课
+                            为了ASC！
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -740,16 +864,11 @@ sys_c<span class="token operator">=</span><span class="token operator">-</span>s
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SHU/" target="_blank">
-                        <span class="chip bg-color">SHU</span>
-                    </a>
-                    
-                    <a href="/tags/智能系统控制/" target="_blank">
-                        <span class="chip bg-color">智能系统控制</span>
+                    <a href="/tags/CUDA/" target="_blank">
+                        <span class="chip bg-color">CUDA</span>
                     </a>
                     
                 </div>
@@ -767,7 +886,7 @@ sys_c<span class="token operator">=</span><span class="token operator">-</span>s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="SHU操作系统">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="SHU操作系统">
                         
                         <span class="card-title">SHU操作系统</span>
                     </div>
@@ -976,7 +1095,7 @@ sys_c<span class="token operator">=</span><span class="token operator">-</span>s
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">211.1k</span>
+            <span class="white-color">227k</span>
             
 
             <br>
