@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://henryavery.cn/2021/12/09/gai-lu-lun/</loc>
+    
+    <lastmod>2021-12-09T12:38:16.240Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://henryavery.cn/2021/04/01/tensorflow/</loc>
+    
+    <lastmod>2021-12-09T03:53:28.253Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://henryavery.cn/2021/12/09/guan-yu-cuda/</loc>
     
     <lastmod>2021-12-09T03:46:26.222Z</lastmod>
@@ -138,13 +152,6 @@
     <loc>https://henryavery.cn/2021/09/12/openmp/</loc>
     
     <lastmod>2021-09-12T01:45:05.649Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://henryavery.cn/2021/04/01/tensorflow/</loc>
-    
-    <lastmod>2021-09-12T01:43:19.804Z</lastmod>
     
   </url>
   

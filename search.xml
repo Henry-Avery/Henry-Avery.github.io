@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于概率论与数理统计</title>
+      <link href="/2021/12/09/gai-lu-lun/"/>
+      <url>/2021/12/09/gai-lu-lun/</url>
+      
+        <content type="html"><![CDATA[<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大三这个学期开始上机器学习和模式识别的专业课，发现数学在这个学期每门课上都很重要，特别是线代和概率论，运筹优化需要用到线代的知识，智能控制要用到信号处理的知识。除了学矩阵代数的时候完整复习过一遍线代以外，之前学的数学知识基本上都是考完之后就放下了，而且当时概率论考试考的也不是很好，又已经隔了很久没有复习过，正好抽出时间来复习一下数学。</p><p>通经过上学期的算法考试大失败反思了自己的学习习惯和方式，发现自己大学里对这些需要静下心来好好学的数学课并没有很好的掌握，而且之所以这些考试考不好也是因为自己没有始终保持一个初学者心态，对学过的知识没有一定的敬畏，花的时间也不对，没有经过系统的反思。所以这次复习要做到有点有面，先从这学期可能更重要的概率论开始复习。</p><p>由于要准备ASC超算比赛时间有限，打算先快速将基础过一遍，这次我将结合电脑和iPad手写笔记的使用来对知识进行整理，并以博客的形式呈现出来。</p><blockquote><p>对知识的整理很重要</p></blockquote><h2 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h2><p>概率论与数理统计是研究和揭示<strong>随机现象统计规律性</strong>的一门数学学科。</p><blockquote><p>在个别试验中其结果呈现不确定性，在大量重复试验中其结果又具有统计规律性的现象。</p></blockquote><p>我们通过研究随机试验来研究随机现象，<strong>随机现象</strong>具有三个特点：</p><p>1、可在相同条件下重复</p><p>2、每次试验可能结果不止一个，但能明确所有可能结果。</p><p>3、进行试验前不知道结果</p><hr><p>随机试验E<strong>所有可能结果的集合</strong>成为E的<strong>样本空间</strong>，记为S。</p><p>样本空间的元素就是E的每个结果，称为<strong>样本点</strong>。</p><p>试验E的<strong>样本空间S的子集</strong>为E的<strong>随机事件</strong>，简称事件。</p><p>在每次试验中，当且仅当这一子集中的一个样本点出现时，称这一<strong>事件发生</strong>。</p><p>必然事件，全集。不可能事件，空集。</p><hr><p><strong>事件的关系与运算</strong></p><p>包含，相等</p><p>和事件</p><p>积事件</p><p>差事件</p><p>互斥（A与B是互不相容的），基本事件是两两互不相容的。</p><p>逆事件（A与B是对立事件）</p><hr><p>交换律，结合律，分配律，德摩根律</p><hr><p><strong>频率与概率</strong></p><p>在相同条件下，在n次试验中如果事件A出现了nA次，nA/n称为事件A发生的<strong>频率</strong>。记为$f_n(A)$</p><p>频率具有三条性质：</p><p>1.[0,1]</p><p>2、$f_n(S)=1$</p><p>3、$A_1,…,A_k$两两互不相容的事件有</p><p>$f_n(A_1\cup…\cup A_k)=f_n(A_1)+…+f_n(A_k)$</p><hr><blockquote><p>大量试验验证，当试验次数n增大，频率趋于稳定性到某个常数。但在实际中我们不可能对每个事件做大量的尝试，然后求得频率，于是为了研究理论的需要给出如下表征事件发生可能性的概率定义。</p></blockquote><p><strong>概率定义</strong></p><p>设任一随机试验E，S为相应的样本空间，若对任意事件A，有唯一实P（A）与之对应，且集合函数P（·）满足下面三个条件，则数P（A）称为事件A的概率。</p><p>集合函数P（·）满足下面三个条件：</p><p>1、非负性，$P(A)\ge 0$</p><p>2、规范性，对于必然事件S有$P(S)=1$</p><p>3、可列可加性，$A_1,…,A_k$两两互不相容的事件有</p><p>$P(A_1\cup A_2\cup…)=P(A_1)+P(A_1)+…$</p><hr><p>由定义推出概率的六条性质：</p><ol><li>$P(\emptyset)=0$</li><li>有限可加性，由性质1和定义3</li><li>若$A \subseteq B$，则有$P(B-A)=P(B)-P(A)$;$P(B) \ge P(A)$.</li></ol><blockquote><p>由$A \subseteq B$，知$B=A \cup(B-A)$，且$A(B-A)= \empty$，再定义3可列可加性得$P(B)=P(A \cup (B-A))=P(A)+P(B-A)$，由定义1概率非负性得$P(B-A) \ge 0$</p><p>所以$P(B) \ge P(A)$</p></blockquote><p>   4.由性质3，任意事件A有$P(A) \le P(S)$，即$P(A) \le 1$ .</p><p>   5.逆事件的概率，$P(\bar{A})=1-P(A)$</p><p>   6.加法公式，对于任意事件A和B有$P(A \cup B)=P(A)+P(B)-P(AB)$，</p><blockquote><p>同性质3证明，$A \cup B = A \cup (B-AB)$，知$A(B-AB)= \empty$,$AB \subset B$,</p><p>由性质2有限可加性，$P(A \cup B)=P(A \cup (B-AB))=P(A)+P(B-AB)$</p><p>由性质3，有$P(B-AB)=P(B)-P(AB)$,可得$P(A \cup B)=P(A)+P(B)-P(AB)$.</p></blockquote><hr><p>等可能概型（<strong>古典概型</strong>）</p><p>两个特点：1、试验样本空间只包含有限个元素；2、每个基本事件发生可能性相同</p><p>古典概型事件A概率计算公式</p><hr><p>放回抽样与不放回抽样</p><p>n球放m盒，相同生日问题（23，64）</p><p>抽检次品，超几何分布</p><p>随机抽数被6和8整除问题</p><p>分配新生优生分配问题</p><hr><p>规定时间接待问题</p><blockquote><p><strong>实际推断原理</strong>，“概率很小的事件在一次试验中实际上几乎不发生。”</p></blockquote><hr><p><strong>条件概率</strong></p><p><strong>乘法公式</strong></p><p><strong>全概率公式</strong></p><p><strong>贝叶斯公式</strong></p><hr><p><strong>独立的定义</strong></p><h2 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h2><h3 id="随机变量的定义"><a href="#随机变量的定义" class="headerlink" title="随机变量的定义"></a>随机变量的定义</h3><p>设随机试验的样本空间为S={e}.</p><p>X=X(e)是定义在样本空间S上的<strong>实值单值函数</strong>.称X=X(e)为<strong>随机变量</strong>。</p><hr><p>离散型随机变量及其分布律</p><p>随机变量的分布函数</p><p>连续型随机变量及其概率密度</p><p>随机变量的函数的分布</p><h2 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h2><h2 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h2><h2 id="第五章-大数定律及中心极限定理"><a href="#第五章-大数定律及中心极限定理" class="headerlink" title="第五章 大数定律及中心极限定理"></a>第五章 大数定律及中心极限定理</h2><h2 id="第六章-样本及抽样分布"><a href="#第六章-样本及抽样分布" class="headerlink" title="第六章 样本及抽样分布"></a>第六章 样本及抽样分布</h2><p><strong>总体</strong></p><p><strong>统计量</strong></p><p>随机变量的函数，不含任何未知参数</p><h2 id="第七章-参数估计"><a href="#第七章-参数估计" class="headerlink" title="第七章 参数估计"></a>第七章 参数估计</h2><p><strong>估计量</strong></p><p>$X_1,X_2,…,X_n$是$X$的一个样本</p><p>构造了一个适当的统计量$\hat{\theta}(X_1,X_2,…,X_n)$，估计量是样本的函数。</p><h2 id="第八章-假设检验"><a href="#第八章-假设检验" class="headerlink" title="第八章 假设检验"></a>第八章 假设检验</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 概率论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于CUDA</title>
       <link href="/2021/12/09/guan-yu-cuda/"/>
       <url>/2021/12/09/guan-yu-cuda/</url>
@@ -1267,9 +1292,9 @@
       
         <tags>
             
-            <tag> MATLAB </tag>
-            
             <tag> SHU </tag>
+            
+            <tag> MATLAB </tag>
             
             <tag> Signal Processing </tag>
             
@@ -1354,9 +1379,9 @@
       
         <tags>
             
-            <tag> Blog </tag>
-            
             <tag> 在更 </tag>
+            
+            <tag> Blog </tag>
             
         </tags>
       

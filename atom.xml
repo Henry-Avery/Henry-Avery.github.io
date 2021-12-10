@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-12-09T03:46:26.222Z</updated>
+  <updated>2021-12-09T12:38:16.240Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于概率论与数理统计</title>
+    <link href="https://henryavery.cn/2021/12/09/gai-lu-lun/"/>
+    <id>https://henryavery.cn/2021/12/09/gai-lu-lun/</id>
+    <published>2021-12-09T12:37:06.000Z</published>
+    <updated>2021-12-09T12:38:16.240Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;概率论&quot;&gt;&lt;a href=&quot;#概率论&quot; class=&quot;headerlink&quot; title=&quot;概率论&quot;&gt;&lt;/a&gt;概率论&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数学笔记" scheme="https://henryavery.cn/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="概率论" scheme="https://henryavery.cn/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>关于CUDA</title>
@@ -527,32 +553,6 @@
     
     
       <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《禅与摩托车维修艺术》</title>
-    <link href="https://henryavery.cn/2021/05/14/shan-yu-mo-tuo-che/"/>
-    <id>https://henryavery.cn/2021/05/14/shan-yu-mo-tuo-che/</id>
-    <published>2021-05-14T00:36:30.000Z</published>
-    <updated>2021-05-30T12:41:33.862Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;《Zen-and-the-Art-of-Motorcycle-Maintenance》&quot;&gt;&lt;a href=&quot;#《Zen-and-the-Art-of-Motorcycle-Maintenance》&quot; class=&quot;headerlink&quot; title=&quot;《Zen
-        
-      
-    
-    </summary>
-    
-      <category term="阅读笔记" scheme="https://henryavery.cn/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="哲学" scheme="https://henryavery.cn/tags/%E5%93%B2%E5%AD%A6/"/>
     
   </entry>
   
