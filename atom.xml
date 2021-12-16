@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-12-09T12:38:16.240Z</updated>
+  <updated>2021-12-16T08:29:26.725Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SHU运筹与优化</title>
+    <link href="https://henryavery.cn/2021/12/16/shuop/"/>
+    <id>https://henryavery.cn/2021/12/16/shuop/</id>
+    <published>2021-12-16T08:22:21.000Z</published>
+    <updated>2021-12-16T08:29:26.725Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MATLAB实验&quot;&gt;&lt;a href=&quot;#MATLAB实验&quot; class=&quot;headerlink&quot; title=&quot;MATLAB实验&quot;&gt;&lt;/a&gt;MATLAB实验&lt;/h2&gt;&lt;h3 id=&quot;实验一&quot;&gt;&lt;a href=&quot;#实验一&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94/"/>
+    
+    
+      <category term="数学" scheme="https://henryavery.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>关于概率论与数理统计</title>
@@ -73,7 +99,7 @@
     <link href="https://henryavery.cn/2021/12/04/shuic/"/>
     <id>https://henryavery.cn/2021/12/04/shuic/</id>
     <published>2021-12-04T09:50:32.000Z</published>
-    <updated>2021-12-08T07:53:53.386Z</updated>
+    <updated>2021-12-16T08:37:34.258Z</updated>
     
     <summary type="html">
     
@@ -527,32 +553,6 @@
     
     
       <category term="ASC竞赛" scheme="https://henryavery.cn/tags/ASC%E7%AB%9E%E8%B5%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5月复盘</title>
-    <link href="https://henryavery.cn/2021/05/28/2021-5/"/>
-    <id>https://henryavery.cn/2021/05/28/2021-5/</id>
-    <published>2021-05-28T11:07:19.000Z</published>
-    <updated>2021-05-31T13:06:40.153Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;五月复盘（5-29）&quot;&gt;&lt;a href=&quot;#五月复盘（5-29）&quot; class=&quot;headerlink&quot; title=&quot;五月复盘（5.29）&quot;&gt;&lt;/a&gt;五月复盘（5.29）&lt;/h1&gt;&lt;h2 id=&quot;本月关键词：书生&quot;&gt;&lt;a href=&quot;#本月关键词：书生&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="复盘" scheme="https://henryavery.cn/categories/%E5%A4%8D%E7%9B%98/"/>
-    
-    
-      <category term="复盘" scheme="https://henryavery.cn/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
