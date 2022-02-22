@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://henryavery.cn/"/>
-  <updated>2021-12-31T05:25:50.370Z</updated>
+  <updated>2022-02-22T02:50:14.225Z</updated>
   <id>https://henryavery.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SHU研究方法与前沿</title>
+    <link href="https://henryavery.cn/2022/02/22/shusy/"/>
+    <id>https://henryavery.cn/2022/02/22/shusy/</id>
+    <published>2022-02-22T02:09:08.000Z</published>
+    <updated>2022-02-22T02:50:14.225Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;YOLO报告&quot;&gt;&lt;a href=&quot;#YOLO报告&quot; class=&quot;headerlink&quot; title=&quot;YOLO报告&quot;&gt;&lt;/a&gt;YOLO报告&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://henryavery.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
+    
+  </entry>
   
   <entry>
     <title>SHU模式识别</title>
@@ -527,32 +553,6 @@
     
     
       <category term="SHU" scheme="https://henryavery.cn/tags/SHU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>code01装机记</title>
-    <link href="https://henryavery.cn/2021/06/19/code01/"/>
-    <id>https://henryavery.cn/2021/06/19/code01/</id>
-    <published>2021-06-19T00:29:23.000Z</published>
-    <updated>2021-06-20T03:30:30.222Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Code01&quot;&gt;&lt;a href=&quot;#Code01&quot; class=&quot;headerlink&quot; title=&quot;Code01&quot;&gt;&lt;/a&gt;Code01&lt;/h2&gt;&lt;h3 id=&quot;装机流程&quot;&gt;&lt;a href=&quot;#装机流程&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://henryavery.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="装备" scheme="https://henryavery.cn/tags/%E8%A3%85%E5%A4%87/"/>
     
   </entry>
   
